@@ -1,0 +1,170 @@
+body {
+  height: 100%;
+  background-color: #000000;
+}
+
+h1 {
+  font-family: "HelveticaNeue-UltraLight", "Century Gothic", Helvetica, sans-serif;
+  font-size: 80px;
+  font-weight: 100;
+  text-align: center;
+  color: white;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-family: "HelveticaNeue-UltraLight", "Century Gothic", Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 65px;
+  text-align: left;
+  color: white;
+}
+
+h4 {
+  font-family: "HelveticaNeue-UltraLight", "Century Gothic", Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+  color: white;
+
+}
+
+h6 {
+  font-family: "HelveticaNeue-Light";
+  font-size: 10px;
+  font-weight: 100;
+  color: #ececec;
+  opacity: 0.5;
+  text-align: center;
+}
+
+p {
+    font-family: "HelveticaNeue-Light";
+    font-size: 14px;
+    color: white;
+    opacity: 0.7;
+    text-align: center;
+}
+
+/* This is the section for grids*/
+
+.row {
+  margin-bottom: 20px;
+}
+
+.row .row {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+[class*="col-"] {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #eee;
+  background-color: rgba(86,61,124,.15);
+  border: 1px solid #ddd;
+  border: 1px solid rgba(86,61,124,.2);
+}
+
+hr {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* This is the end of grid section*/
+
+.top-liner {
+  display: inline-block;
+  width: 100%;
+  height: 3px;
+  background-color: #38b6b1;
+  margin: 0 0 0 0;
+  position: relative;
+  z-index: 999;
+  padding: 0 0 0 0;
+  top: -12px;
+}
+
+/* Here starts the hero unit, which is the cover page */
+
+.hero-unit {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -12px;
+  background: #000000 url(images/cover.jpg) center top no-repeat;
+  background-size: 100%
+}
+
+.nav-bar {
+  width: 147px;
+  left: 25px;
+  position: fixed;
+  top: 60px;
+
+}
+
+.name {
+  width: 100%;
+  position: relative;
+  height: 65px;
+  border-top: 2px solid rgba(255,255,255,.8);
+  border-bottom: 2px solid rgba(255,255,255,.8);
+}
+
+.name h3 {
+  opacity: 0.8;
+  position: relative;
+  top: -25px;
+}
+
+.menu {
+  width: 187px;
+  position: relative;
+  left: -40px;
+  top: 18px;
+}
+
+.menu li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.menu li a {
+  cursor: pointer;
+  display: list-item;
+  list-style-image: none;
+  list-style-type: none;
+  list-style-position: outside;
+  font-family: "HelveticaNeue-UltraLight", "Century Gothic", Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 16px;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 20px;
+  color: white;
+  opacity: 0.8;
+}
+
+.menu li a:hover {
+  text-align: right;
+  background: #ffffff;
+  color: black;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.menu li a:active {
+  text-align: right;
+  background: #ffffff;
+  color: #38b6b1;
+  opacity: 1;
+  text-decoration: none;
+}
+/* Here is the end of the hero unit, which is the cover page */
+
+.copyright {
+  width: 100%;
+  height: 20px;
+  position: fixed;
+  bottom: 5px;
+}
