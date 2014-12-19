@@ -127,8 +127,6 @@ hr {
 .menu li {
   margin-top: 10px;
   margin-bottom: 10px;
-}
-.menu li a {
   cursor: pointer;
   display: list-item;
   list-style-image: none;
@@ -139,27 +137,29 @@ hr {
   font-size: 16px;
   text-align: left;
   text-transform: uppercase;
+  text-decoration: none;
   letter-spacing: 1px;
   line-height: 20px;
   color: white;
   opacity: 0.8;
 }
 
-.menu li a:hover {
+.menu li:hover {
   text-align: right;
   background: #ffffff;
-  color: black;
   opacity: 1;
   text-decoration: none;
+  color: #000000;
 }
 
-.menu li a:active {
+.menu li:active {
   text-align: right;
   background: #ffffff;
-  color: #38b6b1;
   opacity: 1;
   text-decoration: none;
+  color: #38b6b1;
 }
+
 /* Here is the end of the hero unit, which is the cover page */
 
 .copyright {
