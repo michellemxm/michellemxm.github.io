@@ -127,47 +127,53 @@ hr {
 }
 
 .nav-bar li {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
   list-style-image: none;
   list-style-type: none;
   list-style-position: outside;
-  opacity: 0.8;
-}
-.nav-bar li a {
-  margin-top: 10px;
-  margin-bottom: 10px;
   cursor: pointer;
   display: list-item;
   font-family: "HelveticaNeue-Thin", "Century Gothic", Helvetica, sans-serif;
   font-weight: 100;
   font-size: 16px;
+  color: #ffffff;
   text-align: left;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 1px;
   line-height: 20px;
-  color: white;
   opacity: 0.8;
 }
 
-.nav-bar li a:hover {
+.nav-bar li a {
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+.nav-bar li:hover {
   text-align: right;
   background: #ffffff;
   opacity: 1;
-  text-decoration: none;
+}
+
+.nav-bar li:hover a{
   color: #000000;
 }
 
-.nav-bar li a.active {
+.nav-bar li:active {
   text-align: right;
   background: #ffffff;
-  text-decoration: none;
-  color: #38b6b1;
+  opacity: 0.8;
 }
 
+.nav-bar li:active a{
+  color: #38b6b1;
+}
 /* Here is the end of the hero unit, which is the cover page */
 
 /* ========================================================== */
-
 /* Here starts the porfolio section*/
 
 .porfolio {
