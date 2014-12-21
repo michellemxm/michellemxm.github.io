@@ -178,9 +178,34 @@ hr {
   display: block;
   width: 100%
 }
+
 /* Here is the end of the hero unit, which is the cover page */
 
-/* ========================================================== */
+/* ================================================================ */
+
+/* Content general settings */
+
+.container {
+  position: relative;
+  height: auto;
+  min-height: 200px;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.content {
+  position: relative;
+  width: 70%;
+  left: 30%;
+  height: auto;
+  min-height: 200px;
+  border: 1px solid #ffffff;
+}
+
+/* Content general settings ends*/
+
+/* ================================================================ */
+
 /* Here starts the porfolio section*/
 
 .porfolio {
@@ -191,22 +216,10 @@ hr {
   left: 30%;
   background-color: #ececec;
 }
-.container {
-  position: relative;
-  height: auto;
-  min-height: 200px;
-}
-.content {
-  position: relative;
-  width: 70%;
-  left: 30%;
-  height: auto;
-  min-height: 200px;
-  border: 1px solid #ffffff;
-
-}
 
 /* This is the end the porfolio section*/
+
+/* ================================================================ */
 
 .copyright {
   width: 100%;
