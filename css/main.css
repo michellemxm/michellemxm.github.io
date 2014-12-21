@@ -127,7 +127,7 @@ hr {
 }
 
 .nav-bar li {
-  width: 100%;
+  width: 147px;
   margin-top: 10px;
   margin-bottom: 10px;
   list-style-image: none;
@@ -150,6 +150,8 @@ hr {
 .nav-bar li a {
   color: #ffffff;
   opacity: 0.8;
+  display: block;
+  width: 100%
 }
 
 .nav-bar li:hover {
@@ -160,6 +162,8 @@ hr {
 
 .nav-bar li:hover a{
   color: #000000;
+  display: block;
+  width: 100%
 }
 
 .nav-bar li:active {
@@ -168,8 +172,11 @@ hr {
   opacity: 0.8;
 }
 
-.nav-bar li:active a{
+.nav-bar li:active a,
+.nav-bar li:focus a {
   color: #38b6b1;
+  display: block;
+  width: 100%
 }
 /* Here is the end of the hero unit, which is the cover page */
 
@@ -186,9 +193,16 @@ hr {
 }
 .container {
   position: relative;
-  height: 700px;
+  height: auto;
+  min-height: 200px;
 }
-.thumb {
+.content {
+  position: relative;
+  width: 70%;
+  left: 30%;
+  height: auto;
+  min-height: 200px;
+  border: 1px solid #ffffff;
 
 }
 
@@ -197,6 +211,6 @@ hr {
 .copyright {
   width: 100%;
   height: 20px;
-  position: fixed;
+  position: relative;
   bottom: 5px;
 }
