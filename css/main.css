@@ -94,7 +94,7 @@ hr {
   top: -12px;
   z-index: -999;
   background: #000000 url(images/cover.jpg) center top no-repeat;
-  background-size: 100%
+  background-size: cover;
 }
 
 .menu {
