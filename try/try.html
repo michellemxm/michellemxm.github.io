@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+    <meta charset=utf-8 />
+    <style>
+        body {
+	        width: 100%;
+	        height: 100%;
+        }
+        #full {
+            width: 600px;
+        }
+        #full img {}
+    </style>
+</head>
+
+<body>
+	<p>The img should change its width according to the window size.<p>
+<div id="full">
+	<img src="tagCover.jpg">
+</div>
+<script>
+    $(function(){
+
+        var win = $(window),
+            my = $('#full'),
+            image = my.find('img'),
+            imageWidth = image.width(),
+            imageHeight = image.height(),
+            imageRatio = imageWidth / imageHeight;
+
+        function resizeImage() {
+            var winWidth = win.width(),
+                winHeight = win.height(),
+                winRatio = winWidth / winHeight;
+
+            if(winRatio > imageRatio) {
+      	        image.css({
+      		        width: winWidth,
+      		        height: Math.round(winWidth / imageRatio)
+      	        });
+            }
+            else {
+       	        image.css({
+       		        width: Math.round(winHeight * imageRatio),
+       		        height: winHeight
+       	        });
+            }
+        }
+
+        win.bind({
+        	load: function() {
+        		resizeImage();
+        	},
+        	resize: function() {
+        		resizeImage();
+        	}
+        });
+
+    });
+
+</script>
+</body>
+</html>
