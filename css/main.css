@@ -1,6 +1,6 @@
 body {
   height: 100%;
-  background-color: #000000;
+  background-color: #f1f1f1;
 }
 
 h1 {
@@ -17,7 +17,7 @@ h3 {
   font-weight: 100;
   font-size: 65px;
   text-align: left;
-  color: white;
+  color: #59463d;
 }
 
 h4 {
@@ -76,7 +76,7 @@ hr {
   display: inline-block;
   width: 100%;
   height: 3px;
-  background-color: #38b6b1;
+  background-color: #59463d;
   margin: 0 0 0 0;
   position: relative;
   z-index: 999;
@@ -91,7 +91,7 @@ hr {
   height: 100%;
   min-height: 700px;
   position: relative;
-  top: -12px;
+  top: -20px;
   z-index: -999;
   background: #000000 url(images/cover.jpg) center top no-repeat;
   background-size: cover;
@@ -99,7 +99,7 @@ hr {
 
 .menu {
   width: 147px;
-  left: 25px;
+  left: 40px;
   position: fixed;
   top: 60px;
 
@@ -109,12 +109,12 @@ hr {
   width: 100%;
   position: relative;
   height: 65px;
-  border-top: 2px solid rgba(255,255,255,.8);
-  border-bottom: 2px solid rgba(255,255,255,.8);
+  border-top: 2px solid #59463d;
+  border-bottom: 2px solid #59463d;
+  opacity: 0.9;
 }
 
 .name h3 {
-  opacity: 0.8;
   position: relative;
   top: -25px;
 }
@@ -135,20 +135,20 @@ hr {
   list-style-position: outside;
   cursor: pointer;
   display: list-item;
-  font-family: "HelveticaNeue-Thin", "Century Gothic", Helvetica, sans-serif;
-  font-weight: 100;
-  font-size: 16px;
-  color: #ffffff;
+  font-family: Avenir Next, Helvetica Neue, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #59463d;
   text-align: left;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 1px;
-  line-height: 20px;
-  opacity: 0.8;
+  line-height: 22px;
+  opacity: 0.9;
 }
 
 .nav-bar li a {
-  color: #ffffff;
+  color: #59463d;
   opacity: 0.8;
   display: block;
   width: 100%
@@ -156,25 +156,27 @@ hr {
 
 .nav-bar li:hover {
   text-align: right;
-  background: #ffffff;
+  background: #59463d;
+  color: #ffffff;
+  font-weight: 300;
   opacity: 1;
 }
 
 .nav-bar li:hover a{
-  color: #000000;
+  color: #ffffff;
   display: block;
   width: 100%
 }
 
 .nav-bar li:active {
   text-align: right;
-  background: #ffffff;
+  background: #59463d;
   opacity: 0.8;
 }
 
 .nav-bar li:active a,
 .nav-bar li:focus a {
-  color: #38b6b1;
+  color: #ffffff;
   display: block;
   width: 100%
 }
