@@ -9,7 +9,6 @@ h1 {
   font-weight: 100;
   text-align: left;
   color: #59463d;
-  letter-spacing: 1px;
 }
 
 h3 {
@@ -185,6 +184,7 @@ hr {
 /* Content general settings */
 
 .container {
+  width: 100%;
   position: relative;
   height: auto;
   min-height: 200px;
@@ -194,11 +194,18 @@ hr {
 
 .content {
   position: relative;
-  width: 80%;
-  left: 25%;
+  width: 75%;
+  left: 20%;
   height: auto;
   min-height: 200px;
-  border: 1px solid #ffffff;
+}
+
+.content h1 {
+  margin-bottom: 10px;
+}
+
+.content img {
+  width: 100%;
 }
 
 /* Content general settings ends*/
@@ -207,15 +214,12 @@ hr {
 
 /* Here starts the porfolio section*/
 
-.porfolio {
+#portfolio {
   width: 100%;
   height: auto;
   position: relative;
   margin-top: 200px;
-  left: 30%;
-  background-color: #ececec;
 }
-
 
 /* This is the end the porfolio section*/
 
