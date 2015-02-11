@@ -9,6 +9,7 @@ h1 {
   font-weight: 100;
   text-align: left;
   color: #59463d;
+  line-height: 50px;
 }
 
 h3 {
@@ -27,21 +28,29 @@ h4 {
 
 }
 
+h5 {
+  font-family: Avenir Next, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #59463d;
+  opacity: 1;
+  text-align: left;
+  margin-top: 0px;
+}
+
 h6 {
   font-family: Avenir Next, Helvetica Neue, Helvetica, sans-serif;
   font-size: 10px;
-  font-weight: 100;
-  color: #ececec;
+  color: #59463d;
   opacity: 1;
   text-align: center;
 }
 
 p {
     font-family: Avenir Next, Helvetica Neue, Helvetica, sans-serif;
-    font-size: 14px;
-    color: white;
+    font-size: 16px;
+    color: #59463d;
     opacity: 1;
-    text-align: center;
+    text-align: left;
 }
 
 /* This is the section for grids*/
@@ -182,7 +191,7 @@ hr {
 
 /* ================================================================ */
 
-/* Content general settings */
+/* Content general */
 
 .container {
   width: 100%;
@@ -209,7 +218,7 @@ hr {
   width: 100%;
 }
 
-/* Content general settings ends*/
+/* Content general ends*/
 
 /* ================================================================ */
 
@@ -226,6 +235,15 @@ hr {
 
 /* ================================================================ */
 
+/* ================================================================ */
+
+/* Here starts the contact section*/
+
+
+
+/* This is the end the porfolio section*/
+
+/* ================================================================ */
 .copyright {
   width: 100%;
   height: 20px;
