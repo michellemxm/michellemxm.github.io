@@ -98,6 +98,7 @@ hr {
   left: 40px;
   position: fixed;
   top: 60px;
+  z-index: 999;
 
 }
 
