@@ -9,7 +9,7 @@ h1 {
   font-weight: 100;
   text-align: left;
   color: #59463d;
-  line-height: 50px;
+  line-height: 60px;
 }
 
 h3 {
@@ -218,6 +218,11 @@ hr {
   width: 100%;
 }
 
+.section-break {
+  border-top: 1px solid #59463d;
+  margin-bottom: 20px;
+
+}
 /* Content general ends*/
 
 /* ================================================================ */
@@ -234,6 +239,15 @@ hr {
 /* This is the end the porfolio section*/
 
 /* ================================================================ */
+
+/* Here starts the visionvision section*/
+
+#vision .container .content .col-md-6 {
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+/* This is the end the vision section*/
 
 /* ================================================================ */
 
