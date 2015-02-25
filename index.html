@@ -14,41 +14,7 @@
     <!-- google maps -->
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAPbMPFgScXEKqsk26XcplA7SpKsipY_gQ&sensor=SET_TO_TRUE_OR_FALSE">
     </script>
-    <script type="text/javascript">
-              var map;
-              function initialize() {
-              var mapOptions = {
-                  center: new google.maps.LatLng(39.9957824, 116.479004),
-                  zoom: 15,
-                  mapTypeId: google.maps.MapTypeId.ROADMAP
-              };
-              var map = new google.maps.Map(document.getElementById("map_canvas"),
-                  mapOptions);
-              }
-
-              google.maps.event.addDomListener(window, 'load', initialize);
-              var styleArray = [
-             {
-                  featureType: "all",
-                  stylers: [
-                    { saturation: -80 }
-                  ]
-             },{
-                  featureType: "road.arterial",
-                  elementType: "geometry",
-                  stylers: [
-                    { hue: "#00ffee" },
-                    { saturation: 50 }
-                  ]
-             },{
-                  featureType: "poi.business",
-                  elementType: "labels",
-                  stylers: [
-                     { visibility: "off" }
-                  ]
-                }
-             ];
-
+    <script type="text/javascript" src="js/map.js">
     </script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -58,6 +24,7 @@
       <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+
   <body>
     <div class="top-liner"></div>
     <div class="menu">
@@ -72,11 +39,11 @@
             <li><a href="#contact">contact&nbsp;</a></li>
         </ul>
       </div>
-    <div id="home">
+    <div id="home" name="home">
       <div class="hero-unit">
       </div>
     </div>
-    <div id="portfolio">
+    <div id="portfolio" name="portfolio">
       <div class="container">
         <div class="content">
           <h1>PORTFOLIO</h1>
@@ -95,27 +62,27 @@
         </div>
       </div>
     </div>
-    <div id="vision">
+    <div id="vision" name="vision">
       <div class="container">
         <div class="content">
           <h1>VISION</h1>
         </div>
       </div>
     </div>
-    <div id="profile">
+    <div id="profile" name="profile">
       <div class="container">
         <div class="content">
           <h1>PROFILE</h1>
         </div>
       </div>
     </div>
-    <div id="contact">
+    <div id="contact" name="contact">
       <div class="container">
         <div class="content">
           <h1>CONTACT</h1>
           <div class="col-md-6">
             <h5>Email: </h5>
-            <p><a href="mailto:michelle.maxm@gmail.com" target="_top">michelle.maxm@gmail.com</a></p>
+            <p><a href="mailto:michelle.maxm@gmail.com" target="_top" style="color:#59463d">michelle.maxm@gmail.com</a></p>
             <h5>Address:</h5>
             <p>RM2807, Tower 1 B, Wangjing SOHO</p>
             <p>No.10 Wangjing Street, Chaoyang District</p>
@@ -131,9 +98,9 @@
         <h6>Copyright © 2012-2014 MICHELLE MA ALL RIGHTS RESERVED</h6>
       </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="jquery.backgroundSize.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/jquery.backgroundSize.js" type="text/javascript"></script>
   </body>
 </html>
