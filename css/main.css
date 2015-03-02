@@ -253,6 +253,22 @@ hr {
 
 /* Here starts the contact section*/
 
+#contact .container .content .col-md-4 {
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+#contact .container .content .col-md-4 p{
+  line-height: 18px;
+}
+
+#contact .container .content .col-md-4 .col-md-3 {
+  padding-top: 7px;
+  padding-bottom: 3px;
+  padding-right: 30px;
+  opacity: 0.8;
+}
+
 #map_canvas {
   width: 500px;
   height: 400px;
