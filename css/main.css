@@ -104,7 +104,7 @@ hr {
 
 .menu {
   width: 147px;
-  left: 40px;
+  left: 45px;
   position: fixed;
   top: 60px;
   z-index: 999;
@@ -204,7 +204,7 @@ hr {
 
 .content {
   position: relative;
-  width: 75%;
+  width: 72%;
   left: 20%;
   height: auto;
   min-height: 200px;
@@ -256,9 +256,16 @@ hr {
 #contact .container .content .col-md-4 {
   padding-top: 20px;
   padding-right: 20px;
+  height: 190px;
 }
 
-#contact .container .content .col-md-4 p{
+#contact .container .content .col-md-8 {
+  padding-top: 20px;
+  padding-right: 20px;
+  height: 190px;
+}
+
+#contact .container .content .col-md-8 p{
   line-height: 18px;
 }
 
@@ -267,6 +274,11 @@ hr {
   padding-bottom: 3px;
   padding-right: 30px;
   opacity: 0.8;
+}
+
+#contact .container .content .col-md-4 .col-md-3 img {
+  max-height: 58px;
+  max-width: 58px;
 }
 
 #map_canvas {
