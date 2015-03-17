@@ -1,6 +1,6 @@
 body {
   height: 100%;
-  background-color: #f1f1f1;
+  background-color: #fdfdfd;
 }
 
 h1 {
@@ -8,7 +8,7 @@ h1 {
   font-size: 35px;
   font-weight: 100;
   text-align: left;
-  color: #59463d;
+  color: #2b2421;
   line-height: 60px;
 }
 
@@ -17,7 +17,7 @@ h3 {
   font-weight: 100;
   font-size: 65px;
   text-align: left;
-  color: #59463d;
+  color: #2b2421;
 }
 
 h4 {
@@ -30,17 +30,19 @@ h4 {
 
 h5 {
   font-family: Avenir Next, Helvetica Neue, Helvetica, sans-serif;
+  font-weight: 400;
   font-size: 18px;
-  color: #59463d;
+  color: #2b2421;
   opacity: 1;
   text-align: left;
   margin-top: 0px;
+  text-transform: uppercase;
 }
 
 h6 {
   font-family: Avenir Next, Helvetica Neue, Helvetica, sans-serif;
   font-size: 10px;
-  color: #59463d;
+  color: #2b2421;
   opacity: 1;
   text-align: center;
 }
@@ -48,7 +50,8 @@ h6 {
 p {
     font-family: Avenir Next, Helvetica Neue, Helvetica, sans-serif;
     font-size: 16px;
-    color: #59463d;
+    font-weight: 400;
+    color: #2b2421;
     opacity: 1;
     text-align: left;
 }
@@ -81,7 +84,7 @@ hr {
   display: inline-block;
   width: 100%;
   height: 3px;
-  background-color: #59463d;
+  background-color: #2b2421;
   margin: 0 0 0 0;
   position: relative;
   z-index: 999;
@@ -115,8 +118,8 @@ hr {
   width: 100%;
   position: relative;
   height: 65px;
-  border-top: 2px solid #59463d;
-  border-bottom: 2px solid #59463d;
+  border-top: 2px solid #2b2421;
+  border-bottom: 2px solid #2b2421;
   opacity: 0.9;
 }
 
@@ -144,7 +147,7 @@ hr {
   font-family: Avenir Next, Helvetica Neue, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;
-  color: #59463d;
+  color: #2b2421;
   text-align: left;
   text-transform: uppercase;
   text-decoration: none;
@@ -154,7 +157,7 @@ hr {
 }
 
 .nav-bar li a {
-  color: #59463d;
+  color: #2b2421;
   opacity: 0.8;
   display: block;
   width: 100%
@@ -162,7 +165,7 @@ hr {
 
 .nav-bar li:hover {
   text-align: right;
-  background: #59463d;
+  background: #2b2421;
   color: #ffffff;
   font-weight: 300;
   opacity: 1;
@@ -176,7 +179,7 @@ hr {
 
 .nav-bar li:active {
   text-align: right;
-  background: #59463d;
+  background: #2b2421;
   opacity: 0.8;
 }
 
@@ -204,7 +207,7 @@ hr {
 
 .content {
   position: relative;
-  width: 72%;
+  width: 74%;
   left: 20%;
   height: auto;
   min-height: 200px;
@@ -219,7 +222,7 @@ hr {
 }
 
 .section-break {
-  border-top: 1px solid #59463d;
+  border-top: 1px solid #2b2421;
   margin-bottom: 20px;
 
 }
@@ -227,7 +230,7 @@ hr {
 
 /* ================================================================ */
 
-/* Here starts the porfolio section*/
+/* Here starts the portfolio section*/
 
 #portfolio {
   width: 100%;
@@ -236,7 +239,12 @@ hr {
   margin-top: 200px;
 }
 
-/* This is the end the porfolio section*/
+#portfolio .container .content .col-md-4 {
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+
+/* This is the end the portfolio section*/
 
 /* ================================================================ */
 
@@ -246,6 +254,7 @@ hr {
   padding-top: 20px;
   padding-right: 20px;
 }
+
 
 /* This is the end the vision section*/
 
@@ -272,13 +281,13 @@ hr {
 #contact .container .content .col-md-4 .col-md-3 {
   padding-top: 7px;
   padding-bottom: 3px;
-  padding-right: 30px;
+  padding-right: 28px;
   opacity: 0.8;
 }
 
 #contact .container .content .col-md-4 .col-md-3 img {
-  max-height: 58px;
-  max-width: 58px;
+  height: 57px;
+  width: 57px;
 }
 
 #map_canvas {
@@ -286,7 +295,7 @@ hr {
   height: 400px;
 }
 
-/* This is the end the porfolio section*/
+/* This is the end the contact section*/
 
 /* ================================================================ */
 .copyright {
