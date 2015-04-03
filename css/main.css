@@ -3,8 +3,18 @@ body {
   background-color: #fdfdfd;
 }
 
+@font-face {
+  font-family: firstFont;
+  src:url(css/font/avenirnext-regular.ttf);
+}
+
+@font-face {
+  font-family: secondFont;
+  src:url(css/font/HelveticaNeue-UltraLight.otf);
+}
+
 h1 {
-  font-family: Avenir Next, Helvetica Neue, Helvetica, sans-serif;
+  font-family: Avenir Next, firstFont, Helvetica Neue, Helvetica, sans-serif;
   font-size: 35px;
   font-weight: 100;
   text-align: left;
@@ -13,7 +23,7 @@ h1 {
 }
 
 h3 {
-  font-family: "HelveticaNeue-UltraLight", "Helvetica Neue UltraLight", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "HelveticaNeue-UltraLight", "Helvetica Neue UltraLight", secondFont, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 100;
   font-size: 65px;
   text-align: left;
@@ -21,7 +31,7 @@ h3 {
 }
 
 h4 {
-  font-family: Avenir Next, Helvetica Neue, Helvetica, sans-serif;
+  font-family: Avenir Next, firstFont, Helvetica Neue, Helvetica, sans-serif;
   font-weight: 100;
   font-size: 18px;
   color: white;
@@ -29,7 +39,7 @@ h4 {
 }
 
 h5 {
-  font-family: Avenir Next, Helvetica Neue, Helvetica, sans-serif;
+  font-family: Avenir Next, firstFont, Helvetica Neue, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;
   color: #2b2421;
@@ -40,7 +50,7 @@ h5 {
 }
 
 h6 {
-  font-family: Avenir Next, Helvetica Neue, Helvetica, sans-serif;
+  font-family: Avenir Next, firstFont, Helvetica Neue, Helvetica, sans-serif;
   font-size: 10px;
   color: #2b2421;
   opacity: 1;
@@ -48,7 +58,7 @@ h6 {
 }
 
 p {
-    font-family: Avenir Next, Helvetica Neue, Helvetica, sans-serif;
+    font-family: Avenir Next, firstFont, Helvetica Neue, Helvetica, sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: #2b2421;
