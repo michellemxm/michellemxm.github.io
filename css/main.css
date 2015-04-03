@@ -63,7 +63,7 @@ p {
     font-weight: 400;
     color: #2b2421;
     opacity: 1;
-    text-align: left;
+    text-align: justify;
 }
 
 /* This is the section for grids*/
@@ -262,7 +262,6 @@ hr {
 
 #vision .container .content .col-md-6 {
   padding-top: 20px;
-  padding-right: 20px;
 }
 
 
@@ -274,7 +273,6 @@ hr {
 
 #profile .container .content .col-md-12 {
   padding-top: 20px;
-  padding-right: 20px;
 }
 
 
