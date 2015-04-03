@@ -222,9 +222,8 @@ hr {
   width: 100%;
 }
 
-.section-break {
-  border-top: 1px solid #2b2421;
-  margin-bottom: 20px;
+.spacing {
+  height: 15px;
 
 }
 /* Content general ends*/
