@@ -325,7 +325,12 @@ hr {
   bottom: 5px;
 }
 /* ================================================================ */
-
+/* overlay iframe */
+iframe {
+  border: 0;
+}
+/* ================================================================ */
+/* scrolling */
 .cd-container {
   width: 90%;
   max-width: 768px;
@@ -371,3 +376,4 @@ hr {
   /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
   opacity: .5;
 }
+/* ================================================================ */
