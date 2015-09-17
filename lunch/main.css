@@ -36,7 +36,7 @@ body {
 	margin: 0 1px;
 }
 
-.container .title {
+.container>.title {
 	color: #ffffff;
 	font-weight: 100;
 	margin-bottom: 10px;
@@ -92,7 +92,6 @@ body {
 }
 
 .card {
-	background:#2b2b35;
 	text-align: center;
 	line-height: 200px;
 	border-radius: 2px;
@@ -100,12 +99,12 @@ body {
 	position: absolute;
 	top: 201px;
 	width: 100%;
-	z-index: -999;
 }
 
 .card .title {
 	font-size: 40pt;
 	font-weight: bold;
+	color: white;
 }
 
 .card.clickable {
