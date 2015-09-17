@@ -14,7 +14,12 @@ body {
 
 .container {
 	width: 320px;
-	margin: 0 auto 50px;
+	height: 600px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -300px;
+	margin-left: -180px;
 }
 
 .info {
