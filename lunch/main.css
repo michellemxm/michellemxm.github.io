@@ -4,7 +4,7 @@ body * {
 
 div {
 	font-size: 10pt;
-	color: #cccccc;
+	color: #ffffff;
 }
 
 body {
@@ -92,6 +92,7 @@ body {
 }
 
 .card {
+	background: #2a2933;
 	text-align: center;
 	line-height: 200px;
 	border-radius: 2px;
