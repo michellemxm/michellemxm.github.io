@@ -1,187 +1,446 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Michelle MA | Interaction Designer</title>
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/overlay.css" />
-
-    <!-- Hide this line for IE (needed for Firefox and others) -->
-    <![if !IE]>
-    <link rel="icon" href="ico/favicon.png" type="image/x-icon" />
-    <![endif]>
-    <!-- This is needed for IE -->
-    <link rel="shortcut icon" href="ico/favicon.ico" type="image/ico" />
-
-
-    <!-- google maps -->
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAPbMPFgScXEKqsk26XcplA7SpKsipY_gQ&sensor=SET_TO_TRUE_OR_FALSE">
-    </script>
-    <!-- <script type="text/javascript" src="js/map.js"></script> -->
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body>
-    <div class="top-liner">
-      <div id="top" name="top"></div>
-    </div>
-    <div class="menu">
-        <div class="name">
-          <a class="page-scroll" href="#top">
-            <h3>MXM.</h3>
-          </a>
-        </div>
-        <ul class="nav-bar">
-            <li><a class="page-scroll" href="#top">home&nbsp;</a></li>
-            <li><a class="page-scroll" href="#portfolio">portfolio&nbsp;</a></li>
-            <li><a class="page-scroll" href="#vision">vision&nbsp;</a></li>
-            <li><a class="page-scroll" href="#profile">profile&nbsp;</a></li>
-            <li><a class="page-scroll" href="#contact">contact&nbsp;</a></li>
-        </ul>
-      </div>
-    <div id="home" name="home">
-      <div class="hero-unit">
+<!--[if gt IE 6]> <html class="no-js ie oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"  dir="ltr" lang="en-US"> <!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+<!-- Set the viewport width to device width for mobile -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="author" content="ppandp">
+<meta name="Description" content="Camera – Responsive Retina-Ready HTML5 Photography" />
+<title>Michelle MA</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/contact.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css" media="screen" />
+<!--[if gt IE 8]><!-->
+<link href="css/retina-responsive.css" rel="stylesheet" type="text/css" media="screen" />
+<!--<![endif]-->
+<!--[if !IE]> <link href="css/retina-responsive.css" rel="stylesheet" type="text/css" media="screen" /> <![endif]-->
+<link href="css/print.css" rel="stylesheet" type="text/css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300,300italic,700,600,800' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Lora:400italic,400,700italic' rel='stylesheet' type='text/css' />
+<!-- Hide this line for IE (needed for Firefox and others) -->
+<![if !IE]>
+<link rel="icon" href="ico/favicon.png" type="image/x-icon" />
+<![endif]>
+<!-- This is needed for IE -->
+<link rel="shortcut icon" href="ico/favicon.ico" type="image/ico" />
+</head>
+<body class="one-page">
+<!-- Preloader -->
+<div id="preloader">
+  <div id="status">
+    <div class="parent">
+      <div class="child">
+        <p class="small">loading</p>
       </div>
     </div>
-    <div id="portfolio" name="portfolio">
-      <div class="container">
-        <div class="content">
-          <h1>PORTFOLIO</h1>
-          <div class="col-md-4"><a href="http://on.be.net/1ssjjhc" target="_blank"><img src="img/portfolio/pokemo.jpg"></a></div>
-          <div class="col-md-4"><a href="http://on.be.net/11tSLVS" target="_blank"><img src="img/portfolio/timeToChange.jpg"></a></div>
-          <div class="col-md-4"><a href="http://on.be.net/T4f94b" target="_blank"><img src="img/portfolio/theStateOfMind.jpg"></a></div>
-          <div class="col-md-4"><a href="http://on.be.net/1n0BxFS" target="_blank"><img src="img/portfolio/napQ.jpg"></a></div>
-          <div class="col-md-4"><a href="http://on.be.net/1keioS6" target="_blank"><img src="img/portfolio/96sec.jpg"></a></div>
-          <div class="col-md-4"><a href="http://on.be.net/1n0xoBM" target="_blank"><img src="img/portfolio/hm.jpg"></a></div>
-          <div class="col-md-4"><a href="http://on.be.net/T4c0Br" target="_blank"><img src="img/portfolio/justWe.jpg"></a></div>
-          <div class="col-md-4"><a href="http://on.be.net/1n0vhho" target="_blank"><img src="img/portfolio/go.jpg"></a></div>
-          <div class="col-md-4"><a href="http://on.be.net/110RdmI" target="_blank"><img src="img/portfolio/warwar.jpg"></a></div>
-        </div>
-      </div>
-    </div>
-    <div id="vision" name="vision">
-      <div class="container">
-        <div class="content">
-          <h1>VISION</h1>
-          <img src="img/vision.jpg">
-          <div class="spacing"></div>
-          <div class="col-md-6">
-            <div class="col-md-11">
-              <h5>Less but better</h5>
-              <p>A good design is as little design as possible. It concentrates on the essential aspects, and the products are not burdened with non-essentials. Back to purity, back to simplicity. </p>
-            </div>
-            <div class="col-md-1">
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="col-md-1">
-            </div>
-            <div class="col-md-11">
-              <h5>Integrity</h5>
-              <p>A good design is always honest and it respects the nature of the object itself. It does not attempt to manipulate the customer with promises that are beyond what it can do.</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="col-md-11">
-              <h5>Unobtrusive</h5>
-              <p>A design fulfilling a purpose is like a tool, which is neither a decorative object nor a piece of art. The design should be neutral and restrained, leaving room for the customer’s self-expression. </p>
-            </div>
-            <div class="col-md-1">
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="col-md-1">
-            </div>
-            <div class="col-md-11">
-              <h5>Innovative</h5>
-              <p>Technological development is always offering new opportunities for original designs, but imaginative design always develops in tandem with improving technology, and can never be an end in itself.</p>
+  </div>
+</div>
+<header class="clearfix">
+  <h1 id="logo"> <a href="index.html">Michelle MA</a> </h1>
+  <div class="tagline"><span>less but better.</span></div>
+  <div id="nav-button"> <span class="nav-bar"></span> <span class="nav-bar"></span> <span class="nav-bar"></span> </div>
+  <nav id="options">
+    <ul id="nav" class="option-set">
+      <li><a href="#home" class="selected">Home</a> </li>
+      <li><a href="#portfolio">Portfolio</a> </li>
+      <li><a href="#about">About</a> </li>
+      <li><a href="#blog">Archive</a> </li>
+      <li><a href="#contact">Contact</a> </li>
+    </ul>
+  </nav>
+</header>
+<!-- end header -->
+<div id="content">
+  <div class="container">
+    <div id="container" class="clearfix">
+      <section class="element  clearfix col3-3 home">
+        <div class="images"><img src="images/hero.jpg" alt="" /></div>
+        <div id="heading">
+          <div class="parent">
+            <div class="child">
+              <h2>Simplicity is <u>&nbsp;&nbsp;&nbsp;&nbsp;</u>&nbsp;.</h2>
+              <p class="big">-&nbsp;&nbsp;the ultimate form of sophistication&nbsp;&nbsp;-</p>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div id="profile" name="profile">
-      <div class="container">
-        <div class="content">
-          <h1>PROFILE</h1>
-          <img src="img/profile.jpg">
-          <div class="spacing"></div>
-          <div class="col-md-12">
-            <h5>About Michelle</h5>
-            <p>Michelle is an interaction and industrial designer graduated from MDes Interaction Design, School of Design, the Hong Kong Polytechnic University 2014. She received her Bachelor of Engineering in Product Analysis and Engineering Design from the Hong Kong Polytechnic University in 2013.
-              <br>
-            With enthusiasm and passion towards design, Michelle started her design education in PolyU in 2009. Her work encompasses theory and practice of industrial design, product engineering, communication and visual design, software/hardware interaction and user experience design. Michelle joined SENSORO as Chief UX Designer in July 2014.</p>
-              <br> 
-            <div><a href="MichelleMa_CV.pdf" target="_blank"><p style="text-align: right">[View Full CV]</p></a></div>
+        <div class="overlay"></div>
+      </section>
+      <section class="element  clearfix col2-3 home">
+        <div class="col1-3 connect">
+          <div class="images"><img src="images/vision.jpg" alt="" /></div>
+        </div>
+        <div class="col1-3 white-right2">
+          <h3>Vision</h3>
+          <div class="borderline"></div>
+          <p>A good design is as little design as possible. It should not be burdened with non-essentials.</p>
+          <p>Design should be neutral and restrained. It does not attempt to manipulate the customer with promises that are beyond what it can do.</p>
+          <p class="small bottom"><a href="#portfolio">View my work <span class="arrow">→</span></a></p>
+        </div>
+        <div class="clear"></div>
+      </section>
+      
+      
+      
+      
+      
+      <section class="element  clearfix col3-3 portfolio menu">
+        <div class="images"><img src="images/hero_portfolio.jpg" alt="" /></div>
+        <div id="heading">
+          <div class="parent">
+            <div class="child">
+              <h2>Featured Works</h2>
+              
             </div>
-          <div class="col-md-4"></div>
-        </div>
-      </div>
-    </div>
-    <div id="contact" name="contact">
-      <div class="container">
-        <div class="content">
-          <h1>CONTACT</h1>
-          <img src="img/map.jpg">
-          <div class="spacing"></div>
-          <div class="col-md-4">
-            <h5>On The Web</h5>
-            <div class="col-md-3"><a href="https://www.facebook.com/michelle.ma.16" target="_blank"><img src="img/social/facebook.jpg" onmouseover="this.src='img/social/facebook_hover.jpg'" onmouseout="this.src='img/social/facebook.jpg'"></a></div>
-            <div class="col-md-3"><a href="https://twitter.com/MichelleMXM" target="_blank"><img src="img/social/twitter.jpg" onmouseover="this.src='img/social/twitter_hover.jpg'" onmouseout="this.src='img/social/twitter.jpg'"></a></div>
-            <div class="col-md-3"><a href="https://hk.linkedin.com/pub/michelle-ma/51/701/6a8/" target="_blank"><img src="img/social/linkedin.jpg" onmouseover="this.src='img/social/linkedin_hover.jpg'" onmouseout="this.src='img/social/linkedin.jpg'"></a></div>
-            <div class="col-md-3"><a href="https://plus.google.com/u/0/115463036359464085928/posts" target="_blank"><img src="img/social/gplus.jpg" onmouseover="this.src='img/social/gplus_hover.jpg'" onmouseout="this.src='img/social/gplus.jpg'"></a></div>
-            <div class="col-md-3"><a href="https://www.behance.net/michellema" target="_blank"><img src="img/social/behance.jpg" onmouseover="this.src='img/social/behance_hover.jpg'" onmouseout="this.src='img/social/behance.jpg'"></a></div>
-            <div class="col-md-3"><a href="https://dribbble.com/michellema" target="_blank"><img src="img/social/dribbble.jpg" onmouseover="this.src='img/social/dribbble_hover.jpg'" onmouseout="this.src='img/social/dribbble.jpg'"></a></div>
-            <div class="col-md-3"><a href="https://github.com/michellemxm" target="_blank"><img src="img/social/github.jpg" onmouseover="this.src='img/social/github_hover.jpg'" onmouseout="this.src='img/social/github.jpg'"></a></div>
-            <div class="col-md-3"><a href="https://www.youtube.com/channel/UChRbcARg9SrzJYFWKfMcKyA" target="_blank"><img src="img/social/youtube.jpg" onmouseover="this.src='img/social/youtube_hover.jpg'" onmouseout="this.src='img/social/youtube.jpg'"></a></div>
-          </div>
-          <div class="col-md-8">
-            <h5>Email</h5>
-            <p><a href="mailto:michelle.maxm@gmail.com" target="_top" style="color:#2b2421">michelle.maxm@gmail.com</a></p>
-            <h5>Address</h5>
-            <p>RM 2807, Tower1 B, Wangjing SOHO</p>
-            <p>No.10 Wangjing Street, Chaoyang District</p>
-            <p>Beijing, China, 100102 PRC</p>
           </div>
         </div>
-      </div>
-    </div>
-      <a href="#top" class="cd-top">Top</a>
-      <div class="copyright">
-        <h6>Copyright © 2012-2014 MICHELLE MA ALL RIGHTS RESERVED</h6>
-      </div>
-          <!-- resume open/close -->
-    <div class="overlay overlay-scale">
-      <button type="button" class="overlay-close">Close</button>
-      <div class="container">
-        <div class="content">
-          <iframe src="html/projects/1.html">
-          </iframe>
+        <div class="overlay"></div>
+      </section>
+      <section class="element  clearfix col1-3 portfolio menu">
+        <div class="col1-3 white">
+          <h3>Filter Projects</h3>
+          <div class="borderline"></div>
+          <p>Feel free to browse the whole portfolio:</p>
+          
+          <p><a href="#ixd,.menu">Interaction Design <span class="arrow">→</span></a><br />
+          <a href="#ipd,.menu">Product Design <span class="arrow">→</span></a><br />
+          <a href="#uiux,.menu">UI & UX <span class="arrow">→</span></a><br />
+           <a href="#research,.menu">Research Projects <span class="arrow">→</span></a><br />
+           <a href="#commercial,.menu">Commercial Projects <span class="arrow">→</span></a><br />
+          <a href="#portfolio,.menu">View all <span class="arrow">→</span></a></p>
+          <p class="small bottom">© 2015, Michelle MA</p>
         </div>
-      </div>
+        <div class="clear"></div>
+      </section>
+      <section class="element  clearfix col1-3 home portfolio ixd"> <a href="#">
+        <div class="images">
+          <div class="parent">
+            <div class="child">
+              <h4>96SEC</h4>
+              <p class="small">Interactive Ambient</p>
+            </div>
+          </div>
+          <img data-original="images/portfolio/96sec.jpg" alt="" class="lazy" />
+          <div class="overlay"></div>
+        </div>
+        </a> </section>
+      <section class="element  clearfix col1-3 home portfolio ixd ipd uiux"> <a href="#">
+        <div class="images">
+          <div class="parent">
+            <div class="child">
+              <h4>Nap-Q</h4>
+              <p class="small">Sleep Monitor</p>
+            </div>
+            </div>
+            <img data-original="images/portfolio/napq.jpg" alt="" class="lazy" />
+            <div class="overlay"></div>
+          </div>
+        </a> 
+      </section>
+      <section class="element  clearfix col2-3 home portfolio ixd ipd about"><a href="pokemo.html">
+        <div class="images">
+          <div class="parent">
+            <div class="child">
+              <h4>/POKEMO</h4>
+              <p class="small">Tactile Interactive Rings</p>
+            </div>
+          </div>
+          <img data-original="images/portfolio/pokemo.jpg" alt="" class="lazy" />
+          <div class="overlay"></div>
+        </div>
+        </a> </section>
+      <section class="element  clearfix col2-3 home portfolio ixd research"> <a href="#">
+        <div class="images">
+          <div class="parent">
+            <div class="child">
+              <h4>State of Mind</h4>
+              <p class="small">Reading Experience</p>
+            </div>
+          </div>
+          <img data-original="images/portfolio/stateofmind.jpg" alt="" class="lazy" />
+          <div class="overlay"></div>
+        </div>
+        </a> </section>
+      <section class="element  clearfix col1-3 half portfolio uiux ixd"> <a href="#">
+        <div class="images">
+          <div class="parent">
+            <div class="child">
+              <h4>Happiness Machine ài</h4>
+              <p class="small">Persuasive Design</p>
+            </div>
+          </div>
+          <img data-original="images/portfolio/hm.jpg" alt="" class="lazy" />
+          <div class="overlay"></div>
+        </div>
+        </a> </section>
+      <section class="element  clearfix col1-3 half portfolio research"> <a href="#">
+        <div class="images">
+          <div class="parent">
+            <div class="child">
+              <h4>Time to Change</h4>
+              <p class="small">HK Glass Recycle Campaign</p>
+            </div>
+          </div>
+          <img data-original="images/portfolio/ttc.jpg" alt="" class="lazy" />
+          <div class="overlay"></div>
+        </div>
+        </a> </section>
+      <section class="element  clearfix col1-3 portfolio commercial"> <a href="http://www.sensoro.com/en/tag" target="_blank">
+        <div class="images">
+          <div class="parent">
+            <div class="child">
+              <h4>Tag</h4>
+              <p class="small">iBeacon Sensor</p>
+            </div>
+          </div>
+          <img data-original="images/portfolio/tag.jpg" alt="" class="lazy" />
+          <div class="overlay"></div>
+        </div>
+        </a> </section>
+      <section class="element  clearfix col1-3 home about">
+        <div class="col1-3 half connect">
+          <div class="images"><img src="images/aboutme.jpg" alt="" /></div>
+        </div>
+        <div class="col1-3 white-bottom">
+          <h3>About Me</h3>
+          <div class="borderline"></div>
+          <p class="small">An Interaction Designer & A Tinker</br>
+            A Good Design =</br>
+            Passion + Dedication + A Lot of Coffee ;)</p>
+        </div>
+        <div class="clear"></div>
+      </section>
+      <section class="element  clearfix col1-3 half portfolio photography"> <a href="images/pic08.jpg" data-title="Project Title Here" data-fancybox-group="group1" class="popup">
+        <div class="images">
+          <div class="parent">
+            <div class="child">
+              <h4>Just We</h4>
+              <p class="small">Illuminating Interaction</p>
+            </div>
+          </div>
+          <img data-original="images/portfolio/justwe.jpg" alt="" class="lazy" />
+          <div class="overlay"></div>
+        </div>
+        </a> </section>
+      <section class="element  clearfix col2-3 about">
+        <div class="col1-3 connect">
+          <div class="images"><img src="images/vision.jpg" alt="" /></div>
+        </div>
+        <div class="col1-3 white-right2">
+          <h3>Profile</h3>
+          <div class="borderline"></div>
+          <p class="small">I am interaction and product designer graduated from MDes Interaction Design, School of Design, HKPU 2014. I received my Bachelor in Product Analysis and Engineering Design from Mechanical Engineering at HKPU in 2013. </br>My design work encompass theory and practice of industrial design, product engineering, visual communication and informatics, software and hardware interaction and user experience design. </p>
+          <p class="small bottom"><a href="MichelleMa_CV.pdf" target="_blank">View my CV <span class="arrow">→</span></a></p>
+        </div>
+        <div class="clear"></div>
+      </section>
+      <section class="element  clearfix col1-3 about">
+        <div class="images no-icon">
+          <div class="parent">
+            <div class="child">
+              <h4>Michelle MA</h4>
+              <p class="small">– on –<br />
+                <a href="https://hk.linkedin.com/pub/michelle-ma/51/701/6a8/" target="_blank">LinkedIn</a><br>
+                <a href="https://www.behance.net/michellema" target="_blank">Behance</a><br>
+                <a href="https://dribbble.com/michellema" target="_blank">Dribbble</a></p>
+            </div>
+          </div>
+          <img src="images/about.jpg" alt="" class="lazy" />
+          <div class="overlay"></div>
+        </div>
+      </section>
+      <section class="element  clearfix col3-3 blog">
+        <div class="images"><img src="images/hero_archive.jpg" alt="" /></div>
+        <div id="heading">
+          <div class="parent">
+            <div class="child">
+              <h2>Thingy</h2>
+            </div>
+          </div>
+        </div>
+        <div class="overlay"></div>
+      </section>
+      <section class="element  clearfix col1-3 blog auto">
+        <div class="col1-3 half connect auto">
+          <div class="images"><img src="images/archive/sensoroiot.jpg" alt="" /></div>
+        </div>
+        <div class="col1-3 white-bottom auto">
+          <p class="alt"><a href="#">Commercial</a>&nbsp;&middot;&nbsp;<a href="#">Hardware</a></p>
+          <h3><a href="http://www.sensoro.com/zh/iot" target="_blank">The Internet Of Things<br>IOT Developer Kit</a></h3>
+          <div class="borderline"></div>
+          <p>A commercial project I conducted in SENSORO Co., Ltd.</p>
+          <p class="alt">June, 2014</p>
+        </div>
+        <div class="clear"></div>
+      </section>
+      <section class="element  clearfix col1-3 blog auto">
+        <div class="col1-3 half connect auto">
+          <div class="images"><img src="images/archive/xlab.jpg" alt="" /></div>
+        </div>
+        <div class="col1-3 white-bottom auto">
+          <p class="alt"><a href="#">Commercial</a>&nbsp;&middot;&nbsp;<a href="#">Design</a></p>
+          <h3><a href="http://x.sensoro.com/home" target="_blank">Sensoro X Lab</a></h3>
+          <div class="borderline"></div>
+          <p>Interactive application online platform for Sensoro Co., Ltd.</p>
+          <p class="alt">November, 2015</p>
+        </div>
+        <div class="clear"></div>
+      </section>
+      <section class="element  clearfix col1-3 blog half"> <a href="#">
+        <div class="images no-icon">
+          <div class="parent">
+            <div class="child">
+              <h4><a href="lunch/lunchWhere.html" target="_blank" style="color:#ffffff">Random</a></h4>
+              <p class="small">A dice for lunch options</p>
+            </div>
+          </div>
+          <img src="images/archive/lunch.jpg" alt="" class="lazy">
+          <div class="overlay"></div>
+        </div>
+        </a> </section>
+      <section class="element  clearfix col1-3 blog auto">
+        <div class="col1-3 half connect auto">
+          <div class="images"><img src="images/archive/warwar.jpg" alt="" /></div>
+        </div>
+        <div class="col1-3 white-bottom auto">
+          <p class="alt"><a href="#">Design</a>&nbsp;&middot;&nbsp;<a href="#">Game</a></p>
+          <h3><a href="https://www.behance.net/gallery/21117209/WarWar" target="_blank">Global Game Jam<br>HK 2013: War War</a></h3>
+          <div class="borderline"></div>
+          <p>A pixel-style adventure game developed by a group of five intensively within 48 hours during the Global Game Jam 2013.</p>
+          <p class="alt">December, 2013</p>
+        </div>
+        <div class="clear"></div>
+      </section>
+      <!-- <section class="element  clearfix col1-3 blog"> <a href="post2.html">
+        <div class="images no-icon">
+          <div class="parent">
+            <div class="child">
+              <h4>Thomas Edison</h4>
+              <p class="big">" I have not failed. I've just found 10,000 ways that won't work. "</p>
+            </div>
+          </div>
+          <img src="images/blog06.jpg" alt="" class="lazy" />
+          <div class="overlay"></div>
+        </div>
+        </a> </section>
+      <section class="element  clearfix col1-3 blog auto">
+        <div class="col1-3 half connect auto">
+          <div class="images"><img src="images/blog02.jpg" alt="" /></div>
+        </div>
+        <div class="col1-3 white-bottom auto">
+          <p class="alt"><a href="#">Life</a>&nbsp;&middot;&nbsp;<a href="#">Video</a></p>
+          <h3><a href="post2.html">Ok, One Last Link</a></h3>
+          <div class="borderline"></div>
+          <p>Phasellus leo ante, posuere in fringilla vitae, pretium at dui. Fusce et neque quis odio gravida.</p>
+          <p class="alt">August 20, 2014</p>
+        </div>
+        <div class="clear"></div>
+      </section>
+      <section class="element  clearfix col1-3 blog auto">
+        <div class="col1-3 half connect auto">
+          <div class="images"><img src="images/blog04.jpg" alt="" /></div>
+        </div>
+        <div class="col1-3 white-bottom auto">
+          <p class="alt"><a href="#">Graphics</a>&nbsp;&middot;&nbsp;<a href="#">Art</a></p>
+          <h3><a href="post2.html">Post With a Quote</a></h3>
+          <div class="borderline"></div>
+          <p>Phasellus leo ante, posuere in fringilla vitae, pretium at dui. Fusce et neque quis odio gravida.</p>
+          <p class="alt">August 20, 2014</p>
+        </div>
+        <div class="clear"></div>
+      </section>
+      <section class="element  clearfix col1-3 white auto blog">
+        <p class="alt"><a href="#">Photography</a></p>
+        <h3><a href="post2.html">Aside Post Format Without an Image</a></h3>
+        <div class="borderline"></div>
+        <p>Phasellus leo ante, posuere in fringilla vitae, pretium at dui. Fusce et neque quis odio gravida.</p>
+        <p class="alt">August 20, 2014</p>
+      </section>-->
+      <section class="element  clearfix col1-3 contact">
+        <div class="col1-3 half connect">
+          <div class="images"><img src="images/aboutme.jpg" alt="" /></div>
+        </div>
+        <div class="col1-3 white-bottom">
+          <h3>On the web</h3>
+          <div class="borderline"></div>
+          <p>
+            <a href="https://www.facebook.com/michelle.ma.16" target="_blank">Facebook</a>  |
+            <a href="https://hk.linkedin.com/pub/michelle-ma/51/701/6a8/" target="_blank">Linkedin</a>  |
+            <a href="https://twitter.com/MichelleMXM" target="_blank">Twitter</a>
+            <br />
+            <a href="https://dribbble.com/michellema" target="_blank">Dribbble</a>  |
+            <a href="https://www.behance.net/michellema" target="_blank">Behance</a>  |
+            <a href="https://github.com/michellemxm" target="_blank">Github</a></p>
+        </div>
+        <div class="clear"></div>
+      </section>
+      <section class="element  clearfix col2-3 contact">
+        <div class="col1-3 connect">
+          <div class="images"><img src="images/about.jpg" alt="" /></div>
+        </div>
+        <div class="col1-3 white-right2">
+          <h3>Drop Me a Line</h3>
+          <div class="borderline"></div>
+          <div id="contact">
+            <form method="post" action="contact.php" name="contactform" id="contactform" autocomplete="off">
+              <fieldset>
+              <div class="alignleft padding-right">
+                <label for="name" accesskey="U"><span class="required">Your Name</span></label>
+                <input name="name" type="text" id="name" size="30" title="Your Name" />
+                <label for="email" accesskey="E"><span class="required">Email</span></label>
+                <input name="email" type="text" id="email" size="30" title="Email" />
+              </div>
+              <label for="comments" accesskey="C"><span class="required">Say Something</span></label>
+              <textarea name="comments" cols="40" rows="3" id="comments" title="Say Something"></textarea>
+              <span class="break"></span>
+              <p class="hide">I'll get back to you asap.</p>
+              <span id="message"></span>
+              <input type="submit" class="submit" id="submit" value="» Submit" />
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </section>
     </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/jquery.backgroundSize.js" type="text/javascript"></script>
-    <script src="js/scrolling-nav.js" type="text/javascript"></script>
-    <script src="js/back-to-top.js" type="text/javascript"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/modernizr.custom.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/overlay.js"></script>
-  </body>
+  </div>
+  <!-- end container -->
+</div>
+<!-- end content -->
+<footer>
+  <div class="container">
+    <ul class="social clearfix">
+      <li><a href="https://hk.linkedin.com/pub/michelle-ma/51/701/6a8/" class="linkedin" target="_blank">Visit my linkedin Account</a></li>
+      <li><a href="https://www.behance.net/michellema" class="behance" target="_blank">Visit my behance Account</a></li>
+      <li><a href="https://dribbble.com/michellema" class="dribbble" target="_blank">Visit my dribbble Account</a></li>
+    </ul>
+    <p>2807 T1B Wangjing SOHO, Beijing, China</p>
+    <p>|</p>
+    <p><a href="mailto:michelle.maxm@gmail.com">michelle.maxm@gmail.com</a></p>
+    <div class="clear"></div>
+    <p><span>©2015, Xiaomeng (Michelle) MA. All rights reserved.</span></p>
+  </div>
+</footer>
+<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="js/jquery-easing-1.3.js" type="text/javascript"></script>
+<script src="js/modernizr.js" type="text/javascript"></script>
+<script src="js/retina.js" type="text/javascript"></script>
+<script src="js/jquery.touchSwipe.min.js" type="text/javascript"></script>
+<script src="js/jquery.isotope2.min.js" type="text/javascript"></script>
+<script src="js/jquery.ba-bbq.min.js" type="text/javascript"></script>
+<script src="js/jquery.isotope.load.js" type="text/javascript"></script>
+<script src="js/responsive-nav2.js" type="text/javascript"></script>
+<script src="js/jquery.fancybox.pack.js" type="text/javascript"></script>
+<script src="js/preloader.js" type="text/javascript"></script>
+<script src="js/jquery.form.js" type="text/javascript"></script>
+<script src="js/input.fields.js" type="text/javascript"></script>
+<script src="js/jquery.lazyload.js"></script>
+<script src="js/image-hover3.js" type="text/javascript"></script>
+
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</body>
 </html>
