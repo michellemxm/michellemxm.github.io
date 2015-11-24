@@ -110,7 +110,7 @@ nav {display:block; float:none; height:auto }
 
 .flexslider .caption {width:300px; }
 
-.column1, .column2 {width:auto; border:0; padding:0; float:none; }
+.column1, .column2, .column3 {width:auto; border:0; padding:0; float:none; }
 
 footer { height:auto; position:relative; padding:0px 0px 95px 0px; width:310px; text-align:center; z-index:100; margin:0 auto; }
 #map {width:300px; height:195px;}
