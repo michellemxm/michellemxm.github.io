@@ -280,11 +280,11 @@ ul.social a {text-indent:-9000px; text-decoration:none; height:52px; width:52px;
 --------------------------------------------------------------------------------------------------------*/
 
 /* elements*/
-.project { width: 100%; background-color: #ffffff; }
+.project { width: 100%; }
 .project img { width: 100%; }
 .project .projecticon { text-align: center;}
 .project .projecticon img { width: auto; max-height: 70px; margin: 20px; }
-.project .projectline { text-align: center; }
+.project .projectline { text-align: center;}
 .project .projectline img { max-width: 400px; }
 .project .hero { padding-bottom: 100px; }
 .project .content { margin-left: 14%; margin-right: 14%; }
