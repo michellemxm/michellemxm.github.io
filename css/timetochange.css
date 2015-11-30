@@ -1,0 +1,20 @@
+@charset "utf-8";
+.project {background-color: #202627;}
+.contentfull {width: 100%;}
+.break90 {min-height: 90px;}
+.break110 {min-height: 110px;}
+.break750 {min-height: 750px;}
+.contentfull .sec3branding {background:#CEF010}
+.contentfull .sec3bins {background:#F2F2F2; position: relative; top: -3px;}
+.contentfull .sec3ac {background:url(../projects/timetochange/img/sec3ad.jpg); background-size: 920px; min-height: 736px;position: relative; top: -8px;}
+.contentfull .sec3ad img {position: relative; top: -8px;}
+/*typography for this project*/
+h5 { color: #c7da47; font-size:36px; line-height: 36px; font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif; font-weight:100; text-align: center; text-transform: uppercase; }
+h6 { color: #c7da47; font-size:18px; line-height: 30px; font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif; font-weight:100; text-align: center; text-transform: uppercase; }
+p.projectsubtitle { color: #c7da47; line-height: 22px; text-align: center; font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif; font-weight:300; padding: 0px;}
+p.projectsubtitleink { color: #202627; line-height: 22px; text-align: center; font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif; font-weight:300; padding: 0px;}
+p.projectsubtitle2 { font-size: 18px; color: #c7da47; line-height: 27px; text-align: center; padding: 0px; font-weight: 100; font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif; }
+p.projectsubtitle2regular { font-size: 18px; color: #c7da47; line-height: 27px; text-align: center; padding: 0px; font-weight: 400; font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif; }
+p.projectsubtitle2white { font-size: 18px; color: #ffffff; line-height: 27px; text-align: center; padding: 0px; font-weight: 400; font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif; }
+p.projectsubtitle2ink { font-size: 18px; color: #202627; line-height: 27px; text-align: center; padding: 0px; font-weight: 400; font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif; }
+p.projecttext { color: #c7da47; line-height: 22px; text-align: justify; font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif; font-weight:300; padding: 0px;}
