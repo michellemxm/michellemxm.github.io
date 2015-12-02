@@ -105,7 +105,7 @@ h1#logo a { display:block; background:url(../images/bg-logo.png) center no-repea
 h2 {font-size:48px; color:#fff; padding-bottom:1px; }
 .white-bottom h2 {font-size:24px; color:#2b2b2b; text-transform:none; letter-spacing:0; }
 h3 {font-size:18px; letter-spacing:2px; padding-bottom:3px; padding-top:19px; }
-.blog h3, .service h3 {text-transform:none; letter-spacing:0; padding-top:4px; padding-bottom:2px; font-size:19px; }
+.archive h3, .service h3 {text-transform:none; letter-spacing:0; padding-top:4px; padding-bottom:2px; font-size:19px; }
 .one-page h3 {text-transform:none; letter-spacing:0; font-size:19px; }
 h4 {font-size:14px; color:#fff; letter-spacing:1px; }
 .images.no-icon h4 {margin-top:0 }
@@ -139,7 +139,7 @@ header { position:relative; z-index:5555; width:920px; margin:0 auto; margin-top
 .alternative header { background:url(../images/pic01b.jpg) center top no-repeat; }
 .about header { background:url(../images/pic01e.jpg) center top no-repeat; }
 .services header { background:url(../images/pic01f.jpg) center top no-repeat; }
-.blog header { background:url(../images/pic01g.jpg) center top no-repeat; }
+.archive header { background:url(../images/pic01g.jpg) center top no-repeat; }
 .contact header { background:url(../images/pic01d.jpg) center top no-repeat; }
 .no-header-image header, .one-page header {background:none; height:auto; }
 #content {width:100%; position:relative; z-index:56; height:auto; margin-top:5px;}
@@ -290,3 +290,4 @@ ul.social a {text-indent:-9000px; text-decoration:none; height:52px; width:52px;
 .project .content { margin-left: 14%; margin-right: 14%; }
 .break { min-height: 60px;}
 .column3 { width: 220px; height:265px; float:left; position:relative}
+.column4 { width: 300px; height:auto; float:left; position:relative; margin-left: 15px; margin-right: 15px;}
