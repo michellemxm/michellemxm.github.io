@@ -73,6 +73,6 @@ html[xmlns] .slides {display: block;}
 
 /*.flex-direction-nav .flex-prev {opacity: 1; left: 0;}
   .flex-direction-nav .flex-next {opacity: 1; right: 0;}*/
-.flexslider .caption {display:block; position:absolute; z-index:111; bottom:40px; width:920px; padding-right:70px; text-align:right; color:#fff; pointer-events: none;}
-.caption p { font-weight:700; font-size:36px; font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif; }
+.flexslider .caption {display:block; position:absolute; z-index:111; bottom:40px; width:920px; padding-right:58px; text-align:right; color:#fff; pointer-events: none;}
+.caption p { font-weight:400; font-size:36px; font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif; font-style: italic;}
 .caption p span { font-weight:400; font:Georgia, "Times New Roman", Times, serif; font-size:16px; }
