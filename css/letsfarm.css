@@ -7,7 +7,7 @@
 .project iframe {position: relative; top: 3px;}
 .break {min-height: 50px;}
 .break120 {min-height: 120px;}
-hr { margin-left:8%; width:84%; border: 0; height: 0; border-top: 1px solid rgba(0, 0, 0, 0.1); border-bottom: 2px solid rgba(50, 55, 59, 1.0);}
+hr { margin-left:5%; width:90%; border: 0; height: 0; border-top: 1px solid rgba(0, 0, 0, 0.1); border-bottom: 2px solid rgba(42, 51, 48, 0.8);}
 /*typography for this project*/
 h5 { color: #ffffff; font-size:36px; line-height: 36px; font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif; font-weight:100; text-align: center; text-transform: uppercase; }
 h6 { color: #ffffff; font-size:18px; line-height: 30px; font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif; font-weight:100; text-align: center; text-transform: uppercase; }
