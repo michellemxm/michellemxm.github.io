@@ -7,15 +7,15 @@
 .breaksec518 {min-height: 518px;}
 .breaksec815 {min-height: 815px;}
 .breaksec575 {min-height: 575px;}
-.contentfull .sec1 {background: url(../projects/96sec/img/sec1bg.jpg);background-size: auto 100%;background-repeat: no-repeat;}
+.contentfull .sec1 {background: url(../projects/96sec/img/sec1bg.jpg);background-size: 100% auto;background-repeat: no-repeat;}
 .contentfull .sec2 {background: url(../projects/96sec/img/sec2bg.jpg);background-size: auto 100%;background-repeat: no-repeat;}
 .contentfull .sec3 {background: url(../projects/96sec/img/sec3bg.jpg);background-size: auto 100%;background-repeat: no-repeat;}
 .contentfull .sec4 {background: url(../projects/96sec/img/sec4bg.jpg);background-size: auto 100%;background-repeat: no-repeat;}
-.contentfull .sec5 {background: url(../projects/96sec/img/sec41.jpg);background-size: auto 100%;background-repeat: no-repeat;}
-.contentfull .sec6 {background: url(../projects/96sec/img/sec42.jpg);background-size: auto 100%;background-repeat: no-repeat;}
-.contentfull .sec7 {background: url(../projects/96sec/img/sec43.jpg);background-size: auto 100%;background-repeat: no-repeat;}
-.contentfull .sec8 {background: url(../projects/96sec/img/sec44.jpg);background-size: auto 100%;background-repeat: no-repeat;}
-.contentfull .sec9 {background: url(../projects/96sec/img/sec45.jpg);background-size: auto 100%;background-repeat: no-repeat;}
+.contentfull .sec5 {background: url(../projects/96sec/img/sec41.jpg);background-size: 100% auto;background-repeat: no-repeat;}
+.contentfull .sec6 {background: url(../projects/96sec/img/sec42.jpg);background-size: 100% auto;background-repeat: no-repeat;}
+.contentfull .sec7 {background: url(../projects/96sec/img/sec43.jpg);background-size: 100% auto;background-repeat: no-repeat;}
+.contentfull .sec8 {background: url(../projects/96sec/img/sec44.jpg);background-size: 100% auto;background-repeat: no-repeat;}
+.contentfull .sec9 {background: url(../projects/96sec/img/sec45.jpg);background-size: 100% auto;background-repeat: no-repeat;}
 .projectline {position: relative; top: 2px;}
 .project iframe {position: relative; top: 3px;}
 /*typography for this project*/
