@@ -423,9 +423,9 @@
               <label for="comments" accesskey="C"><span class="required">Say Something</span></label>
               <textarea name="comments" cols="40" rows="3" id="comments" title="Say Something"></textarea>
               <span class="break"></span>
-              <p class="hide">I'll get back to you asap.</p>
+              <p class="hide" id="feedback">I'll get back to you asap.</p>
               <span id="message"></span>
-              <input type="submit" class="submit" id="submit" value="» Submit" />
+              <input type="submit" onclick="document.getElementById('feedback').innerHTML = 'Email has been sent. Thank you!'" class="submit" id="submit" value="» Submit" />
               </fieldset>
             </form>
           </div>
