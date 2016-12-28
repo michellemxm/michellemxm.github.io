@@ -28,9 +28,9 @@ function pickRandom(array, size) {
 	return result;
 }
 
-var weeks = ["日", "一", "二", "三", "四", "五", "六"];
+var weeks = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 function getTodayString() {
-	return "今天是" + today.getFullYear() + "年" + (today.getMonth() + 1) + "月" + today.getDate() + "日 星期" + weeks[today.getDay()];
+	return "TODAY IS " + today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear() + " " + weeks[today.getDay()];
 }
 
 var today = new Date();
@@ -38,9 +38,9 @@ var timeseed = today.getMilliseconds();
 
 /////////////////////////////////////////////////////////
 
-var results = ['开发新据点儿', '兰州拉面', '1929小面', '本粥', '北漂食堂', '麻辣烫', '新疆米粉', '毛毛', 'DaisyFresh'];
+var results = ['Explore', 'Ramen', 'Hotpot', 'Korean', 'Sushi', 'Salad', 'Pizza', 'Burger', 'BBQ'];
 var descriptions = ['','','','','','','','',''];
-var luck_rate = [10, 100, 500, 800, 300, 800, 500, 100, 10]; // 吉凶概率分布，总数为 3120
+var luck_rate = [10, 100, 500, 800, 300, 800, 500, 100, 10]; // 按照喜好分配权重
 
 
 
