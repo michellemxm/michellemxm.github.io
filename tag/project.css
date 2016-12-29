@@ -57,7 +57,7 @@
 /* =3. Typography
 --------------------------------------------------------------------------------------------------------*/
 html {overflow: -moz-scrollbars-vertical; overflow-y: scroll; -webkit-font-smoothing: antialiased; }
-body { font: 14px Arial, Helvetica, sans-serif; color:#555; background:#fff;  }
+body { font: 14px Arial, Helvetica, sans-serif; color:#555; background:#f3f3f3;  }
 strong { font-weight:600; }
 em {font-size:17px; }
 a, a > * {-webkit-transition: all 0.2s ease 0s; -moz-transition: all 0.2s ease 0s; -o-transition: all 0.2s ease 0s; transition: all 0.2s ease 0s; }
