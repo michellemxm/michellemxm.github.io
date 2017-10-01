@@ -56,7 +56,7 @@ function init(){
       }
     })
 
-    console.log("salesCentral");
+    console.log("salesCentral" + salesCentral);
   })
 
 }
