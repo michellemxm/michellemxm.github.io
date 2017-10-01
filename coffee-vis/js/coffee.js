@@ -41,22 +41,11 @@ function init(){
       d.profit = +d.profit;
     })
 
-    data.forEach(function(d) {
-      if (d.regions == "Central") {
-        salesCentral += d.sales;
-      }
-      else if (d.regions == "East") {
-        salesEast += d.sales;
-      }
-      else if (d.regions == "West") {
-        salesWest += d.sales;
-      }
-      else if (d.regions == "South") {
-        salesSouth += d.sales;
-      }
-    })
+    //for (var i = 0; i < data.length; i++) {
+      //data[i]
+    //}
 
-    console.log("salesCentral" + salesCentral);
+    console.log(data.length);
   })
 
 }
