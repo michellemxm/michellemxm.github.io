@@ -41,11 +41,13 @@ function init(){
       d.profit = +d.profit;
     })
 
-    //for (var i = 0; i < data.length; i++) {
-      //data[i]
-    //}
+    for (var i = 0; i < data.length; i++) {
+      if (data[i].region == "Central") {
+        salesCentral += data[i].sales;
+      }
+    }
 
-    console.log(data.length);
+    console.log("salesCentral:" + salesCentral);
   })
 
 }
