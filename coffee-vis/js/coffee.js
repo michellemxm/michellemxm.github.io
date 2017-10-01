@@ -55,8 +55,8 @@ function init(){
         salesSouth += d.sales;
       }
     })
-    
-    console.log(salesCentral);
+
+    console.log("salesCentral");
   })
 
 }
