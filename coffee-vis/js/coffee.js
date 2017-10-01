@@ -21,13 +21,6 @@ var profitCoffee = 0;
 var profitEspresso = 0;
 var profitTea = 0;
 var profitHerbal = 0;
-//Console all sums
-var allSums = [
-  [salesCentral, salesEast, salesWest, salesSouth],
-  [profitCentral, profitEast, profitWest, profitSouth],
-  [salesCoffee, salesEspresso, salesTea, salesHerbal],
-  [profitCoffee, profitEspresso, profitTea, profitHerbal]
-];
 
 //DEFINE YOUR VARIABLES 
 
@@ -69,6 +62,13 @@ function init(){
         profitSouth += data[i].profit;
       }
     }
+    //Console all sums
+    var allSums = [
+      [salesCentral, salesEast, salesWest, salesSouth],
+      [profitCentral, profitEast, profitWest, profitSouth],
+      [salesCoffee, salesEspresso, salesTea, salesHerbal],
+      [profitCoffee, profitEspresso, profitTea, profitHerbal]
+    ];
     //Check on the sum in console
     console.log(allSums);
   })
