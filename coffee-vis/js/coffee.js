@@ -35,16 +35,30 @@ function init(){
   //Count number of lines in the csv data sheet
   //4248 rows of data for this sheet
 
-  // Parse csv and change strings to numbers
+  //Import data
   d3.csv("./data/CoffeeData.csv", function(data) {
     data.forEach(function(d) {
       d.sales = +d.sales;
       d.profit = +d.profit;
     })
     coffeeData = data;
-    console.log(coffeeData);
-
   })
+
+  coffeeData.forEach(function(c) {
+    if (c.regions == "Central") {
+        salesCentral += c.sales;
+      }
+    else if (c.regions == "East") {
+        salesEast += c.sales;
+      }
+    else if (c.regions == "West") {
+        salesWest += c.sales;
+      }
+    else if (c.regions == "South") {
+        salesSouth += c.sales;
+      }
+  })
+  console.log(salesCentral);
 
 }
 
