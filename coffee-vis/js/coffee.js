@@ -1,7 +1,6 @@
 var chart;
 var height = 200;
 var width = 300;
-var coffeeData;
 //Sum of sales by regions
 var salesCentral = 0;
 var salesEast = 0;
@@ -41,24 +40,24 @@ function init(){
       d.sales = +d.sales;
       d.profit = +d.profit;
     })
-    coffeeData = data;
-  })
 
-  coffeeData.forEach(function(c) {
-    if (c.regions == "Central") {
-        salesCentral += c.sales;
+    data.forEach(function(d) {
+      if (d.regions == "Central") {
+        salesCentral += d.sales;
       }
-    else if (c.regions == "East") {
-        salesEast += c.sales;
+      else if (d.regions == "East") {
+        salesEast += d.sales;
       }
-    else if (c.regions == "West") {
-        salesWest += c.sales;
+      else if (d.regions == "West") {
+        salesWest += d.sales;
       }
-    else if (c.regions == "South") {
-        salesSouth += c.sales;
+      else if (d.regions == "South") {
+        salesSouth += d.sales;
       }
+    })
+    
+    console.log(salesCentral);
   })
-  console.log(salesCentral);
 
 }
 
