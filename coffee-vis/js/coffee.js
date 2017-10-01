@@ -45,9 +45,18 @@ function init(){
       if (data[i].region == "Central") {
         salesCentral += data[i].sales;
       }
+      else if (data[i].region == "East") {
+        salesEast += data[i].sales;
+      }
+      else if (data[i].region == "West") {
+        salesWest += data[i].sales;
+      }
+      else if (data[i].region == "South") {
+        salesSouth += data[i].sales;
+      }
     }
 
-    console.log("salesCentral:" + salesCentral);
+    console.log("salesCentral:" + salesCentral + ";" + "salesEast:" + salesEast + ";" + "salesWest:" + salesWest + ";" + "salesSouth:" + salesSouth);
   })
 
 }
