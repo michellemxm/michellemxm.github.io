@@ -1,3 +1,8 @@
+//It is my first try in learning d3
+//I'm a designer and I don't have much programming experience;
+//My sincere apology if the code is not well-formatted or hard to read;
+
+//VARIABLES
 var chart;
 var height = 200;
 var width = 300;
@@ -22,9 +27,8 @@ var profitEspresso = 0;
 var profitTea = 0;
 var profitHerbal = 0;
 
-//DEFINE YOUR VARIABLES 
 
-
+//INITIATION
 //Gets called when the page is loaded.
 function init(){
   chart = d3.select('#vis').append('svg');
@@ -62,18 +66,39 @@ function init(){
         profitSouth += data[i].profit;
       }
     }
-    //Console all sums
+
+    //Calculate by categories
+    for (var i = 0; i < data.length; i++) {
+      if (data[i].category == "Coffee") {
+        salesCoffee += data[i].sales;
+        profitCoffee += data[i].profit;
+      }
+      else if (data[i].category == "Espresso") {
+        salesEspresso += data[i].sales;
+        profitEspresso += data[i].profit;
+      }
+      else if (data[i].category == "Tea") {
+        salesTea += data[i].sales;
+        profitTea += data[i].profit;
+      }
+      else if (data[i].category == "Herbal") {
+        salesHerbal += data[i].sales;
+        profitHerbal += data[i].profit;
+      }
+    }
+    
+    //Console all sums for debug
     var allSums = [
       [salesCentral, salesEast, salesWest, salesSouth],
       [profitCentral, profitEast, profitWest, profitSouth],
       [salesCoffee, salesEspresso, salesTea, salesHerbal],
       [profitCoffee, profitEspresso, profitTea, profitHerbal]
     ];
-    //Check on the sum in console
     console.log(allSums);
   })
 
 }
+
 
 
 //Called when the update button is clicked
