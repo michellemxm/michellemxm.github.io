@@ -1,6 +1,7 @@
 var chart;
 var height = 200;
 var width = 300;
+var coffeeData;
 //Sum of sales by regions
 var salesCentral = 0;
 var salesEast = 0;
@@ -40,7 +41,8 @@ function init(){
       d.sales = +d.sales;
       d.profit = +d.profit;
     })
-    console.log(data);
+    coffeeData = data;
+    console.log(coffeeData);
 
   })
 
