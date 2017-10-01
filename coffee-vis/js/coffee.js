@@ -81,7 +81,7 @@ function init(){
         salesTea += data[i].sales;
         profitTea += data[i].profit;
       }
-      else if (data[i].category == "Herbal") {
+      else if (data[i].category == "Herbal Tea") {
         salesHerbal += data[i].sales;
         profitHerbal += data[i].profit;
       }
