@@ -39,11 +39,21 @@ function init(){
     data.forEach(function(d) {
       d.sales = +d.sales;
       d.profit = +d.profit;
-
+      if (d.regions == "Central") {
+        salesCentral += d.sales;
+      }
+      else if (d.regions == "East") {
+        salesEast += d.sales;
+      }
+      else if (d.regions == "West") {
+        salesWest += d.sales;
+      }
+      else if (d.regions == "South") {
+        salesSouth += d.sales;
+      }
     })
-    console.log(data[0]);
-    console.log(data[1]);
-    console.log(data[2]);
+    console.log(salesCentral);
+
   })
 
 }
