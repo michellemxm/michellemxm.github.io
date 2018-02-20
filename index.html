@@ -73,6 +73,14 @@ $(document).ready(function(){
 });
 </script>
 
+<!-- jQuery for the preloader-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+    jQuery(window).load(function(){
+        jQuery(".mxm-loader-overlay").fadeOut(500);
+    });
+</script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114385180-1"></script>
 <script>
@@ -87,6 +95,13 @@ $(document).ready(function(){
 
 
 <body class="page-template-home">
+
+<!-- preloader -->
+<div class="mxm-loader-overlay"></div>
+<noscript>
+    <style>.hameid-loader-overlay { display: none; } </style>
+</noscript>
+
 
 <!-- header -->
 <header id="site-header" class="fixed-header">
