@@ -29,6 +29,15 @@
 	- 12) Features page
 	
  ------------------------------------ */
+/* --- preloader --- */
+ .mxm-loader-overlay {
+    width: 100%;
+    height: 100%;
+    background: center no-repeat #FFF;
+    z-index: 99999;
+    position: fixed;
+}
+ 
 
  
 /* --- 1) BASIC STYLING --- */
