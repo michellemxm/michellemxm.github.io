@@ -1,0 +1,54 @@
+a {
+    color: #313843;
+    text-decoration:none;
+}
+a:hover {
+    text-decoration:underline;
+}
+a:visited {
+    color:#313843;
+}
+
+#sidebar li {
+	list-style-type: none;
+}
+
+#sidebar li a {
+	color: #313843;
+}
+
+#sidebar li.active a {
+    color: #00AEEF;
+}
+
+.sticky{
+	position: -webkit-sticky;
+  	position: sticky;
+  	top: 120px;
+  	background-color: #fff;
+  	font-family: 'Open Sans', sans-serif
+  	-webkit-font-smoothing: antialiased;
+  	color: #313843;
+  	padding-top: 10px;
+}
+.product{
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 36px;
+	margin-bottom: 10px;
+}
+
+.phase {
+	font-weight: 400;
+	font-size: 16px;
+	text-transform: uppercase;
+	color: #313843;
+}
+
+.subphase {
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 25px;
+	color: #41464b;
+}
+
