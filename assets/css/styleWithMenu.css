@@ -149,7 +149,7 @@
 	
 	/* -- 4.2) page section title -- */
 	
-	.section-title{margin-bottom:30px;}
+	.section-title{margin-bottom:50px; margin-top: 100px;}
 	.section-title h2{font-size:27px;line-height:26px;letter-spacing:1px;margin-bottom:10px;font-weight:400;text-transform:uppercase;text-align:left;}
 	.section-title p{font-size:15px;line-height:19px;letter-spacing:0.5px;text-align:left;}
 	.section-title:after{width:40px;height:1px;display:block;background-color:#313843;content:"";margin:15px 0 0 0;}
