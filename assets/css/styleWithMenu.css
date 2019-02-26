@@ -30,14 +30,14 @@
 	
  ------------------------------------ */
 /* --- preloader --- */
- .mxm-loader-overlay {
+.mxm-loader-overlay {
     width: 100%;
     height: 100%;
-    background: center no-repeat #FFF;
+    background: url('../img/preloader.gif') center no-repeat #FFF;
+    background-size: 200px auto;
     z-index: 99999;
     position: fixed;
 }
- 
 
  
 /* --- 1) BASIC STYLING --- */
