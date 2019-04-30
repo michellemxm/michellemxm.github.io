@@ -17,10 +17,6 @@ a:visited {
 	color: #313843;
 }
 
-#sidebar li.active a {
-    color: #00AEEF;
-}
-
 .sticky{
 	position: -webkit-sticky;
   	position: sticky;
