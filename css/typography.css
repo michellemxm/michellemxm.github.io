@@ -1,0 +1,262 @@
+/* Typography Styles */
+
+/* Base Typography */
+body {
+    font-family: 'Quicksand', 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h4 {
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+}
+
+h5 {
+    font-size: clamp(1rem, 1.5vw, 1rem);
+}
+
+h6 {
+    font-size: clamp(0.8rem, 1.25vw, 0.8rem);
+}
+
+/* Paragraphs */
+p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+p.small {
+    font-size: 0.80rem;
+    margin-bottom: 0;
+}
+
+/* Font Colors */
+.primary {
+    color: var(--text-primary);
+}
+
+.secondary {
+    color: var(--text-secondary);
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+/* Buttons Typography */
+.btn {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+    color: var(--text-primary);
+}
+
+/* Navigation Typography */
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
+}
+
+.nav-resume:hover {
+    color: var(--text-primary);
+}
+
+/* Hero Section Typography */
+.hero-content-top {
+    text-align: right;
+}
+
+.hero-tagline {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.hero-tagline span:first-child {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Inline Icons */
+.inline-icon {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.25em;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.name-highlight {
+    font-weight: 400;
+}
+
+.hero-details {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.hero-role,
+.hero-experience,
+.hero-background {
+    color: var(--text-primary);
+    min-height: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+.text-link {
+    color: var(--text-primary);
+    font-weight: 400;
+    text-decoration: underline;
+    text-decoration-color: var(--text-secondary);
+}
+
+.text-link:hover {
+    text-decoration-color: var(--primary-color);
+}
+
+/* Skills Typography */
+.skill-tag {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.skill-tag:first-child {
+    font-weight: 400;
+}
+
+.project-tags span {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+
+
+/* Stats Typography */
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Contact Section Typography */
+.contact-details p {
+    color: var(--text-secondary);
+}
+
+/* Form Typography */
+.form-group input,
+.form-group textarea {
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+/* Footer Typography */
+.footer-copyright p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.footer-bottom {
+    text-align: center;
+    opacity: 0.8;
+}
+
+/* Responsive Typography */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .hero-content-top {
+        text-align: center;
+    }
+
+    .hero-details {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}

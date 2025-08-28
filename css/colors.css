@@ -1,0 +1,43 @@
+/* Color Variables */
+:root {
+    /* Primary Colors */
+    --primary-color: #FB008B;
+    --secondary-color: #2EF2FE;
+    /* Another pink option is #df3079 */
+
+    /* Background Colors */
+    --bg-primary: #0A090B;
+    --bg-secondary: #191919;
+    --bg-tertiary: #2a2a2a;
+
+    /* RGB Values for opacity usage */
+    --bg-primary-rgb: 10, 9, 11;
+    --bg-secondary-rgb: 25, 25, 25;
+    --bg-tertiary-rgb: 42, 42, 42;
+
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --text-tertiary: #938F9B;
+
+    /* Border Colors */
+    --border-dark: #232323;
+    --border-light: rgba(255, 255, 255, 0.1);
+
+    /* Transparent Backgrounds */
+    --bg-navbar: rgba(10, 9, 11, 0.95);
+    --bg-transparent: transparent;
+
+    /* Shadow Colors */
+    --shadow-primary: rgba(255, 71, 163, 0.3);
+    --shadow-dark: rgba(0, 0, 0, 0.3);
+    --shadow-darker: rgba(0, 0, 0, 0.5);
+
+    /* Kiro Colors */
+    --kiro-purple: #8543EE;
+
+    /* Alexa Colors */
+    --alexa-blue: #0075FF;
+
+
+}
