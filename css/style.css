@@ -826,7 +826,7 @@ section {
     }
 
     .container {
-        padding: 0 40px;
+        padding: 0 20px;
     }
 }
 
@@ -932,6 +932,24 @@ textarea:focus {
     padding: 0;
 }
 
+/* Ensure work tabs are always clickable */
+.work-tabs-fixed.hidden {
+    pointer-events: none;
+}
+
+.work-tabs-fixed:not(.hidden) {
+    pointer-events: auto;
+}
+
+.work-tabs-fixed * {
+    pointer-events: auto;
+}
+
+/* Ensure tabs are always on top and clickable */
+.work-tabs-fixed {
+    isolation: isolate;
+}
+
 /* Tab Navigation - Visible throughout Work section */
 .work-tabs-fixed {
     position: fixed;
@@ -939,7 +957,8 @@ textarea:focus {
     /* Position relative to the work section width */
     top: 50%;
     transform: translateY(-50%);
-    z-index: 100;
+    z-index: 1001;
+    pointer-events: auto;
 }
 
 .tab-container {
@@ -951,6 +970,7 @@ textarea:focus {
     border: 1px solid var(--border-light);
     border-radius: 16px;
     backdrop-filter: blur(10px);
+    pointer-events: auto;
 }
 
 .tab-button {
@@ -965,6 +985,9 @@ textarea:focus {
     justify-content: center;
     transition: all 0.3s ease;
     padding: 0;
+    pointer-events: auto;
+    position: relative;
+    z-index: 1;
 }
 
 .tab-button:hover {

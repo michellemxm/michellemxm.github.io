@@ -91,16 +91,39 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Handle tab button clicks - scroll to respective project
     tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const tabName = button.getAttribute('data-tab');
-            const targetProject = document.getElementById(`project-${tabName}`);
-            
-            if (targetProject) {
-                targetProject.scrollIntoView({ 
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+        // Add multiple event listeners to ensure clicks are captured
+        ['click', 'mousedown', 'touchstart'].forEach(eventType => {
+            button.addEventListener(eventType, (e) => {
+                if (eventType !== 'click') {
+                    return; // Only process click events for actual navigation
+                }
+                
+                e.preventDefault();
+                e.stopPropagation();
+                e.stopImmediatePropagation();
+                
+                const tabName = button.getAttribute('data-tab');
+                const targetProject = document.getElementById(`project-${tabName}`);
+                
+                if (targetProject) {
+                    // Temporarily disable paginated scroll to allow smooth scrolling
+                    if (window.paginatedScrollInstance) {
+                        window.paginatedScrollInstance.isScrolling = true;
+                    }
+                    
+                    targetProject.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Re-enable paginated scroll after animation
+                    setTimeout(() => {
+                        if (window.paginatedScrollInstance) {
+                            window.paginatedScrollInstance.isScrolling = false;
+                        }
+                    }, 1000);
+                }
+            }, { capture: true });
         });
     });
     

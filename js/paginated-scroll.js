@@ -169,6 +169,12 @@ class PaginatedScroll {
 
         if (Math.abs(e.deltaY) < 10) return; // Ignore small scroll movements
 
+        // Don't prevent default if the event target is within work-tabs-fixed
+        const workTabs = document.querySelector('.work-tabs-fixed');
+        if (workTabs && workTabs.contains(e.target)) {
+            return;
+        }
+
         e.preventDefault();
         
         const direction = e.deltaY > 0 ? 1 : -1;
