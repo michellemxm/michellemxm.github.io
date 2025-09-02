@@ -161,19 +161,24 @@ p.small {
 }
 
 
-
-
-
 .text-link {
     color: var(--text-primary);
     font-weight: 400;
     text-decoration: underline;
     text-decoration-color: var(--text-secondary);
+    transition: all 0.3s ease;
+    padding: 4px;
+}
+
+.text-link.no-left-padding {
+    padding-left: 0;
 }
 
 .text-link:hover {
+    color: var(--primary-color);
     text-decoration-color: var(--primary-color);
 }
+
 
 /* Skills Typography */
 .skill-tag {
