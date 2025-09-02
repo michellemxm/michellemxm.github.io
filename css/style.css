@@ -1,10 +1,14 @@
-/* Import Colors and Typography */
+/* Import Modular CSS Files */
 @import url('colors.css');
-@import url('typography.css');
 @import url('dot-pattern.css');
 @import url('navigation.css');
+@import url('preloader.css');
+@import url('paginated-scroll.css');
 
-/* Reset and Base Styles */
+/* ========================================
+   RESET AND BASE STYLES
+   ======================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -16,9 +20,77 @@ html {
 }
 
 body {
+    font-family: 'Quicksand', 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
     background-color: var(--bg-primary);
     overflow-x: hidden;
 }
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h4 {
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+}
+
+h5 {
+    font-size: clamp(1rem, 1.5vw, 1rem);
+}
+
+h6 {
+    font-size: clamp(0.8rem, 1.25vw, 0.8rem);
+}
+
+/* Paragraphs */
+p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+p.small {
+    font-size: 0.80rem;
+    margin-bottom: 0;
+}
+
+/* Text Utilities */
+.primary {
+    color: var(--text-primary);
+}
+
+.secondary {
+    color: var(--text-secondary);
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+/* ========================================
+   LAYOUT CONTAINERS
+   ======================================== */
 
 .container {
     max-width: 1600px;
@@ -26,7 +98,10 @@ body {
     padding: 0 20px;
 }
 
-/* Buttons */
+/* ========================================
+   BUTTON COMPONENTS
+   ======================================== */
+
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -34,10 +109,14 @@ body {
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
 }
 
 .btn-primary {
     background: var(--primary-color);
+    color: var(--text-primary);
 }
 
 .btn-primary:hover {
@@ -59,7 +138,9 @@ body {
 
 
 
-/* Hero Section */
+/* ========================================
+   HERO SECTION
+   ======================================== */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -93,8 +174,6 @@ body {
     min-width: 400px;
 }
 
-
-
 .hero-right {
     flex: 1;
     height: 100%;
@@ -111,6 +190,24 @@ body {
     text-align: right;
 }
 
+/* Hero Typography */
+.hero-content-top {
+    text-align: right;
+}
+
+.hero-tagline {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.hero-tagline span:first-child {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
 .hero-tagline-line {
     display: inline-block;
     width: 120px;
@@ -118,6 +215,31 @@ body {
     background: var(--text-secondary);
     margin: 6px 8px;
     vertical-align: bottom;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.name-highlight {
+    font-weight: 400;
+}
+
+.hero-details {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.hero-role,
+.hero-experience,
+.hero-background {
+    color: var(--text-primary);
+    min-height: 1.5em;
+    display: flex;
+    align-items: center;
 }
 
 .hero-content-bottom {
@@ -141,6 +263,34 @@ body {
     margin-right: 0.25rem;
 }
 
+/* Text Links */
+.text-link {
+    color: var(--text-primary);
+    font-weight: 400;
+    text-decoration: underline;
+    text-decoration-color: var(--text-secondary);
+    transition: all 0.3s ease;
+    padding: 4px;
+}
+
+.text-link.no-left-padding {
+    padding-left: 0;
+}
+
+.text-link:hover {
+    color: var(--primary-color);
+    text-decoration-color: var(--primary-color);
+}
+
+/* Inline Icons */
+.inline-icon {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.25em;
+}
+
 .hero-specialization {
     display: flex;
     flex-wrap: wrap;
@@ -150,6 +300,7 @@ body {
     align-items: center;
 }
 
+/* Skill Tags and Specializations */
 .specialization {
     background: var(--bg-secondary);
     color: var(--text-secondary);
@@ -163,6 +314,28 @@ body {
     background: var(--primary-color);
     color: var(--text-primary);
     border-color: var(--primary-color);
+}
+
+.skill-tag {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-dark);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.skill-tag:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border-color: var(--border-light);
+}
+
+.skill-tag:first-child {
+    font-weight: 400;
 }
 
 .scroll-indicator {
@@ -181,7 +354,10 @@ body {
     transform: rotate(45deg);
 }
 
-/* Section Styles */
+/* ========================================
+   SECTION LAYOUTS
+   ======================================== */
+
 section {
     padding: 5rem 0;
 }
@@ -205,12 +381,10 @@ section {
     margin-bottom: 2rem;
 }
 
-/* Work Section */
-.work {
-    background: var(--bg-primary);
-}
+/* ========================================
+   ABOUT SECTION
+   ======================================== */
 
-/* About Section */
 .about {
     background: var(--bg-primary);
     width: 100%;
@@ -282,20 +456,18 @@ section {
     margin: 0.5rem 0;
 }
 
-.skill-tag {
-    background: var(--bg-secondary);
-    color: var(--text-secondary);
-    padding: 0.25rem 0.5rem;
-    border-radius: 6px;
-    border: 1px solid var(--border-dark);
-    transition: all 0.3s ease;
-    display: inline-flex;
+
+
+/* Stats Typography */
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
 }
 
-.skill-tag:hover {
-    background: var(--bg-tertiary);
-    color: var(--text-primary);
-    border-color: var(--border-light);
+.stat-label {
+    color: var(--text-secondary);
+    font-weight: 500;
 }
 
 .about-stats {
@@ -316,7 +488,9 @@ section {
     transform: translateY(-5px);
 }
 
-/* Footer uses unified container class */
+/* ========================================
+   PROJECT COMPONENTS
+   ======================================== */
 
 .projects-grid {
     display: grid;
@@ -375,6 +549,8 @@ section {
     border-radius: 15px;
     border: 1px solid var(--border-dark);
     transition: all 0.3s ease;
+    font-size: 0.85rem;
+    font-weight: 500;
 }
 
 .project-tags span:hover {
@@ -383,7 +559,10 @@ section {
     border-color: var(--primary-color);
 }
 
-/* Contact Section */
+/* ========================================
+   CONTACT SECTION
+   ======================================== */
+
 .contact {
     background: var(--bg-primary);
     width: 100%;
@@ -457,12 +636,6 @@ section {
     color: var(--text-primary);
 }
 
-.contact-details p {
-    margin: 0;
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-}
-
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -481,6 +654,9 @@ section {
     border-radius: 8px;
     transition: border-color 0.3s ease;
     background: var(--bg-secondary);
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text-primary);
 }
 
 .form-group input:focus,
@@ -489,7 +665,9 @@ section {
     border-color: var(--primary-color);
 }
 
-/* Footer */
+/* ========================================
+   FOOTER SECTION
+   ======================================== */
 .footer {
     background: transparent;
     color: var(--text-primary);
@@ -534,6 +712,8 @@ section {
     color: var(--text-secondary);
     margin: 0;
     text-align: right;
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 .footer-social {
@@ -576,9 +756,12 @@ section {
     text-align: center;
     padding-top: 2rem;
     border-top: 1px solid var(--border-light);
+    opacity: 0.8;
 }
 
-/* Animations */
+/* ========================================
+   ANIMATIONS AND KEYFRAMES
+   ======================================== */
 @keyframes float {
 
     0%,
@@ -610,7 +793,10 @@ section {
     }
 }
 
-/* Responsive Design */
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
 @media (max-width: 640px) {
 
     /* Adjust adaptive sections for mobile */
@@ -680,6 +866,16 @@ section {
         text-align: center;
     }
 
+    /* Typography adjustments for mobile */
+    .hero-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .hero-content-top {
+        text-align: center;
+    }
+
     .about-content {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -737,6 +933,7 @@ section {
 }
 
 @media (max-width: 480px) {
+    /* Layout adjustments */
     .hero {
         padding: 80px 0 20px;
     }
@@ -757,6 +954,24 @@ section {
         padding: 0 15px;
     }
 
+    /* Typography adjustments */
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .expertise-card h4 {
+        font-size: 0.8rem;
+    }
+
+    .expertise-card p {
+        font-size: 0.7rem;
+    }
+
+    /* Component adjustments */
     .hero-buttons {
         flex-direction: column;
         align-items: center;
@@ -779,14 +994,6 @@ section {
 
     .expertise-card {
         padding: 0.75rem;
-    }
-
-    .expertise-card h4 {
-        font-size: 0.8rem;
-    }
-
-    .expertise-card p {
-        font-size: 0.7rem;
     }
 }
 
@@ -819,6 +1026,11 @@ section {
         width: 400px;
         min-width: 350px;
     }
+
+    /* Typography adjustments */
+    .hero-title {
+        font-size: 2.2rem;
+    }
 }
 
 /* Tablet screens */
@@ -831,7 +1043,25 @@ section {
     .hero .container {
         gap: 1.5rem;
     }
+
+    /* Typography adjustments */
+    .hero-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .hero-content-top {
+        text-align: center;
+    }
+
+    .hero-details {
+        text-align: center;
+    }
 }
+
+/* ========================================
+   MOTION AND ACCESSIBILITY PREFERENCES
+   ======================================== */
 
 /* Smooth scrolling for older browsers */
 @media (prefers-reduced-motion: no-preference) {
@@ -840,7 +1070,10 @@ section {
     }
 }
 
-/* Focus styles for accessibility */
+/* ========================================
+   ACCESSIBILITY AND FOCUS STYLES
+   ======================================== */
+
 .btn:focus,
 .nav-link:focus,
 .social-link:focus,
@@ -850,7 +1083,9 @@ textarea:focus {
     font-weight: 400;
 }
 
-/* Scroll to Top Button */
+/* ========================================
+   SCROLL TO TOP COMPONENT
+   ======================================== */
 .scroll-to-top {
     position: fixed;
     bottom: 30px;
@@ -887,7 +1122,9 @@ textarea:focus {
     box-shadow: 0 6px 20px var(--shadow-primary);
 }
 
-/* Loading animation for images */
+/* ========================================
+   LOADING ANIMATIONS
+   ======================================== */
 .placeholder-image,
 .placeholder-work {
     animation: pulse 2s infinite;
@@ -907,7 +1144,9 @@ textarea:focus {
     }
 }
 
-/* Work Section - Vertical Projects Layout */
+/* ========================================
+   WORK SECTION - VERTICAL PROJECTS LAYOUT
+   ======================================== */
 .work-section {
     position: relative;
     background: var(--bg-primary);
@@ -1157,7 +1396,6 @@ textarea:focus {
 .carousel-tile:hover {
     transform: translateY(-5px);
     border-color: var(--primary-color);
-    box-shadow: 0 10px 30px rgba(251, 0, 139, 0.2);
 }
 
 .tile-image {
@@ -1191,7 +1429,7 @@ textarea:focus {
 
 
 
-/* Responsive Design */
+/* Work Section Responsive Design */
 @media (max-width: 1024px) {
     .work-section {
         padding: 0;

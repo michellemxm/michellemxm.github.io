@@ -32,10 +32,15 @@
     padding: 0 20px;
 }
 
+/* Navigation Typography */
 .nav-logo {
     display: flex;
     align-items: center;
     gap: 12px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    text-decoration: none;
 }
 
 .nav-logo-asset {
@@ -52,8 +57,17 @@
 }
 
 .nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
     transition: color 0.3s ease;
     position: relative;
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
 }
 
 .nav-link.active::after {
@@ -75,6 +89,10 @@
 
 .nav-resume:hover {
     background-color: var(--border-dark);
+    color: var(--text-primary);
+}
+
+.nav-resume:hover {
     color: var(--text-primary);
 }
 
@@ -104,7 +122,7 @@
         height: 60px;
         padding: 0;
     }
-    
+
     .nav-container {
         padding: 0 16px;
     }
