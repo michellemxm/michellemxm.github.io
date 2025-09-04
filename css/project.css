@@ -189,6 +189,10 @@
 .project-content {
     background: var(--bg-primary);
     padding: 0 0 5rem 0;
+    /* Ensure proper overflow for sticky positioning */
+    overflow: visible;
+    /* Ensure proper height for sticky context */
+    min-height: 100vh;
 }
 
 .content-grid {
@@ -199,6 +203,16 @@
     position: relative;
 }
 
+.toc-container {
+    position: relative;
+    /* Ensure proper height for sticky positioning */
+    height: fit-content;
+}
+
+.main-content {
+    width: 100%;
+}
+
 /* Table of Contents */
 .toc-container {
     position: relative;
@@ -206,13 +220,28 @@
 
 .toc-content {
     position: sticky;
-    top: 132px;
-    /* 92px navbar + 40px offset */
+    top: 108px;
+    /* 16px navbar top + 76px navbar height + 16px offset = 108px */
     background: var(--bg-secondary);
     border: 1px solid var(--border-dark);
     border-radius: 16px;
     padding: 20px;
     transition: all 0.3s ease;
+    z-index: 10;
+    /* Ensure the sticky element has proper height constraints */
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    /* Initially hidden until project-content section is reached */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-20px);
+}
+
+/* Show TOC when project-content section is in view */
+.toc-content.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
 }
 
 .toc-content h4 {
@@ -248,10 +277,7 @@
     background: rgba(var(--primary-color-rgb, 251, 0, 139), 0.1);
 }
 
-/* Main Content Area */
-.main-content {
-    width: 100%;
-}
+/* Main Content Area - styles moved to .content-grid section */
 
 .content-section {
     margin-bottom: 5rem;
@@ -399,6 +425,10 @@
     .toc-content {
         position: static;
         margin-bottom: 2rem;
+        /* Always show on mobile when in project-content section */
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
     }
 
     .toc-nav {

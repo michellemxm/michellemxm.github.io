@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initTableOfContents();
     initScrollToTop();
     initNavbarScroll();
+    initStickyToc();
 });
 
 // Project Dropdown Functionality
@@ -199,28 +200,138 @@ function initNavbarScroll() {
     updateNavbarOnScroll();
 }
 
-// Sticky TOC Functionality
+// Sticky TOC Functionality - Enhanced with visibility control
 function initStickyToc() {
     const tocContainer = document.getElementById('tocContainer');
+    const tocContent = tocContainer?.querySelector('.toc-content');
+    const projectContentSection = document.querySelector('.project-content');
     
-    if (!tocContainer) return;
+    if (!tocContainer || !tocContent || !projectContentSection) return;
     
-    function updateTocPosition() {
-        const scrollY = window.scrollY;
-        const navbarHeight = 92;
-        const offset = 40;
-        
-        if (scrollY > navbarHeight + offset) {
-            tocContainer.style.position = 'fixed';
-            tocContainer.style.top = `${navbarHeight + offset}px`;
-        } else {
-            tocContainer.style.position = 'static';
-        }
+    // Initialize visibility control
+    initTocVisibility();
+    
+    // Check if sticky positioning is supported and working
+    const testSticky = document.createElement('div');
+    testSticky.style.position = 'sticky';
+    const stickySupported = testSticky.style.position === 'sticky';
+    
+    if (!stickySupported) {
+        // Fallback for browsers that don't support sticky positioning
+        implementStickyFallback();
+    } else {
+        // Monitor if CSS sticky is actually working
+        monitorStickyBehavior();
     }
     
-    // Note: The sticky positioning is handled via CSS, but this function
-    // can be used for more complex sticky behavior if needed
+    function initTocVisibility() {
+        let observer;
+        
+        function setupVisibilityObserver() {
+            // Clean up existing observer
+            if (observer) {
+                observer.disconnect();
+            }
+            
+            // Check if we're on mobile (where TOC is always visible in project-content)
+            const isMobile = window.innerWidth <= 768;
+            
+            if (isMobile) {
+                // On mobile, TOC is always visible when in project-content section
+                tocContent.classList.add('visible');
+                return;
+            }
+            
+            // Use Intersection Observer to detect when project-content section is in view
+            observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Project content section is in view, show TOC
+                        tocContent.classList.add('visible');
+                    } else {
+                        // Project content section is not in view, hide TOC
+                        tocContent.classList.remove('visible');
+                    }
+                });
+            }, {
+                // Trigger when the top 20% of the project-content section is visible
+                rootMargin: '-20% 0px -80% 0px',
+                threshold: 0
+            });
+            
+            observer.observe(projectContentSection);
+        }
+        
+        // Initial setup
+        setupVisibilityObserver();
+        
+        // Handle window resize to switch between mobile and desktop behavior
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            if (resizeTimeout) {
+                clearTimeout(resizeTimeout);
+            }
+            resizeTimeout = setTimeout(setupVisibilityObserver, 100);
+        });
+    }
     
-    window.addEventListener('scroll', updateTocPosition);
-    updateTocPosition();
+    function implementStickyFallback() {
+        const navbarHeight = 92; // 16px top + 76px height
+        const offset = 16;
+        const stickyTop = navbarHeight + offset;
+        
+        function updateTocPosition() {
+            const scrollY = window.scrollY;
+            const projectContentTop = projectContentSection.offsetTop;
+            const shouldStick = scrollY > (projectContentTop - stickyTop);
+            
+            // Only apply sticky behavior if TOC is visible
+            if (tocContent.classList.contains('visible') && shouldStick) {
+                tocContent.style.position = 'fixed';
+                tocContent.style.top = `${stickyTop}px`;
+                tocContent.style.width = '200px'; // Match original width
+            } else {
+                tocContent.style.position = 'static';
+                tocContent.style.width = 'auto';
+            }
+        }
+        
+        let scrollTimeout;
+        window.addEventListener('scroll', function() {
+            if (scrollTimeout) {
+                clearTimeout(scrollTimeout);
+            }
+            scrollTimeout = setTimeout(updateTocPosition, 5);
+        });
+        
+        updateTocPosition();
+    }
+    
+    function monitorStickyBehavior() {
+        // Test if sticky is actually working by checking position changes
+        let stickyTestTimeout;
+        
+        function testStickyWorking() {
+            const currentScrollY = window.scrollY;
+            const tocRect = tocContent.getBoundingClientRect();
+            const expectedTop = 108; // Our sticky top value
+            const projectContentTop = projectContentSection.offsetTop;
+            
+            // Only test if TOC is visible and we've scrolled past the project content start
+            if (tocContent.classList.contains('visible') && 
+                currentScrollY > projectContentTop && 
+                Math.abs(tocRect.top - expectedTop) > 10) {
+                console.log('TOC: CSS sticky may not be working, falling back to JavaScript');
+                implementStickyFallback();
+                return;
+            }
+        }
+        
+        window.addEventListener('scroll', function() {
+            if (stickyTestTimeout) {
+                clearTimeout(stickyTestTimeout);
+            }
+            stickyTestTimeout = setTimeout(testStickyWorking, 100);
+        });
+    }
 }
