@@ -219,14 +219,11 @@
 }
 
 .toc-content {
-    position: sticky;
-    top: 108px;
-    /* 16px navbar top + 76px navbar height + 16px offset = 108px */
     background: var(--bg-secondary);
     border: 1px solid var(--border-dark);
     border-radius: 16px;
     padding: 20px;
-    transition: all 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
     z-index: 10;
     /* Ensure the sticky element has proper height constraints */
     max-height: calc(100vh - 120px);
@@ -234,14 +231,14 @@
     /* Initially hidden until project-content section is reached */
     opacity: 0;
     visibility: hidden;
-    transform: translateX(-20px);
+    transform: translateY(10px);
 }
 
 /* Show TOC when project-content section is in view */
 .toc-content.visible {
     opacity: 1;
     visibility: visible;
-    transform: translateX(0);
+    transform: translateY(0);
 }
 
 .toc-content h4 {
@@ -257,13 +254,11 @@
 }
 
 .toc-link {
-    color: var(--text-secondary);
+    color: var(--text-tertiary);
     text-decoration: none;
     font-size: 0.85rem;
     padding: 8px 12px;
-    border-radius: 8px;
     transition: all 0.3s ease;
-    border-left: 3px solid transparent;
 }
 
 .toc-link:hover {
@@ -273,8 +268,6 @@
 
 .toc-link.active {
     color: var(--primary-color);
-    border-left-color: var(--primary-color);
-    background: rgba(var(--primary-color-rgb, 251, 0, 139), 0.1);
 }
 
 /* Main Content Area - styles moved to .content-grid section */
