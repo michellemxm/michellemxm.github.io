@@ -254,12 +254,13 @@
 .toc-nav {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
 }
 
 .toc-link {
     color: var(--text-tertiary);
     text-decoration: none;
+    border-radius: 12px;
     font-size: 0.85rem;
     padding: 8px 12px;
     transition: all 0.3s ease;
@@ -283,11 +284,22 @@
 
 .content-label {
     display: inline-block;
-    color: var(--primary-color);
     font-size: 0.85rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
     letter-spacing: 0.1em;
+    color: var(--text-primary);
+    position: relative;
+}
+
+.content-label::before {
+    content: '<';
+    color: var(--primary-color);
+}
+
+.content-label::after {
+    content: '>';
+    color: var(--primary-color);
 }
 
 /* Layout 1: Text Only */

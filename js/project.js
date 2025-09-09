@@ -88,7 +88,24 @@ function initTableOfContents() {
     const tocLinks = document.querySelectorAll('.toc-link');
     const sections = document.querySelectorAll('.content-section');
 
-    if (!tocLinks.length || !sections.length) return;
+    if (!tocLinks.length || !sections.length) {
+        console.warn('TOC: Missing elements', { tocLinks: tocLinks.length, sections: sections.length });
+        return;
+    }
+    
+    console.log('TOC initialized with', tocLinks.length, 'links and', sections.length, 'sections');
+    
+    // Debug function - call window.enableTocDebug() in console to debug
+    window.enableTocDebug = () => { window.tocDebug = true; };
+    window.disableTocDebug = () => { window.tocDebug = false; };
+    
+    // Log section positions for debugging
+    sections.forEach(section => {
+        const h3 = section.querySelector('h3');
+        if (h3) {
+            console.log(`Section ${section.id}: h3 at ${h3.offsetTop}px`);
+        }
+    });
 
     // Handle TOC link clicks
     tocLinks.forEach(link => {
@@ -98,52 +115,120 @@ function initTableOfContents() {
             const targetSection = document.getElementById(targetId);
 
             if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 140; // Account for fixed navbar
+                // Get the absolute position of the section
+                const rect = targetSection.getBoundingClientRect();
+                const absoluteTop = rect.top + window.scrollY;
+                
+                // Position section just below the navbar with buffer
+                const navbarHeight = 132;
+                const buffer = 100; // Same buffer as trigger point
+                const targetScrollY = absoluteTop - navbarHeight - buffer;
+                
                 window.scrollTo({
-                    top: offsetTop,
+                    top: Math.max(0, targetScrollY),
                     behavior: 'smooth'
                 });
+
+                // Update active state immediately
+                tocLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
             }
         });
     });
 
     // Update active TOC link on scroll
     function updateActiveTocLink() {
-        const scrollPosition = window.scrollY + 200; // Offset for better UX
-
+        const scrollY = window.scrollY;
+        const navbarHeight = 132;
+        
+        // Get the start position of the project-content section
+        const projectContentSection = document.querySelector('.project-content');
+        const contentStartY = projectContentSection ? projectContentSection.offsetTop : 0;
+        
+        // Calculate trigger point relative to viewport
+        const viewportTrigger = scrollY + navbarHeight + 100; // 100px buffer below navbar
+        
         let activeSection = null;
+        
+        // Find all sections and their positions
+        const sectionData = [];
         sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionBottom = sectionTop + section.offsetHeight;
-
-            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                activeSection = section;
-            }
+            // Get absolute position of the section element
+            const rect = section.getBoundingClientRect();
+            const absoluteTop = rect.top + window.scrollY;
+            
+            sectionData.push({
+                section: section,
+                top: absoluteTop,
+                bottom: absoluteTop + section.offsetHeight,
+                id: section.id
+            });
         });
+        
+        // Sort sections by position
+        sectionData.sort((a, b) => a.top - b.top);
+        
+        // Find which section should be active
+        for (let i = 0; i < sectionData.length; i++) {
+            const current = sectionData[i];
+            const next = sectionData[i + 1];
+            
+            // If we're past this section's top position
+            if (viewportTrigger >= current.top) {
+                // If there's no next section, or we haven't reached the next one yet
+                if (!next || viewportTrigger < next.top) {
+                    activeSection = current.section;
+                    break;
+                }
+            }
+        }
+        
+        // Only activate sections if we're actually in the content area
+        if (scrollY < contentStartY - 200) {
+            activeSection = null;
+        }
 
         // Update TOC active states
         tocLinks.forEach(link => {
             link.classList.remove('active');
-            if (activeSection) {
-                const targetId = activeSection.getAttribute('id');
-                if (link.getAttribute('href') === `#${targetId}`) {
-                    link.classList.add('active');
-                }
-            }
         });
+        
+        if (activeSection) {
+            const targetId = activeSection.getAttribute('id');
+            const activeLink = document.querySelector(`.toc-link[href="#${targetId}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+        }
+        
+        // Debug logging
+        if (window.tocDebug) {
+            console.log('ScrollY:', scrollY, 'ContentStart:', contentStartY, 'ViewportTrigger:', viewportTrigger, 'Active:', activeSection?.id || 'none');
+            sectionData.forEach(s => {
+                console.log(`  ${s.id}: ${s.top}px - ${s.bottom}px`);
+            });
+        }
     }
 
-    // Throttled scroll listener for performance
-    let scrollTimeout;
+    // Scroll listener for TOC updates
+    function handleScroll() {
+        updateActiveTocLink();
+    }
+    
+    // Use requestAnimationFrame for better performance
+    let ticking = false;
     window.addEventListener('scroll', function () {
-        if (scrollTimeout) {
-            clearTimeout(scrollTimeout);
+        if (!ticking) {
+            requestAnimationFrame(function() {
+                handleScroll();
+                ticking = false;
+            });
+            ticking = true;
         }
-        scrollTimeout = setTimeout(updateActiveTocLink, 10);
     });
 
     // Initial call
-    updateActiveTocLink();
+    setTimeout(updateActiveTocLink, 100);
 }
 
 // Scroll to Top Button
