@@ -25,11 +25,23 @@
 </head>
 
 <body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo-container">
+                <img src="image/icon/logo-asset.png" alt="MXM Logo" class="preloader-logo-img">
+                <div class="preloader-spinner">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Project Navigation -->
     <nav class="navbar project-navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo project-nav-logo">
-                <i class="fas fa-arrow-left back-icon"></i>
+                <img src="image/icon/back@3x.png" alt="Back" class="back-icon">
                 <span>HOME</span>
             </a>
             <ul class="nav-menu">
@@ -63,7 +75,7 @@
     <!-- Project Cover -->
     <section class="project-cover">
         <div class="container">
-            <div class="project-cover-content">
+            <div class="project-cover-content" style="background: var(--kiro-purple);">
                 <img src="image/index/index-work-kiro.png" alt="Project Cover" class="project-cover-image">
             </div>
         </div>
@@ -72,19 +84,20 @@
     <!-- Project Overview -->
     <section class="project-overview">
         <div class="container">
+            <h4 class="overview-title">Overview</h4>
             <div class="overview-grid">
                 <div class="overview-column">
-                    <h3>Challenge</h3>
+                    <h5>Challenge</h5>
                     <p>Developers struggle with the gap between product requirements and code implementation, often
                         leading to misaligned features and inefficient development cycles.</p>
                 </div>
                 <div class="overview-column">
-                    <h3>Solution</h3>
+                    <h5>Solution</h5>
                     <p>Kiro introduces a spec-driven workflow that helps developers move systematically from
                         requirements to technical design to structured tasks with AI agent support.</p>
                 </div>
                 <div class="overview-column overview-details">
-                    <h3>Project Details</h3>
+                    <h5>Project Details</h5>
                     <p class="detail-item"><strong>Role:</strong> Design Lead</p>
                     <p class="detail-item"><strong>Timeline:</strong> 2024-2025</p>
                     <p class="detail-item"><strong>Team:</strong> Product, Engineering, Science</p>
@@ -123,7 +136,7 @@
                     <div class="content-section" id="section-1">
                         <div class="content-layout-text">
                             <span class="content-label">01</span>
-                            <h2>Introduction</h2>
+                            <h3>Introduction</h3>
                             <p>Kiro represents a fundamental shift in how developers approach software creation. Rather
                                 than jumping straight into code, Kiro encourages a structured methodology that begins
                                 with clear requirements, progresses through thoughtful design, and culminates in
@@ -136,7 +149,7 @@
                         <div class="content-layout-split">
                             <div class="content-text">
                                 <span class="content-label">02</span>
-                                <h2>Design Process</h2>
+                                <h3>Design Process</h3>
                                 <p>Our design process focused on understanding developer workflows and identifying pain
                                     points in the traditional development cycle. Through extensive user research and
                                     iterative prototyping, we crafted an experience that feels natural while introducing
@@ -156,7 +169,7 @@
                             </div>
                             <div class="content-text">
                                 <span class="content-label">03</span>
-                                <h2>Key Features</h2>
+                                <h3>Key Features</h3>
                                 <p>The core features of Kiro center around the spec-driven workflow, intelligent code
                                     generation, and seamless integration with existing development tools. Each feature
                                     was designed to enhance rather than disrupt established developer practices.</p>
@@ -168,7 +181,7 @@
                     <div class="content-section" id="section-4">
                         <div class="content-layout-full-image">
                             <span class="content-label">04</span>
-                            <h2>User Research Insights</h2>
+                            <h3>User Research Insights</h3>
                             <div class="full-width-image">
                                 <img src="image/index/index-work-more-fpo.png" alt="User Research"
                                     class="content-img-full">
@@ -180,7 +193,7 @@
                     <div class="content-section" id="section-5">
                         <div class="content-layout-text">
                             <span class="content-label">05</span>
-                            <h2>Final Design</h2>
+                            <h3>Final Design</h3>
                             <p>The final design balances powerful functionality with intuitive usability. Every
                                 interface element serves a purpose in the spec-driven workflow, from the initial
                                 requirements gathering to the final code implementation. The result is a tool that feels
@@ -193,7 +206,7 @@
                         <div class="content-layout-split">
                             <div class="content-text">
                                 <span class="content-label">06</span>
-                                <h2>Results & Impact</h2>
+                                <h3>Results & Impact</h3>
                                 <p>Early adoption metrics show significant improvements in development velocity and code
                                     quality. Developers report feeling more confident in their implementations and
                                     appreciate the structured approach to feature development that Kiro provides.</p>
@@ -241,6 +254,7 @@
         <i class="fas fa-chevron-up"></i>
     </button>
 
+    <script src="js/preloader.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/project.js"></script>
 </body>

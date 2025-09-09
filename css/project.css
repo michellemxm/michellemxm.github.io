@@ -4,17 +4,18 @@
 
 /* Project Navigation Overrides */
 .project-navbar .nav-logo {
-    gap: 8px;
+    gap: 12px;
 }
 
 .back-icon {
-    font-size: 1rem;
-    color: var(--text-secondary);
-    transition: color 0.3s ease;
+    width: 28px;
+    height: 28px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
 }
 
 .project-nav-logo:hover .back-icon {
-    color: var(--primary-color);
+    opacity: 1;
 }
 
 /* Make WORK non-clickable but visually identical to home page */
@@ -119,14 +120,13 @@
    ======================================== */
 .project-cover {
     background: var(--bg-primary);
-    padding: 5rem 0;
+    padding: 3rem 0 2rem 0;
     margin-top: 92px;
 }
 
 .project-cover-content {
     width: 100%;
     height: 600px;
-    background: var(--bg-tertiary);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,14 +139,20 @@
     max-height: 100%;
     object-fit: contain;
     border-radius: 12px;
+    padding-top: 2%;
 }
 
 /* ========================================
    PROJECT OVERVIEW SECTION
    ======================================== */
 .project-overview {
-    padding: 5rem 0;
+    padding: 0 0 5rem 0;
     background: var(--bg-primary);
+}
+
+.overview-title {
+    color: var(--text-primary);
+    padding-bottom: 1rem;
 }
 
 .overview-grid {
@@ -159,7 +165,6 @@
 .overview-column h3 {
     color: var(--text-primary);
     margin-bottom: 1rem;
-    font-size: 1.25rem;
 }
 
 .overview-column p {
@@ -244,7 +249,6 @@
 .toc-content h4 {
     color: var(--text-primary);
     margin-bottom: 1rem;
-    font-size: 1rem;
 }
 
 .toc-nav {
@@ -294,13 +298,11 @@
 .content-layout-text h2 {
     color: var(--text-primary);
     margin-bottom: 1.5rem;
-    font-size: 2rem;
 }
 
 .content-layout-text p {
     color: var(--text-secondary);
     line-height: 1.7;
-    font-size: 1.1rem;
 }
 
 /* Layout 2 & 3: Split Layouts */
@@ -326,13 +328,11 @@
 .content-text h2 {
     color: var(--text-primary);
     margin-bottom: 1.5rem;
-    font-size: 1.75rem;
 }
 
 .content-text p {
     color: var(--text-secondary);
     line-height: 1.7;
-    font-size: 1rem;
 }
 
 .content-image {
@@ -350,7 +350,6 @@
 .content-layout-full-image h2 {
     color: var(--text-primary);
     margin-bottom: 2rem;
-    font-size: 1.75rem;
 }
 
 .full-width-image {
@@ -464,20 +463,11 @@
         gap: 20px;
     }
 
-    .overview-column h3 {
-        font-size: 1.1rem;
-    }
 
-    .content-layout-text h2,
-    .content-text h2,
-    .content-layout-full-image h2 {
-        font-size: 1.5rem;
-    }
 
-    .content-layout-text p,
-    .content-text p {
-        font-size: 0.95rem;
-    }
+
+
+
 
     .project-dropdown-btn {
         padding: 6px 12px;
