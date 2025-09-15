@@ -138,7 +138,6 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    border-radius: 12px;
     padding-top: 2%;
 }
 
@@ -492,6 +491,105 @@
     }
 }
 
+/* Layout 5: Image Carousel */
+
+.carousel-container {
+    width: 100%;
+}
+
+.carousel-images {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.carousel-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.carousel-text {
+    flex: 1;
+    position: relative;
+}
+
+.carousel-description {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.carousel-description.active {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+}
+
+.carousel-pagination {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.carousel-btn {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--border-dark);
+    background: transparent;
+    color: var(--text-tertiary);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn:hover {
+    background: var(--border-dark);
+    color: var(--text-primary);
+}
+
+.carousel-btn.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--bg-primary);
+}
+
 /* Large screens */
 @media (min-width: 1600px) {
     .content-grid {
@@ -500,5 +598,41 @@
 
     .content-layout-split {
         gap: 60px;
+    }
+
+    .carousel-images {
+        height: 500px;
+    }
+}
+
+/* Tablet and mobile responsive styles for carousel */
+@media (max-width: 768px) {
+    .carousel-images {
+        height: 300px;
+    }
+
+    .carousel-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .carousel-pagination {
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-images {
+        height: 250px;
+    }
+
+    .carousel-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
+    }
+
+    .carousel-content {
+        gap: 20px;
     }
 }
