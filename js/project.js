@@ -332,7 +332,7 @@ function initStickyToc() {
             // Make it sticky and visible
             tocContent.style.position = 'fixed';
             tocContent.style.top = `${stickyTop}px`;
-            tocContent.style.width = '200px';
+            tocContent.style.width = '240px';
             tocContent.style.zIndex = '10';
             tocContent.classList.add('visible');
             isSticky = true;

@@ -201,8 +201,8 @@
 
 .content-grid {
     display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 60px;
+    grid-template-columns: 240px 1fr;
+    gap: 40px;
     align-items: start;
     position: relative;
 }
@@ -223,10 +223,10 @@
 }
 
 .toc-content {
-    background: var(--bg-secondary);
+    background: rgba(var(--bg-secondary-rgb), 0.6);
     border: 1px solid var(--border-dark);
     border-radius: 16px;
-    padding: 20px;
+    padding: 4px;
     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
     z-index: 10;
     /* Ensure the sticky element has proper height constraints */
@@ -245,9 +245,22 @@
     transform: translateY(0);
 }
 
-.toc-content h4 {
+.toc-content h5 {
     color: var(--text-primary);
-    margin-bottom: 1rem;
+    margin: 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.header-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    padding: 2px;
+    box-sizing: content-box;
+    display: block;
+    transform: translateY(-1px);
 }
 
 .toc-nav {
@@ -261,7 +274,7 @@
     text-decoration: none;
     border-radius: 12px;
     font-size: 0.85rem;
-    padding: 8px 12px;
+    padding: 6px 8px 6px 32px;
     transition: all 0.3s ease;
 }
 
@@ -381,8 +394,8 @@
 
 @media (max-width: 1024px) {
     .content-grid {
-        grid-template-columns: 180px 1fr;
-        gap: 40px;
+        grid-template-columns: 200px 1fr;
+        gap: 30px;
     }
 
     .content-layout-split {
@@ -564,12 +577,12 @@
 }
 
 .carousel-btn {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     border: 2px solid var(--border-dark);
     background: transparent;
     color: var(--text-tertiary);
-    border-radius: 8px;
+    border-radius: 12px;
     font-size: 0.9rem;
     font-weight: 500;
     cursor: pointer;
@@ -585,15 +598,15 @@
 }
 
 .carousel-btn.active {
-    background: var(--primary-color);
-    border-color: var(--primary-color);
-    color: var(--bg-primary);
+    background: transparent;
+    border-color: var(--border-dark);
+    color: var(--primary-color);
 }
 
 /* Large screens */
 @media (min-width: 1600px) {
     .content-grid {
-        gap: 80px;
+        gap: 60px;
     }
 
     .content-layout-split {

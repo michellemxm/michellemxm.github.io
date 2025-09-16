@@ -85,7 +85,7 @@ p.small {
 }
 
 .highlight {
-    color: var(--primary-color);
+    color: var(--primary-color) !important;
 }
 
 /* ========================================
@@ -1095,13 +1095,12 @@ textarea:focus {
     background: var(--primary-color);
     color: var(--text-primary);
     border: none;
-    border-radius: 50%;
+    border-radius: 45%;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
-    box-shadow: 0 4px 15px var(--shadow-primary);
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);
@@ -1116,10 +1115,21 @@ textarea:focus {
 }
 
 .scroll-to-top:hover {
-    background: var(--text-primary);
+    background: var(--bg-tertiary);
+    border: 2px solid var(--primary-color);
     color: var(--primary-color);
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px var(--shadow-primary);
+}
+
+.scroll-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+}
+
+.scroll-to-top:hover .scroll-icon {
+    filter: none;
 }
 
 /* ========================================
