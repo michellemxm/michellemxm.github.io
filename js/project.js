@@ -381,39 +381,42 @@ function initStickyToc() {
 
 // Carousel Functionality
 function initCarousel() {
-    const carouselContainer = document.querySelector('.carousel-container');
+    const carouselContainers = document.querySelectorAll('.carousel-container');
     
-    if (!carouselContainer) return;
+    if (!carouselContainers.length) return;
     
-    const slides = carouselContainer.querySelectorAll('.carousel-slide');
-    const descriptions = carouselContainer.querySelectorAll('.carousel-description');
-    const buttons = carouselContainer.querySelectorAll('.carousel-btn');
-    
-    if (!slides.length || !descriptions.length || !buttons.length) return;
-    
-    let currentSlide = 0;
-    
-    function showSlide(index) {
-        // Remove active class from all elements
-        slides.forEach(slide => slide.classList.remove('active'));
-        descriptions.forEach(desc => desc.classList.remove('active'));
-        buttons.forEach(btn => btn.classList.remove('active'));
+    // Initialize each carousel separately
+    carouselContainers.forEach(carouselContainer => {
+        const slides = carouselContainer.querySelectorAll('.carousel-slide');
+        const descriptions = carouselContainer.querySelectorAll('.carousel-description');
+        const buttons = carouselContainer.querySelectorAll('.carousel-btn');
         
-        // Add active class to current elements
-        if (slides[index]) slides[index].classList.add('active');
-        if (descriptions[index]) descriptions[index].classList.add('active');
-        if (buttons[index]) buttons[index].classList.add('active');
+        if (!slides.length || !buttons.length) return;
         
-        currentSlide = index;
-    }
-    
-    // Handle button clicks
-    buttons.forEach((button, index) => {
-        button.addEventListener('click', function() {
-            showSlide(index);
+        let currentSlide = 0;
+        
+        function showSlide(index) {
+            // Remove active class from all elements in this carousel
+            slides.forEach(slide => slide.classList.remove('active'));
+            descriptions.forEach(desc => desc.classList.remove('active'));
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to current elements
+            if (slides[index]) slides[index].classList.add('active');
+            if (descriptions[index]) descriptions[index].classList.add('active');
+            if (buttons[index]) buttons[index].classList.add('active');
+            
+            currentSlide = index;
+        }
+        
+        // Handle button clicks
+        buttons.forEach((button, index) => {
+            button.addEventListener('click', function() {
+                showSlide(index);
+            });
         });
+        
+        // Initialize first slide
+        showSlide(0);
     });
-    
-    // Initialize first slide
-    showSlide(0);
 }
