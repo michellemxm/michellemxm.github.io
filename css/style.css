@@ -1422,6 +1422,19 @@ textarea:focus {
     border-color: var(--primary-color);
 }
 
+.tile-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.tile-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
 .tile-image {
     width: 100%;
     height: 320px;
