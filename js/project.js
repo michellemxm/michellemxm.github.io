@@ -43,8 +43,16 @@ function initProjectDropdown() {
     const dropdownItems = dropdownMenu.querySelectorAll('.dropdown-item');
     dropdownItems.forEach(item => {
         item.addEventListener('click', function (e) {
-            e.preventDefault();
-            selectProject(this);
+            const href = this.getAttribute('href');
+            
+            // Only prevent default for placeholder links (# or empty)
+            if (!href || href === '#' || href === '') {
+                e.preventDefault();
+                selectProject(this);
+            } else {
+                // For real links, just update the active state and let navigation happen
+                selectProject(this);
+            }
             closeDropdown();
         });
     });
