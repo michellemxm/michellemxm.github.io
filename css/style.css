@@ -75,6 +75,20 @@ p.small {
     margin-bottom: 0;
 }
 
+/* Lists */
+ul {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+li {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+}
+
 /* Text Utilities */
 .primary {
     color: var(--text-primary);
