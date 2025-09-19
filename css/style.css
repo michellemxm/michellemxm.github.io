@@ -32,7 +32,12 @@ body {
    ======================================== */
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 400;
     line-height: 1.6;
 }
@@ -556,23 +561,6 @@ section {
     gap: 0.5rem;
 }
 
-.project-tags span {
-    background: var(--bg-secondary);
-    color: var(--text-secondary);
-    padding: 0.25rem 0.75rem;
-    border-radius: 15px;
-    border: 1px solid var(--border-dark);
-    transition: all 0.3s ease;
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-
-.project-tags span:hover {
-    background: var(--primary-color);
-    color: var(--text-primary);
-    border-color: var(--primary-color);
-}
-
 /* ========================================
    CONTACT SECTION
    ======================================== */
@@ -947,6 +935,7 @@ section {
 }
 
 @media (max-width: 480px) {
+
     /* Layout adjustments */
     .hero {
         padding: 80px 0 20px;
