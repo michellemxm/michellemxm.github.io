@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SWAN Interior - Michelle Ma Design Portfolio</title>
+	<meta name="description" content="SWAN Interior - Audio-Based Augmented Reality Wearable Indoor Navigation System">
+	<link rel="stylesheet" href="css/colors.css">
+	<link rel="stylesheet" href="css/preloader.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/navigation.css">
+	<link rel="stylesheet" href="css/project.css">
+	<link rel="stylesheet" href="css/lightbox.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+
+	<!-- Table styles -->
+	<style>
+		.content-table {
+			border-collapse: collapse;
+			width: 100%;
+			margin: 20px 0;
+		}
+
+		.content-table th,
+		.content-table td {
+			border: 1px solid var(--text-secondary);
+			padding: 12px 16px;
+			text-align: left;
+		}
+
+		.content-table th {
+			background-color: var(--bg-secondary);
+			font-weight: 500;
+		}
+
+		.content-table th:first-child {
+			width: 40%;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Preloader -->
+	<div id="preloader" class="preloader">
+		<div class="preloader-content">
+			<div class="preloader-logo-container">
+				<img src="image/icon/logo-asset.png" alt="MXM Logo" class="preloader-logo-img">
+				<div class="preloader-spinner">
+					<div class="spinner"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Project Navigation -->
+	<nav class="navbar project-navbar">
+		<div class="nav-container">
+			<a href="index.html" class="nav-logo project-nav-logo">
+				<img src="image/icon/back@3x.png" alt="Back" class="back-icon">
+				<span>HOME</span>
+			</a>
+			<ul class="nav-menu">
+				<li class="nav-item">
+					<a href="#" class="nav-link nav-work-disabled">WORK</a>
+				</li>
+				<li class="nav-item project-dropdown">
+					<button class="project-dropdown-btn" id="projectDropdownBtn">
+						<span>SWAN AR</span>
+						<i class="fas fa-chevron-down dropdown-icon"></i>
+					</button>
+					<div class="project-dropdown-menu" id="projectDropdownMenu">
+						<a href="#" class="dropdown-item">Kiro Agentic IDE</a>
+						<a href="#" class="dropdown-item">Alexa+ on Mobile App</a>
+						<a href="#" class="dropdown-item">Alexa Mosaic Design System</a>
+						<a href="#" class="dropdown-item">Google HWUX</a>
+						<a href="#" class="dropdown-item">VISSH</a>
+						<a href="swan.html" class="dropdown-item active">SWAN AR</a>
+						<a href="aoab.html" class="dropdown-item">Art on the Atlanta Beltline</a>
+					</div>
+				</li>
+			</ul>
+			<div class="hamburger">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Project Cover -->
+	<section class="project-cover">
+		<div class="container">
+			<div class="project-cover-content" style="background: #F3F3F3;">
+				<img src="image/swan/swan_cover.jpg" alt="SWAN Interior Project Cover" class="project-cover-image">
+			</div>
+		</div>
+	</section>
+
+	<!-- Project Overview -->
+	<section class="project-overview">
+		<div class="container">
+			<h3 class="overview-title">SWAN AR: System for Wearable Audio Navigation with Augmented Reality</h3>
+			<div class="overview-grid">
+				<div class="overview-column">
+					<h5>Introduction</h5>
+					<p>There is a growing need for a portable, practical, and highly functional navigation aid for
+						individuals who experience vision loss.
+						This can include temporary situations, such as firefighters navigating smoke-filled buildings,
+						as well as long-term or permanent blindness.
+						In all cases, users must be able to move safely, avoid obstacles, and learn about their
+						surroundings.
+						An audio-only interface offers significant advantages by guiding listeners along a path while
+						simultaneously indicating the presence of landmarks, hazards, or other important environmental
+						features.
+						Such an approach ensures that users are not solely dependent on vision to build a reliable
+						mental map of their environment.</p>
+				</div>
+				<div class="overview-column">
+					<h5>&nbsp;</h5>
+					<p>The SWAN project addresses this need by developing a navigation system that integrates indoor
+						navigation technology with audition.
+						Tools such as augmented reality kits and Bluetooth beacons enable precise location tracking,
+						while auditory cues provide accurate directional guidance that can rival visual localization.
+						By giving users greater control of their environment, the system enhances safety and autonomy
+						for people with vision impairments and supports first responders in vision-limiting situations.
+						Beyond assisting those with low or no vision, it also improves efficiency for sighted users in
+						multitasking scenarios, making indoor navigation more effective and versatile for a wide range
+						of needs.</p>
+				</div>
+				<div class="overview-column overview-details">
+					<h5>Project Details</h5>
+					<p class="detail-item"><strong>Lab:</strong> Sonification Lab, Psychology, Georgia Tech</p>
+					<p class="detail-item"><strong>Role:</strong> Designer, Engineer, Researcher</p>
+					<p class="detail-item"><strong>Timeline:</strong> 2017-2018</p>
+					<div class="project-tags">
+						<span class="skill-tag">AR/VR</span>
+						<span class="skill-tag">Accessibility</span>
+						<span class="skill-tag">User Research</span>
+						<span class="skill-tag">3D Modeling</span>
+						<span class="skill-tag">Unity</span>
+						<span class="skill-tag">App Development</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Project Content -->
+	<section class="project-content">
+		<div class="container">
+			<div class="content-grid">
+				<!-- Table of Contents -->
+				<div class="toc-container" id="tocContainer">
+					<div class="toc-content">
+						<h5><img src="image/icon/note.svg" alt="Content" class="header-icon">Content</h5>
+						<nav class="toc-nav">
+							<a href="#system-design" class="toc-link active">System Design</a>
+							<a href="#pilot-testing" class="toc-link">Pilot Testing</a>
+							<a href="#gvu-demo" class="toc-link">&bull; GVU Demo Day</a>
+							<a href="#hallway-testing" class="toc-link">&bull; Hallway Testing</a>
+							<a href="#future-research" class="toc-link">Future Research Plan</a>
+							<a href="#video" class="toc-link">Demo Video</a>
+						</nav>
+					</div>
+				</div>
+
+				<!-- Main Content -->
+				<div class="main-content">
+					<!-- System Design - Full Image Layout -->
+					<div class="content-section" id="system-design">
+						<div class="content-layout-full-image">
+							<span class="content-label">system design</span>
+							<h3>Designing a <span class="highlight">spatial audio–guided</span> indoor navigation system</h3>
+							<p>The system we built is a wearable auditory interior navigation system. It has an AR
+								mobile application, and a bluetooth bone conduction headphone. When users open the
+								application, they are able to see the 3D map of the building they are currently in.
+								There are semi-transparent green cylinders, which stands for the waypoints that map out
+								the route to help with the navigation. They would hear a spatialized sound from the bone
+								conduction headphone that directs them to the waypoint.</p>
+							<div class="full-width-image">
+								<img src="image/swan/systemdesign.png" alt="System Design Architecture"
+									class="content-img-full lightbox-image">
+							</div>
+						</div>
+					</div>
+
+					<!-- Pilot Testing Header -->
+					<div class="content-section" id="pilot-testing">
+						<div class="content-layout-text">
+							<span class="content-label">pilot testings</span>
+							<h3>System evaluation in controlled <br>and real-world settings</h3>
+						</div>
+					</div>
+
+					<!-- GVU Demo Day - Split Layout -->
+					<div class="content-section" id="gvu-demo">
+						<div class="content-layout-split">
+							<div class="content-text">
+								<h4>GVU Demo Day</h4>
+								<p>We have developed a low-fidelity version of the SWAN Audio-based AR mobile
+									application for GVU Demo Day and conducted more than 10 casual testings during the
+									demo session. This version includes a simplified hallway interior with 6 checkpoints
+									along the hallway as well as an audio environment sound for a door on the designed
+									navigating path. The geometry of the 3D modeling is rather simple, which only
+									contains a rectangular-shaped hallway and a room at one side.</p>
+							</div>
+							<div class="content-image">
+								<img src="image/swan/gvu.png" alt="GVU Demo Day Testing"
+									class="content-img lightbox-image">
+							</div>
+						</div>
+
+						<!-- Test Process subsection -->
+						<div class="content-layout-text">
+							<h5>Test Process</h5>
+							<p>The participants were asked to stand at a designed starting point, and launch the mobile
+								application. Due to the limitation of the Unity ARKit, the users needed to hold the
+								mobile phone straight for a few second to allow the application to detect the floor as
+								reference plane and then plot the AR geometry accordingly. The participants needed to
+								orient themselves according to the audio cues, and the mobile phone's camera was
+								required to face the same direction of their head as mobile application was using the
+								camera to detect the location.</p>
+							<p>The participants then passed 3 checkpoints walking away from the starting point to the
+								other end of the hallway, and headed back for checkpoint 4. The audio cue then directed
+								the participants to checkpoint 5 which was located in the room we designed. And the
+								journey ended at the last checkpoint which led the participants back to the starting
+								area.</p>
+						</div>
+
+						<!-- Findings subsection -->
+						<div class="content-layout-text">
+							<h5>Findings</h5>
+							<p>The main findings include two aspects, including audio cue perception and cognition, and
+								body motion and mounting methods. There are 3 types of audio cue in the system now -
+								continuous audio beacon, checkpoint confirmation, obstacle/barrier/physical environment
+								alert. All participants demonstrated no confusion about the audio confirmation, but the
+								other two caused misinterpretation to some extent. Also, a number of participants found
+								difficult to recognize the audio source's direction. And there is no audio cue for user
+								to determine whether they are pointing at the right direction.</p>
+							<p>Besides, people's interpretations to the audio cues vary enormously. Even the
+								participants have been instructed to 'go to checkpoint at where the audio source is
+								located', some of them still felt confused when they were trying to find their way
+								following the sound cue. Some people indicated that it is hard to distinguish the
+								frequency increase/decrease with a relatively small displacement. One stated that he
+								need to stride back and forth to find out whether he is heading towards the checkpoint.
+							</p>
+							<p>As per body motion issue, most of participants did not indicate that they felt
+								inconvenience when they are told to rotate their body with the camera during the test
+								runs, probably they had more patience for demos as compared to actual products. Less
+								than half of participants forgot to rotate their body when they were trying to make to
+								the checkpoint and they rotated their heads instead as a more natural reaction.</p>
+						</div>
+
+						<!-- Potential Research Questions subsection -->
+						<div class="content-layout-text">
+							<h5>Potential Research Questions</h5>
+							<p>Based on our findings, we identified several key research questions for future
+								investigation:</p>
+							<ul>
+								<li>Experiment whether adding confirmation sound for direction will improve clarity for
+									the wayfinding process (Test with/without the direction confirmation audio cue with
+									other variables controlled).</li>
+								<li>Define a proper curve to map the frequency of audio beacon to the actual distance
+									between the user and the checkpoint.</li>
+								<li>Number of checkpoints between starting point and destination.</li>
+								<li>Examine the usability of head-mount and chest-mount.</li>
+								<li>Conduct experiments for both with vision and blindfolded and see whether there is
+									correlation with vision and audio-based wayfinding.</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Pilot Hallway Testing - Split Layout -->
+					<div class="content-section" id="hallway-testing">
+						<div class="content-layout-split">
+							<div class="content-text">
+								<h4>Pilot Hallway Testing</h4>
+								<p>We conducted a pilot hallway testing on the medium fidelity prototype of SWAN. For
+									this version, we built the 3D model of the second floor of JS Coon building using
+									Sketchup, then imported the model into Unity. The 3D model included all
+									constructional features of the interior, such as pillars, doorways, and rooms. It
+									did not contain furnitures and other items installed after construction.</p>
+							</div>
+							<div class="content-image">
+								<img src="image/swan/hwtesting.png" alt="Hallway Testing Setup"
+									class="content-img lightbox-image">
+							</div>
+						</div>
+
+						<!-- Test Process subsection -->
+						<div class="content-layout-text">
+							<h5>Test Process</h5>
+							<p>This pilot run was conducted with our team member. The starting point was located inside
+								Sonification Lab and the user need to meet the first checkpoint in front of the lab's
+								door, make a left turn walking to the common area to find the checkpoints 2 to 4, and
+								the audio cues led the user to find the last two checkpoints located near the lift at
+								the corner.</p>
+						</div>
+
+						<!-- Findings subsection -->
+						<div class="content-layout-text">
+							<h5>Findings</h5>
+							<p>Since it was an internal testing conducted by a project team member, we considered the
+								participant familiar enough with the system. She was able to perceive, recognize and
+								interpret the audio cue clearly and easily. The pilot test revealed problems which were
+								more on the technical side rather than the user experience side.</p>
+							<p>The most crucial issue was that the indoor location the system obtained via mobile
+								phone's camera drifted severely as the increase of indoor geometry complexity. When the
+								user passed through a door or walked from a narrow corridor into the open common area,
+								the system often lost context and was not able to pinpoint the accurate location.
+								Without a stable and accurate location data, the system was not be able to perform
+								following navigating tasks as designed. We also noted that keeping the camera straight,
+								walking and turning slower could reduce the frequency of drifting to some extent.</p>
+							<p>As navigating while walking is the main use scenario of this system, the pace of walking
+								and speed of turning are considered very important to the entire experience. Ideally, we
+								do not want the participants to walk at an abnormally slow speed. In this case, we
+								decided to explore other indoor location technologies, for instance, Indoor Atlas, and
+								integrate them into the system to reduce drifting and increase location accuracy.</p>
+						</div>
+					</div>
+
+					<!-- Future Research Plan - Text Only with Table -->
+					<div class="content-section" id="future-research">
+						<div class="content-layout-text">
+							<span class="content-label">next steps</span>
+							<h3>Future Research Plan</h3>
+							<p>In future, we plan to build different versions of the prototype and recruit more
+								participants to do the tests. We want to build the versions based on two manipulations:
+								"environment complexity", which includes both falloff and how many non-waypoint sounds
+								are enabled; and "waypoint density", which is whether waypoints are far apart, or close
+								together. We want to include these two variables because we are interested in the
+								different performance trade offs present. If we include few waypoints in the model, we
+								rely on the environment sounds to help with obstacle avoidance; or we can also include
+								many waypoints to guarantee users can take an optimal path, but the sounds might be
+								annoying. So the matrix of the testing variables would be like:</p>
+
+							<table class="content-table">
+								<tr>
+									<th></th>
+									<th>Many waypoints</th>
+									<th>Few waypoints</th>
+								</tr>
+								<tr>
+									<th>High density of environment sounds</th>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>Low density of environment sounds</th>
+									<td></td>
+									<td></td>
+								</tr>
+							</table>
+
+							<p>In addition to these two variables, we also need to have four different courses in
+								different parts of the building with roughly the same number of objects and waypoints in
+								order to get more unbiased results. In total we will have 16 versions of the prototype
+								because we will have four courses for each of the combinations shown in the above
+								matrix. Participants can start in slightly different parts of the building, but each
+								should generally cover the same sorts of areas, and should have (a) the same number of
+								waypoints and (b) approximately the same distance traveled. We plan to recruit 20
+								participants for initial testings, then recruit more participants if the initial
+								testings show promising results.</p>
+							<p>Besides conducting more tests on different versions of current prototype, the study can
+								be brought further by developing and integrating more accurate indoor location
+								technology. The current prototype sometimes has drifts when user walks. The performance
+								would be greatly improved if the location of the user can be more precisely tracked.</p>
+						</div>
+					</div>
+
+					<!-- Demo Video Section -->
+					<div class="content-section" id="video">
+						<div class="content-layout-full-image">
+							<span class="content-label">video</span>
+							<h3>Demo</h3>
+
+							<div class="full-width-image" style="margin-bottom: 2rem;">
+								<div
+									style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; /* 16:9 aspect ratio */">
+									<iframe title="vimeo-player"
+										src="https://player.vimeo.com/video/251986314?h=7c27c1b16b&title=0&byline=0&portrait=0"
+										width="100%" height="100%" frameborder="0"
+										referrerpolicy="strict-origin-when-cross-origin"
+										allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+										allowfullscreen
+										style="position: absolute; top: 0; left: 0; border-radius: 12px;">
+									</iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="footer-container">
+			<div class="footer-social">
+				<a href="mailto:michelle.maxm@gmail.com" class="social-link" aria-label="Email" target="_blank"
+					rel="noopener noreferrer">
+					<img src="image/icon/email-circle.svg" alt="Email" class="social-icon">
+				</a>
+				<a href="https://linkedin.com/in/michellemxm" class="social-link" aria-label="LinkedIn" target="_blank"
+					rel="noopener noreferrer">
+					<img src="image/icon/linkedin-circle.svg" alt="LinkedIn" class="social-icon">
+				</a>
+				<a href="https://instagram.com/michelle_mxm" class="social-link" aria-label="Instagram" target="_blank"
+					rel="noopener noreferrer">
+					<img src="image/icon/ig-circle.svg" alt="Instagram" class="social-icon">
+				</a>
+				<a href="https://discordapp.com/users/tinkrthetinker" class="social-link" aria-label="Discord"
+					target="_blank" rel="noopener noreferrer">
+					<img src="image/icon/discord-circle.svg" alt="Discord" class="social-icon">
+				</a>
+			</div>
+			<div class="footer-copyright">
+				<p class="small">Designed and coded with <i class="fa-solid fa-heart"></i> and <i
+						class="fa-solid fa-mug-saucer"></i> | Xiaomeng (Michelle) Ma all rights reserved © 2013-2025</p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Scroll to Top Button -->
+	<button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+		<img src="image/icon/arrow-up.svg" alt="Scroll to top" class="scroll-icon">
+	</button>
+
+	<script src="js/preloader.js"></script>
+	<script src="js/navigation.js"></script>
+	<script src="js/project.js"></script>
+	<script src="js/lightbox.js"></script>
+</body>
+
+</html>
