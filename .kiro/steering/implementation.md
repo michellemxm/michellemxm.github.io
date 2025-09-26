@@ -27,6 +27,11 @@
 .active, .visible, .scrolled
 ```
 
+### Color Guidelines
+- **No Gradients**: Never use gradient colors unless explicitly instructed to do so
+- **Solid Colors**: Use flat, solid colors from the defined color palette
+- **Consistency**: Stick to the established color variables in CSS custom properties
+
 ### JavaScript Implementation Patterns
 ```javascript
 // Module separation - each file handles specific functionality
