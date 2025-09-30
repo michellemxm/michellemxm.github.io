@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISSH - Michelle Ma Design Portfolio</title>
+    <meta name="description" content="VISSH - Voice Interaction Surface for Smart Homes - Michelle Ma Design Portfolio">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo-container">
+                <img src="image/icon/logo-asset.png" alt="MXM Logo" class="preloader-logo-img">
+                <div class="preloader-spinner">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Navigation -->
+    <nav class="navbar project-navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo project-nav-logo">
+                <img src="image/icon/back@3x.png" alt="Back" class="back-icon">
+                <span>HOME</span>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link nav-work-disabled">WORK</a>
+                </li>
+                <li class="nav-item project-dropdown">
+                    <button class="project-dropdown-btn" id="projectDropdownBtn">
+                        <span>VISSH</span>
+                        <i class="fas fa-chevron-down dropdown-icon"></i>
+                    </button>
+                    <div class="project-dropdown-menu" id="projectDropdownMenu">
+                        <a href="#" class="dropdown-item">Kiro Agentic IDE</a>
+                        <a href="#" class="dropdown-item">Alexa+ on Mobile App</a>
+                        <a href="#" class="dropdown-item">Alexa Mosaic Design System</a>
+                        <a href="googleintern.html" class="dropdown-item">Google HWUX</a>
+                        <a href="#" class="dropdown-item active">VISSH</a>
+                        <a href="swan.html" class="dropdown-item">SWAN AR</a>
+                        <a href="aoab.html" class="dropdown-item">Art on the Atlanta Beltline</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Cover -->
+    <section class="project-cover">
+        <div class="container">
+            <div class="project-cover-content" style="background: var(--vissh-blue);">
+                <img src="image/vissh/vissh_cover@2x.jpg" alt="VISSH Project Cover" class="project-cover-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="project-overview">
+        <div class="container">
+            <h3 class="overview-title">VISSH</h3>
+            <div class="overview-grid">
+                <div class="overview-column">
+                    <h5>Challenge</h5>
+                    <p>Design a wearable voice interaction interface that extends the reach of smart home speakers using
+                        ZEUSSS technology - a flexible self-powered microphone.</p>
+                </div>
+                <div class="overview-column">
+                    <h5>Solution</h5>
+                    <p>VISSH Patch - a flexible, wireless patch that enables on-body voice interactions with smart home
+                        speakers from anywhere in the household.</p>
+                </div>
+                <div class="overview-column overview-details">
+                    <h5>Project Details</h5>
+                    <p class="detail-item"><strong>Role:</strong> Individual Project</p>
+                    <p class="detail-item"><strong>Timeline:</strong> Aug. 2018 - Apr. 2019</p>
+                    <p class="detail-item"><strong>Category:</strong> MS HCI Master Project @ Georgia Tech</p>
+                    <div class="project-tags">
+                        <span class="skill-tag">Ubiquitous Computing</span>
+                        <span class="skill-tag">Smart Homes</span>
+                        <span class="skill-tag">Wearable</span>
+                        <span class="skill-tag">Hardware UX</span>
+                        <span class="skill-tag">Voice Interaction</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Table of Contents -->
+                <div class="toc-container" id="tocContainer">
+                    <div class="toc-content">
+                        <h5><img src="image/icon/note.svg" alt="Content" class="header-icon">Content</h5>
+                        <nav class="toc-nav">
+                            <a href="#overview" class="toc-link active">Overview</a>
+                            <a href="#diamond1" class="toc-link">Diamond #1</a>
+                            <a href="#diamond2" class="toc-link">Diamond #2</a>
+                            <a href="#diamond3-develop" class="toc-link">Diamond #3: Develop</a>
+                            <a href="#diamond3-deliver" class="toc-link">Diamond #3: Deliver</a>
+                            <a href="#iterations" class="toc-link">Iterations</a>
+                            <a href="#future-work" class="toc-link">Future Work</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Overview Section -->
+                    <div class="content-section" id="overview">
+                        <div class="content-layout-full-image">
+                            <span class="content-label">overview</span>
+                            <h3>About ZEUSSS</h3>
+                            <p>There are mechanical vibrations all around us. Even when you are talking, the vibrations
+                                from the sound is resulting in subtle vibrations of the objects' surfaces around you. We
+                                can extract these vibrations if we instrument a sensor that converts the vibration into
+                                electrical signal, and the signal sent to a receiving device like a computer can be
+                                later played back into sound again.</p>
+                            <div class="full-width-image">
+                                <img src="image/vissh/context@2x.png" alt="ZEUSSS Context"
+                                    class="content-img-full lightbox-image">
+                            </div>
+                            <p>That is exactly what ZEUSSS does. ZEUSSS, Zero Energy Ubiquitous Sound Sensing Surface,
+                                is a flexible self-powered microphone with signal communication capability developed by
+                                COSMOS Team. The way it senses sound is based on the principle of static electricity.
+                                When two materials come in contact, they exchange charges. ZEUSSS is made from a FTP
+                                film and a copper coated paper. When there's sound, the films vibrate and produce
+                                electrical signal. So the sound sensing process of ZEUSSS is self-sustained.</p>
+                            <div class="full-width-image">
+                                <img src="image/vissh/zeusssphoto@2x.png" alt="ZEUSSS Photo"
+                                    class="content-img-full lightbox-image">
+                            </div>
+                            <div class="full-width-image">
+                                <img src="image/vissh/principle.gif" alt="ZEUSSS Principle"
+                                    class="content-img-full lightbox-image">
+                            </div>
+
+                            <h3>Objective</h3>
+                            <div class="full-width-image">
+                                <img src="image/vissh/objective@2x.jpg" alt="Project Objective"
+                                    class="content-img-full lightbox-image">
+                            </div>
+
+                            <h3>Process</h3>
+                            <p>The main challenge I encountered in this project is that I have a technology, not a
+                                design problem. An extra round of exploratory research was conducted before I was able
+                                to enter the main house of UCD.</p>
+                            <div class="full-width-image">
+                                <img src="image/vissh/process@2x.jpg" alt="Design Process"
+                                    class="content-img-full lightbox-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Diamond #1 Section -->
+                    <div class="content-section" id="diamond1">
+                        <div class="content-layout-full-image">
+                            <span class="content-label">diamond #1</span>
+                            <h3>Exploratory Expert Interviews</h3>
+                            <p>In order to find a promising area that ZEUSSS can create value, I started off by doing
+                                exploratory interviews with experienced practitioners from 7 different industries. The
+                                purpose of the interviews was to explore how this technology can be applied to their
+                                industries, to discover potential problem space and then identify an area I should focus
+                                on.</p>
+                            <div class="full-width-image">
+                                <img src="image/vissh/ei@2x.jpg" alt="Expert Interviews"
+                                    class="content-img-full lightbox-image">
+                            </div>
+
+                            <h3>Refined Project Scope</h3>
+                            <div class="full-width-image">
+                                <img src="image/vissh/scope@2x.jpg" alt="Project Scope"
+                                    class="content-img-full lightbox-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Diamond #2 Section -->
+                    <div class="content-section" id="diamond2">
+                        <div class="content-layout-carousel">
+                            <span class="content-label">diamond #2</span>
+                            <h3>Key Insights</h3>
+                            <p>Literature review and online research on Smart Homes were conducted to explore the
+                                problem space and discover existing user problems. Based on the research findings, I
+                                synthesized the key values of ZEUSSS and further defined the problems I would like to
+                                address through the design.</p>
+
+                            <div class="carousel-container">
+                                <div class="carousel-images">
+                                    <div class="carousel-slide active" data-slide="0">
+                                        <img src="image/vissh/ki1@2x.jpg" alt="Key Insights 1"
+                                            class="carousel-img lightbox-image">
+                                    </div>
+                                    <div class="carousel-slide" data-slide="1">
+                                        <img src="image/vissh/ki2@2x.jpg" alt="Key Insights 2"
+                                            class="carousel-img lightbox-image">
+                                    </div>
+                                    <div class="carousel-slide" data-slide="2">
+                                        <img src="image/vissh/ki3@2x.jpg" alt="Key Insights 3"
+                                            class="carousel-img lightbox-image">
+                                    </div>
+                                </div>
+
+                                <div class="carousel-content">
+                                    <div class="carousel-pagination">
+                                        <button class="carousel-btn active" data-slide="0"
+                                            aria-label="View insight 1">1</button>
+                                        <button class="carousel-btn" data-slide="1"
+                                            aria-label="View insight 2">2</button>
+                                        <button class="carousel-btn" data-slide="2"
+                                            aria-label="View insight 3">3</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3>Opportunity Statement</h3>
+                            <div class="full-width-image">
+                                <img src="image/vissh/problemstatement@2x.jpg" alt="Opportunity Statement"
+                                    class="content-img-full lightbox-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Diamond #3: Develop Section -->
+                    <div class="content-section" id="diamond3-develop">
+                        <div class="content-layout-text">
+                            <span class="content-label">diamond #3: develop</span>
+                            <h3>Brainstorm & Initial Concepts</h3>
+                            <p>Inspired by the problem discovered through previous study and insights from the user
+                                research, I did the first round of brainstorm and then integrated the ideas into 3 main
+                                concepts.</p>
+                        </div>
+
+                        <div class="content-layout-split">
+                            <div class="content-text">
+                                <h4>Concept 1: An embedded gesture-based controller for smart home appliances</h4>
+                                <p>It is designed to be either embed or attach ZEUSSS patch(removable) to any surface in
+                                    the
+                                    household and to be used as a remote controller to control home appliances. The
+                                    problem
+                                    addressed is to provide a unified and ubiquitous controller to control smart home
+                                    appliances so as to save the time and effort to look for the right app or remote
+                                    controller.</p>
+                                <p>Two interaction models were developed based on the concept. In the first model, each
+                                    patch is dedicated to a specific home appliance and is embedded at where the user
+                                    would
+                                    normally interact with that appliance. Each appliance can be controlled by multiple
+                                    patches. In the second model, each patch was not preassigned what it controls. The
+                                    user
+                                    needs to assign the patch through a set of gestures and then control the appliance.
+                                </p>
+                            </div>
+                            <div class="content-image">
+                                <img src="image/vissh/concept1@2x.png" alt="Concept 1"
+                                    class="content-img lightbox-image">
+                            </div>
+                        </div>
+
+                        <div class="content-layout-split reverse">
+                            <div class="content-image">
+                                <img src="image/vissh/concept2@2x.png" alt="Concept 2"
+                                    class="content-img lightbox-image">
+                            </div>
+                            <div class="content-text">
+                                <h4>Concept 2: A reprogrammable sticker for quick and convenient home supply management
+                                </h4>
+                                <p>It is shipped as a sheet of sticker patch and each patch can be linked to an item
+                                    through
+                                    a mobile application. When it is linked, the user will be able to add a home supply
+                                    or a
+                                    grocery item to the shopping list. The concept is to release the user's memory
+                                    burden by
+                                    helping them complete a mundane but frequent task quickly.</p>
+                            </div>
+                        </div>
+
+                        <div class="content-layout-split">
+                            <div class="content-text">
+                                <h4>Concept 3: A removable voice interaction interface that extends the reach of smart
+                                    home
+                                    speakers.</h4>
+                                <p>The device includes a ZEUSSS patch as the voice input and an e-ink display as the
+                                    visual
+                                    output. The user can interact with the smart home speaker through the device using
+                                    voice
+                                    command and the display provides information in a visual manner including text and
+                                    graphics.</p>
+                            </div>
+                            <div class="content-image">
+                                <img src="image/vissh/concept3@2x.png" alt="Concept 3"
+                                    class="content-img lightbox-image">
+                            </div>
+                        </div>
+
+                        <div class="content-layout-full-image">
+                            <h3>Concept Feedback Sessions</h3>
+                            <p>I then conducted a round of concept feedback sessions. 11 participants who are smart home
+                                users were recruited. In the session, participants provided feedback based on the sketch
+                                and interaction description of each concept, and then evaluated the concepts from these
+                                5 perspectives by filling out a Likert scale questionnaire. The qualitative data were
+                                analyzed using affinity mapping.</p>
+                            <div class="full-width-image">
+                                <img src="image/vissh/feedback@2x.jpg" alt="Concept Feedback"
+                                    class="content-img-full lightbox-image">
+                            </div>
+                        </div>
+
+                        <div class="content-layout-full-image">
+                            <h3>Design Directions</h3>
+                            <p>Based on the user needs defined through the concept feedback session, and also the
+                                capabilities or constraints of ZEUSSS, I was able to further delineate the design
+                                directions.</p>
+                            <div class="full-width-image">
+                                <img src="image/vissh/direction@2x.jpg" alt="Design Directions"
+                                    class="content-img-full lightbox-image">
+
+                            </div>
+                            <h4>Design Direction Validation Survey</h4>
+                            <p style="margin-bottom: 5px;">
+                                In order to validate the design directions, I created an online survey to ask about
+                                current user experience using smart home appliances and also mobile or wearable smart
+                                devices when the users are at home.
+                            </p>
+                            <div class="full-width-image">
+                                <img src="image/vissh/validationsurvey@2x.jpg" alt="Design Direction Validation Survey"
+                                    class="content-img-full lightbox-image">
+                            </div>
+                            <h5>Form factor: Wearable?</h5>
+                            <p>The first question to answer through the survey is that if wearable is a desirable form
+                                factor?</p>
+                            <div class="full-width-image">
+                                <img src="image/vissh/surveyresult1@2x.jpg" alt="Survey Result - Form Factor"
+                                    class="content-img-full lightbox-image">
+                            </div>
+                            <h5>Power Solution: Self-sustained?</h5>
+                            <p>Regarding the battery problem, do people care about it? In the open question asking about
+                                the challenge they encountered, a lot of people filled in battery and charging.
+                                Actually, it is one of the main reasons that they cannot carry or wear the device while
+                                they are at home.</p>
+                            <div class="full-width-image">
+                                <img src="image/vissh/surveyresult2@2x.jpg" alt="Survey Result - Power Solution"
+                                    class="content-img-full lightbox-image">
+                            </div>
+                            <h5>Interaction: Voice?</h5>
+                            <p>How about voice interaction? Is it an effective, efficient, and enjoyable way to interact
+                                with the smart home ecosystem?</p>
+                            <div class="full-width-image">
+                                <img src="image/vissh/surveyresult3@2x.jpg" alt="Survey Result - Voice Interaction"
+                                    class="content-img-full lightbox-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Diamond #3: Deliver Section -->
+                    <div class="content-section" id="diamond3-deliver">
+                        <div class="content-layout-full-image">
+                            <span class="content-label">diamond #3: deliver</span>
+                            <h3>Final Design</h3>
+                            <p>VISSH Patch, voice interaction surface for smart homes, is a flexible patch that extends
+                                the reach of smart home speakers. It is designed to be attached to the clothes you wear
+                                at home, enabling onbody voice interactions with the speaker at every spot within your
+                                household. It is wireless, thin, and flexible so that you can carry it around with you
+                                all the time.</p>
+                            <div class="full-width-image">
+                                <img src="image/vissh/design@2x.jpg" alt="Final Design"
+                                    class="content-img-full lightbox-image">
+                            </div>
+                            <p>It consists of a ZEUSSS microphone to capture voice, an e-ink display to provide visual
+                                feedback which consumes very little energy, powered by a flexible battery that using the
+                                solar panel here to harvest energy for it.</p>
+                            <div class="full-width-image">
+                                <img src="image/vissh/hw@2x.jpg" alt="Hardware Components"
+                                    class="content-img-full lightbox-image">
+                            </div>
+
+                            <h4>Target Audience</h4>
+                            <div class="full-width-image">
+                                <img src="image/vissh/ta@2x.jpg" alt="Target Audience"
+                                    class="content-img-full lightbox-image">
+                            </div>
+
+                            <h3>Usage Scenarios</h3>
+                            <div class="carousel-container">
+                                <div class="carousel-images">
+                                    <div class="carousel-slide active" data-slide="0">
+                                        <img src="image/vissh/scenario1@2x.jpg" alt="Scenario 1: Different Rooms"
+                                            class="carousel-img lightbox-image">
+                                    </div>
+                                    <div class="carousel-slide" data-slide="1">
+                                        <img src="image/vissh/scenario2@2x.jpg" alt="Scenario 2: Same Room"
+                                            class="carousel-img lightbox-image">
+                                    </div>
+                                </div>
+
+                                <div class="carousel-content">
+                                    <div class="carousel-text">
+                                        <p class="carousel-description small active" data-text="0"><strong>Different
+                                                Rooms:</strong> When the user and the speaker are in different rooms -
+                                            they cannot hear each other. When the user talks to the VISSH patch, it
+                                            sends the audio to the speaker. When the response comes back, user will read
+                                            it from the e-ink display.</p>
+                                        <p class="carousel-description small" data-text="1"><strong>Same Room:</strong>
+                                            If the user and the speaker are in the same room, in addition to the visual
+                                            feedback provided by the e-ink display, the user will also be able hear the
+                                            audio feedback at the meantime.</p>
+                                    </div>
+
+                                    <div class="carousel-pagination">
+                                        <button class="carousel-btn active" data-slide="0"
+                                            aria-label="View scenario 1">1</button>
+                                        <button class="carousel-btn" data-slide="1"
+                                            aria-label="View scenario 2">2</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3>Use Cases</h3>
+                            <div class="full-width-image">
+                                <img src="image/vissh/usecase1@2x.png" alt="Use Case 1"
+                                    class="content-img-full lightbox-image">
+                            </div>
+                            <div class="full-width-image">
+                                <img src="image/vissh/usecase2@2x.png" alt="Use Case 2"
+                                    class="content-img-full lightbox-image">
+                            </div>
+                            <div class="full-width-image">
+                                <img src="image/vissh/usecase3@2x.png" alt="Use Case 3"
+                                    class="content-img-full lightbox-image">
+                            </div>
+                            <div class="full-width-image">
+                                <img src="image/vissh/uis@2x.jpg" alt="User Interfaces"
+                                    class="content-img-full lightbox-image">
+                            </div>
+
+                            <h3>Prototype</h3>
+                            <p>A set of hardware prototype was made In order to conduct a usability test, including a
+                                concept model prototype which gives the user the touch and feel of the form factor, and
+                                an interactive prototype which simulates the interactions for evaluating the user
+                                experiences.</p>
+
+                            <h4>Concept Model Prototype</h4>
+                            <p>The concept model prototype consists of a ZEUSSS microphone, and a 2.13-inch flexible
+                                e-ink display module. The two electronic elements were glued on a soft female Velcro
+                                patch. 2 strips of male Velcro patch were stitched on the cuff of a shirt, so that the
+                                VISSH patch can be attached to and removed from the shirt easily.</p>
+                            <div class="full-width-image">
+                                <img src="image/vissh/prototype@2x.png" alt="Concept Model Prototype"
+                                    class="content-img-full lightbox-image">
+                            </div>
+
+                            <h4>Interactive Prototype</h4>
+                            <p>The interactive prototype was developed using Raspberry Pi, Google AIY Voice kit and
+                                Google Assistant API. When the VISSH patch is plugged into the Raspberry Pi, the
+                                microphone on Google AIY Voice kit capture sounds constantly and the Assistant API
+                                enables the prototype to recognize what people are talking to it. The prototype wakes up
+                                to hot words 'OK Google' and 'Hey Google', and responds to voice commands. (Header pin
+                                mapping: green for Google AIY Voice Kit, blue for e-paper display)</p>
+                            <div class="full-width-image">
+                                <img src="image/vissh/aiy@2x.png" alt="Interactive Prototype"
+                                    class="content-img-full lightbox-image">
+                            </div>
+
+                            <h4>Demo Video</h4>
+                            <div class="full-width-image">
+                                <iframe width="100%" height="464px;" src="https://www.youtube.com/embed/eWeLN-ICAOw"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+
+                            <h3>Usability Test</h3>
+                            <div class="full-width-image">
+                                <img src="image/vissh/usabilitytest@2x.jpg" alt="Usability Test"
+                                    class="content-img-full lightbox-image">
+                            </div>
+                            <div class="full-width-image">
+                                <img src="image/vissh/utResult@2x.jpg" alt="Usability Test Results"
+                                    class="content-img-full lightbox-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Iterations Section -->
+                    <div class="content-section" id="iterations">
+                        <div class="content-layout-full-image">
+                            <span class="content-label">iterations</span>
+                            <h3>Iterations</h3>
+
+                            <h4>User Interface Templates</h4>
+                            <p>To improve the glanceability of the content displayed on the e-ink display, and reduce
+                                the required effort for the user to read the information, a set of user interface
+                                templates were designed. Template 1 applies to scenarios including asking the weather,
+                                commute condition, address, etc. Template 2 applies to scenarios like asking Google
+                                questions, business information, calendar/schedule, setting/retrieving reminder and
+                                grocery list, etc. And Template 3 is designed for smart home controls like controlling
+                                music, video streaming, adjusting thermostats, turning on and off lights, etc.</p>
+                            <div class="full-width-image">
+                                <img src="image/vissh/iteration3@2x.png" alt="UI Templates"
+                                    class="content-img-full lightbox-image">
+                            </div>
+
+                            <div class="content-layout-split">
+                                <div class="content-text">
+                                    <h4>UIs for the Different Interaction States</h4>
+                                    <p>The second change is to design UIs to show states when the VISSH patch is
+                                        listening
+                                        and when it finishes listening and start to request data. It is designed to make
+                                        sure
+                                        that the user knows when the patch is interactable so that the user will not
+                                        feel
+                                        confused while waiting for the response to come back. This also mitigates the
+                                        privacy
+                                        concern as when the patch wakes up to the hot words and is actively listening,
+                                        the
+                                        user could
+                                        tell from the interface.</p>
+                                </div>
+                                <div class="content-image">
+                                    <img src="image/vissh/iteration2@2x.png" alt="Interaction States"
+                                        class="content-img lightbox-image">
+                                </div>
+                            </div>
+
+                            <div class="content-layout-split reverse">
+                                <div class="content-image">
+                                    <img src="image/vissh/iteration1@2x.png" alt="Physical Switch"
+                                        class="content-img lightbox-image">
+                                </div>
+                                <div class="content-text">
+                                    <h4>Physical Switch and Sound Capturing Range</h4>
+                                    <p>Another refinement is to address the privacy issue through hardware changes. A
+                                        physical switch was added with a color-coded indicator. The user can turn it off
+                                        when he/she
+                                        does not want to be heard.<br>
+                                        Also through adjusting the size of ZEUSSS patch integrated here as the
+                                        microphone,
+                                        the sound capturing range can be adjusted. According to the usability test
+                                        insight,
+                                        an
+                                        arm-length range is preferred. While the device is not being used, the user
+                                        could
+                                        keep it at somewhere else, for example, in the drawer, so that the sound
+                                        capturing
+                                        is
+                                        disabled due to distance.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Future Work Section -->
+                    <div class="content-section" id="future-work">
+                        <div class="content-layout-full-image">
+                            <span class="content-label">future work</span>
+                            <h3>Future Work</h3>
+                            <p>To achieve more desirable user experiences, there are technical explorations as well as
+                                further user studies needed to be done. Currently, ZEUSSS is made of FTP and
+                                copper-coated paper. Even though the use cases for VISSH are limited to the indoor
+                                environment, a wearable device tends to have a considerable amount of wearing, folding,
+                                and maybe tearing while being used. Durability is a significant concern in designing a
+                                consumer-facing wearable. Alternative materials that is more durable, and anti-wear and
+                                tear, are more desirable.<br>
+                                Signal communication technology needs further research as well. The first problem needed
+                                to be resolved is how to give a unique ID to each patch so that the system could
+                                identify which patch is being used and to which patch the response should be sent to.
+                                Also, analog backscatter, which is currently used for ZEUSSS's data communication, has a
+                                limited range. Other technologies with a better range like BLE or Wifi require higher
+                                power, which adds difficulties to power harvesting and battery capacity.<br>
+                                From the user research perspective, testing the concept with higher fidelity prototype,
+                                especially with a wireless version which the user can actually wear on the body, is the
+                                next step. Usability tests completed in this project were task-based and the
+                                participants were sitting the whole time. Experimenting the concept in a more realistic
+                                household environment with the participant walking around will give the participant more
+                                pertinent experience as to how this should be in real use cases.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-social">
+                <a href="mailto:michelle.maxm@gmail.com" class="social-link" aria-label="Email" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="image/icon/email-circle.svg" alt="Email" class="social-icon">
+                </a>
+                <a href="https://linkedin.com/in/michellemxm" class="social-link" aria-label="LinkedIn" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="image/icon/linkedin-circle.svg" alt="LinkedIn" class="social-icon">
+                </a>
+                <a href="https://instagram.com/michelle_mxm" class="social-link" aria-label="Instagram" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="image/icon/ig-circle.svg" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://discordapp.com/users/tinkrthetinker" class="social-link" aria-label="Discord"
+                    target="_blank" rel="noopener noreferrer">
+                    <img src="image/icon/discord-circle.svg" alt="Discord" class="social-icon">
+                </a>
+            </div>
+            <div class="footer-copyright">
+                <p class="small">Designed and coded with <i class="fa-solid fa-heart"></i> and <i
+                        class="fa-solid fa-mug-saucer"></i> | Xiaomeng (Michelle) Ma all rights reserved © 2013-2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+        <img src="image/icon/arrow-up.svg" alt="Scroll to top" class="scroll-icon">
+    </button>
+
+    <script src="js/preloader.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/project.js"></script>
+    <script src="js/lightbox.js"></script>
+</body>
+
+</html>
