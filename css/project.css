@@ -2,6 +2,16 @@
    PROJECT PAGE STYLES
    ======================================== */
 
+/* Headings */
+h1,
+h2,
+h3 {
+    margin-bottom: 1rem;
+}
+h4 {
+    margin-bottom: 0.5rem;
+}
+
 /* Image Margins */
 img {
     margin: 0.5rem 0;
@@ -166,11 +176,6 @@ img {
     align-items: start;
 }
 
-.overview-column h3 {
-    color: var(--text-primary);
-    margin-bottom: 1rem;
-}
-
 .overview-column p {
     color: var(--text-secondary);
     line-height: 1.6;
@@ -305,7 +310,6 @@ img {
     display: inline-block;
     font-size: 0.85rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
     letter-spacing: 0.1em;
     color: var(--text-primary);
     position: relative;
@@ -335,12 +339,6 @@ img {
 .content-layout-text+.content-layout-full-image,
 .content-layout-text+.content-layout-carousel {
     margin-top: 3rem;
-}
-
-.content-layout-text h2,
-.content-layout-text h3 {
-    color: var(--text-primary);
-    margin-bottom: 1.5rem;
 }
 
 .content-layout-text p {
@@ -373,17 +371,6 @@ img {
 
 .content-layout-split.reverse .content-image {
     order: 1;
-}
-
-.content-text h2,
-.content-text h3 {
-    color: var(--text-primary);
-    margin-bottom: 1.5rem;
-}
-
-.content-text p {
-    color: var(--text-secondary);
-    line-height: 1.7;
 }
 
 .content-image {
@@ -432,12 +419,6 @@ img {
 .content-layout-carousel+.content-layout-full-image,
 .content-layout-carousel+.content-layout-carousel {
     margin-top: 3rem;
-}
-
-.content-layout-carousel h2,
-.content-layout-carousel h3 {
-    color: var(--text-primary);
-    margin-bottom: 2rem;
 }
 
 .content-layout-carousel p {
