@@ -353,10 +353,6 @@ li {
     border-color: var(--border-light);
 }
 
-.skill-tag:first-child {
-    font-weight: 400;
-}
-
 .scroll-indicator {
     position: absolute;
     bottom: 2rem;
