@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Name - Michelle Ma Design Portfolio</title>
+    <meta name="description" content="Project Name - Michelle Ma Design Portfolio">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo-container">
+                <img src="image/icon/logo-asset.png" alt="MXM Logo" class="preloader-logo-img">
+                <div class="preloader-spinner">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Navigation -->
+    <nav class="navbar project-navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo project-nav-logo">
+                <img src="image/icon/back@3x.png" alt="Back" class="back-icon">
+                <span>HOME</span>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link nav-work-disabled">WORK</a>
+                </li>
+                <li class="nav-item project-dropdown">
+                    <button class="project-dropdown-btn" id="projectDropdownBtn">
+                        <span>Project Name</span>
+                        <i class="fas fa-chevron-down dropdown-icon"></i>
+                    </button>
+                    <div class="project-dropdown-menu" id="projectDropdownMenu">
+                        <a href="#" class="dropdown-item active">Kiro Agentic IDE</a>
+                        <a href="#" class="dropdown-item">Alexa+ on Mobile App</a>
+                        <a href="#" class="dropdown-item">Alexa Mosaic Design System</a>
+                        <a href="#" class="dropdown-item">Google HWUX</a>
+                        <a href="vissh.html" class="dropdown-item">VISSH</a>
+                        <a href="swan.html" class="dropdown-item">SWAN AR</a>
+                        <a href="aoab.html" class="dropdown-item">Art on the Atlanta Beltline</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Cover -->
+    <section class="project-cover">
+        <div class="container">
+            <div class="project-cover-content" style="background: var(--text-primary);">
+                <img src="image/alexaplus/alexaplus_cover.png" alt="Project Cover" class="project-cover-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="project-overview">
+        <div class="container">
+            <h3 class="overview-title">Kiro Agentic IDE</h3>
+            <div class="overview-grid">
+                <div class="overview-column">
+                    <h5>Challenge</h5>
+                    <p>Developers struggle with the gap between product requirements and code implementation, often
+                        leading to misaligned features and inefficient development cycles.</p>
+                </div>
+                <div class="overview-column">
+                    <h5>Solution</h5>
+                    <p>Kiro introduces a spec-driven workflow that helps developers move systematically from
+                        requirements to technical design to structured tasks with AI agent support.</p>
+                </div>
+                <div class="overview-column overview-details">
+                    <h5>Project Details</h5>
+                    <p class="detail-item"><strong>Role:</strong> Design Lead</p>
+                    <p class="detail-item"><strong>Timeline:</strong> 2024-2025</p>
+                    <p class="detail-item"><strong>Team:</strong> Product, Engineering, Science</p>
+                    <div class="project-tags">
+                        <span class="skill-tag">Agentic Experience</span>
+                        <span class="skill-tag">Developer Tool</span>
+                        <span class="skill-tag">AI Assistant</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Table of Contents -->
+                <div class="toc-container" id="tocContainer">
+                    <div class="toc-content">
+                        <h5><img src="image/icon/note.svg" alt="Content" class="header-icon">Content</h5>
+                        <nav class="toc-nav">
+                            <a href="#section-1" class="toc-link active">Text only</a>
+                            <a href="#section-2" class="toc-link">Split layout</a>
+                            <a href="#section-3" class="toc-link">Split reverse</a>
+                            <a href="#section-4" class="toc-link">Full image</a>
+                            <a href="#section-5" class="toc-link">Image carousel</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Layout 1: Text Only -->
+                    <div class="content-section" id="section-1">
+                        <div class="content-layout-text">
+                            <span class="content-label">text only layout</span>
+                            <h3>Introduction</h3>
+                            <p>Kiro represents a fundamental shift in how developers approach software creation. Rather
+                                than jumping straight into code, Kiro encourages a structured methodology that begins
+                                with clear requirements, progresses through thoughtful design, and culminates in
+                                organized implementation tasks.</p>
+                        </div>
+                    </div>
+
+                    <!-- Layout 2: Left Text, Right Image -->
+                    <div class="content-section" id="section-2">
+                        <div class="content-layout-split">
+                            <div class="content-text">
+                                <span class="content-label">split layout</span>
+                                <h3>Design Process</h3>
+                                <p>Our design process focused on understanding developer workflows and identifying pain
+                                    points in the traditional development cycle. Through extensive user research and
+                                    iterative prototyping, we crafted an experience that feels natural while introducing
+                                    powerful new capabilities.</p>
+                            </div>
+                            <div class="content-image">
+                                <img src="image/index/index-work-kiro.png" alt="Design Process"
+                                    class="content-img lightbox-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Layout 3: Right Text, Left Image -->
+                    <div class="content-section" id="section-3">
+                        <div class="content-layout-split reverse">
+                            <div class="content-image">
+                                <img src="image/index/index-work-alexa.png" alt="Key Features"
+                                    class="content-img lightbox-image">
+                            </div>
+                            <div class="content-text">
+                                <span class="content-label">split layout reverse</span>
+                                <h3>Key Features</h3>
+                                <p>The core features of Kiro center around the spec-driven workflow, intelligent code
+                                    generation, and seamless integration with existing development tools. Each feature
+                                    was designed to enhance rather than disrupt established developer practices.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Layout 4: Full Width Image -->
+                    <div class="content-section" id="section-4">
+                        <div class="content-layout-full-image">
+                            <span class="content-label">full image layout</span>
+                            <h3>User Research Insights</h3>
+                            <p>The core features of Kiro center around the spec-driven workflow, intelligent code
+                                generation, and seamless integration with existing development tools. Each feature
+                                was designed to enhance rather than disrupt established developer practices.</p>
+                            <div class="full-width-image">
+                                <img src="image/index/index-work-more-fpo.png" alt="User Research"
+                                    class="content-img-full lightbox-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Layout 5: Image Carousel -->
+                    <div class="content-section" id="section-5">
+                        <div class="content-layout-carousel">
+                            <span class="content-label">image carousel layout</span>
+                            <h3>Design Evolution</h3>
+                            <p>Throughout the development process, we iterated on multiple design concepts to arrive at
+                                the final solution. Each iteration brought us closer to understanding the core user
+                                needs and technical requirements.</p>
+
+                            <div class="carousel-container">
+                                <div class="carousel-images">
+                                    <div class="carousel-slide active" data-slide="0">
+                                        <img src="image/index/index-work-kiro.png" alt="Initial Concept"
+                                            class="carousel-img lightbox-image">
+                                    </div>
+                                    <div class="carousel-slide" data-slide="1">
+                                        <img src="image/index/index-work-alexa.png" alt="Wireframe Development"
+                                            class="carousel-img lightbox-image">
+                                    </div>
+                                    <div class="carousel-slide" data-slide="2">
+                                        <img src="image/index/index-work-more-fpo.png" alt="Final Design"
+                                            class="carousel-img lightbox-image">
+                                    </div>
+                                </div>
+
+                                <div class="carousel-content">
+                                    <div class="carousel-text">
+                                        <p class="carousel-description small active" data-text="0">Our initial concept
+                                            focused
+                                            on creating a seamless integration between AI assistance and traditional
+                                            development workflows, emphasizing clarity and ease of use.</p>
+                                        <p class="carousel-description small" data-text="1">The wireframe phase allowed
+                                            us to
+                                            explore different interaction patterns and information architecture
+                                            approaches, testing various layouts with our target users.</p>
+                                        <p class="carousel-description small" data-text="2">The final design represents
+                                            a
+                                            refined balance of functionality and aesthetics, incorporating user feedback
+                                            and technical constraints into a cohesive experience.</p>
+                                    </div>
+
+                                    <div class="carousel-pagination">
+                                        <button class="carousel-btn active" data-slide="0"
+                                            aria-label="View slide 1">1</button>
+                                        <button class="carousel-btn" data-slide="1" aria-label="View slide 2">2</button>
+                                        <button class="carousel-btn" data-slide="2" aria-label="View slide 3">3</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-social">
+                <a href="mailto:michelle.maxm@gmail.com" class="social-link" aria-label="Email" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="image/icon/email-circle.svg" alt="Email" class="social-icon">
+                </a>
+                <a href="https://linkedin.com/in/michellemxm" class="social-link" aria-label="LinkedIn" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="image/icon/linkedin-circle.svg" alt="LinkedIn" class="social-icon">
+                </a>
+                <a href="https://instagram.com/michelle_mxm" class="social-link" aria-label="Instagram" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="image/icon/ig-circle.svg" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://discordapp.com/users/tinkrthetinker" class="social-link" aria-label="Discord"
+                    target="_blank" rel="noopener noreferrer">
+                    <img src="image/icon/discord-circle.svg" alt="Discord" class="social-icon">
+                </a>
+            </div>
+            <div class="footer-copyright">
+                <p class="small">Designed and coded with <i class="fa-solid fa-heart"></i> and <i
+                        class="fa-solid fa-mug-saucer"></i> | Xiaomeng (Michelle) Ma all rights reserved © 2013-2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+        <img src="image/icon/arrow-up.svg" alt="Scroll to top" class="scroll-icon">
+    </button>
+
+    <script src="js/preloader.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/project.js"></script>
+    <script src="js/lightbox.js"></script>
+</body>
+
+</html>
