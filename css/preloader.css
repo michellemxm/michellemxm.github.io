@@ -57,7 +57,7 @@
     width: 100%;
     height: 100%;
     border: 3px solid rgba(255, 255, 255, 0.1);
-    border-top: 3px solid var(--primary-color);
+    border-top: 3px solid var(--preloader-color);
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }

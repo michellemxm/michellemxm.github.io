@@ -33,6 +33,12 @@
     --shadow-dark: rgba(0, 0, 0, 0.3);
     --shadow-darker: rgba(0, 0, 0, 0.5);
 
+    /* Preloader Colors */
+    --preloader-color: #FB008B; /* Fixed color for preloader, not affected by page overrides */
+
+    /* Project Default Colors */
+    --project-default: #FB008B;
+
     /* Kiro Colors */
     --kiro-purple: #8543EE;
 
@@ -41,5 +47,8 @@
 
     /* VISSH Colors */
     --vissh-blue: #2C50FF;
+
+    /* AOAB Colors */
+    --aoab-blue: #02A7E7;
 
 }
