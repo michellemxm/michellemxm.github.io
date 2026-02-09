@@ -36,6 +36,9 @@
     /* Preloader Colors */
     --preloader-color: #FB008B; /* Fixed color for preloader, not affected by page overrides */
 
+    /* Dropdown Colors */
+    --dropdown-active-color: #FB008B; /* Fixed color for dropdown, not affected by page overrides */
+
     /* Project Default Colors */
     --project-default: #FB008B;
 
