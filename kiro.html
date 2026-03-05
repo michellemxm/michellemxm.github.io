@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiro Agentic IDE - Michelle Ma Design Portfolio</title>
+    <meta name="description" content="Kiro Agentic IDE - Michelle Ma Design Portfolio">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    
+    <!-- Page-specific color override -->
+    <style>
+        :root {
+            --primary-color: var(--kiro-purple); /* Custom color for this project page */
+        }
+    </style>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo-container">
+                <img src="image/icon/logo-asset.png" alt="MXM Logo" class="preloader-logo-img">
+                <div class="preloader-spinner">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Navigation -->
+    <nav class="navbar project-navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo project-nav-logo">
+                <img src="image/icon/back@3x.png" alt="Back" class="back-icon">
+                <span>HOME</span>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link nav-work-disabled">WORK</a>
+                </li>
+                <li class="nav-item project-dropdown">
+                    <button class="project-dropdown-btn" id="projectDropdownBtn">
+                        <span>Kiro Agentic IDE</span>
+                        <i class="fas fa-chevron-down dropdown-icon"></i>
+                    </button>
+                    <div class="project-dropdown-menu" id="projectDropdownMenu">
+                        <!-- <a href="kiro.html" class="dropdown-item active">Kiro Agentic IDE</a> -->
+                        <a href="alexaplus.html" class="dropdown-item">Alexa+ on Mobile App</a>
+                        <!-- <a href="#" class="dropdown-item">Alexa Mosaic Design System</a> -->
+                        <a href="googleintern.html" class="dropdown-item">Google HWUX</a>
+                        <a href="vissh.html" class="dropdown-item">VISSH</a>
+                        <a href="swan.html" class="dropdown-item">SWAN AR</a>
+                        <a href="aoab.html" class="dropdown-item">Art on the Atlanta Beltline</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Cover -->
+    <section class="project-cover">
+        <div class="container">
+            <div class="project-cover-content" style="background: var(--kiro-purple);">
+                <img src="image/index/index-work-kiro.png" alt="Kiro Agentic IDE Cover" class="project-cover-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="project-overview">
+        <div class="container">
+            <h3 class="overview-title">Kiro Agentic IDE</h3>
+            <div class="overview-grid">
+                <div class="overview-column">
+                    <h5>Overview</h5>
+                    <p>Kiro is AWS's agentic IDE, built around a spec-driven workflow that helps developers move from requirements to technical design to structured tasks with the support of AI agents. It goes beyond code recommendation or single-task completions through chat, enabling developers to work with agents that understand context and execute across the full development lifecycle.</p>
+                </div>
+                <div class="overview-column">
+                    <h5>My Role</h5>
+                    <p>As design lead of Kiro, I define how agentic capabilities come to life in the IDE, ensuring the workflows are intuitive, transparent, and productive. I drive design strategy and collaborate closely with product, engineering, and science teams to continuously evolve Kiro while aligning it with AWS's broader developer tools ecosystem.</p>
+                </div>
+                <div class="overview-column overview-details">
+                    <h5>Project Details</h5>
+                    <p class="detail-item"><strong>Role:</strong> Design Lead</p>
+                    <p class="detail-item"><strong>Timeline:</strong> 2024-2025</p>
+                    <p class="detail-item"><strong>Team:</strong> Product, Engineering, Science</p>
+                    <div class="project-tags">
+                        <span class="skill-tag">Agentic Experience</span>
+                        <span class="skill-tag">Developer Tool</span>
+                        <span class="skill-tag">AI Assistant</span>
+                        <span class="skill-tag">IDE Design</span>
+                        <span class="skill-tag">Spec-Driven Workflow</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Table of Contents -->
+                <div class="toc-container" id="tocContainer">
+                    <div class="toc-content">
+                        <h5><img src="image/icon/note.svg" alt="Content" class="header-icon">Content</h5>
+                        <nav class="toc-nav">
+                            <a href="#section-1" class="toc-link active">The Challenge</a>
+                            <a href="#section-2" class="toc-link">Spec-Driven Workflow</a>
+                            <a href="#section-3" class="toc-link">Agentic Experience</a>
+                            <a href="#section-4" class="toc-link">Design Principles</a>
+                            <a href="#section-5" class="toc-link">Impact</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Section 1: The Challenge -->
+                    <div class="content-section" id="section-1">
+                        <div class="content-layout-text">
+                            <span class="content-label">The Challenge</span>
+                            <h3>Bridging the gap between <span class="highlight">product requirements</span> and <span class="highlight">code implementation</span></h3>
+                            <p>Developers often struggle with the disconnect between what needs to be built and how it gets built. Traditional development workflows rely on scattered documentation, ad-hoc conversations, and individual interpretation, leading to misaligned features, rework, and inefficient development cycles. As AI-powered coding tools emerged, most focused on code generation in isolation, missing the broader context of why code is being written in the first place.</p>
+                            <p>Kiro was created to address this fundamental gap by introducing a structured, spec-driven approach that brings clarity and intentionality to every stage of the development lifecycle, from requirements gathering through implementation.</p>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Spec-Driven Workflow -->
+                    <div class="content-section" id="section-2">
+                        <div class="content-layout-full-image">
+                            <span class="content-label">Core Innovation</span>
+                            <h3>Spec-Driven Workflow</h3>
+                            <p>At the heart of Kiro is the spec-driven workflow, a structured methodology that guides developers through three key phases: requirements, design, and implementation tasks. Rather than jumping straight into code, Kiro encourages developers to articulate what they're building and why before determining how.</p>
+                            <p>This approach ensures alignment between product intent and technical execution, reduces ambiguity, and creates a shared understanding that persists throughout the project. The spec becomes a living document that evolves with the codebase, keeping the team grounded in the original goals while adapting to new insights.</p>
+                            <div class="full-width-image">
+                                <img src="image/index/index-work-kiro.png" alt="Kiro Spec-Driven Workflow"
+                                    class="content-img-full lightbox-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: Agentic Experience -->
+                    <div class="content-section" id="section-3">
+                        <div class="content-layout-text">
+                            <span class="content-label">Agentic Experience</span>
+                            <h3>Designing for AI agents that <span class="highlight">understand context</span></h3>
+                            <p>Kiro's agentic capabilities go beyond simple code completion. The AI agents in Kiro understand the full development context, from the spec and requirements down to the codebase structure, enabling them to execute meaningful tasks across the entire development lifecycle.</p>
+                            <p>Designing this experience required careful consideration of transparency, control, and trust. Developers need to understand what the agent is doing, why it's making certain decisions, and how to steer it when needed. We focused on creating interaction patterns that keep the developer in the driver's seat while letting the agent handle the heavy lifting, striking a balance between automation and agency.</p>
+                        </div>
+                    </div>
+
+                    <!-- Section 4: Design Principles -->
+                    <div class="content-section" id="section-4">
+                        <div class="content-layout-text">
+                            <span class="content-label">Design Principles</span>
+                            <h3>Guiding the design of an agentic IDE</h3>
+                            <p>The design of Kiro is grounded in a set of core principles that shape every interaction:</p>
+                            <ul>
+                                <li><strong>Transparency:</strong> Make the agent's reasoning and actions visible so developers can build trust and maintain oversight</li>
+                                <li><strong>Progressive disclosure:</strong> Surface the right level of detail at the right time, avoiding information overload while keeping depth accessible</li>
+                                <li><strong>Developer agency:</strong> Ensure the developer always has control, with the ability to guide, override, or refine the agent's work</li>
+                                <li><strong>Seamless integration:</strong> Fit naturally into existing development workflows and mental models rather than requiring developers to learn entirely new paradigms</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Section 5: Impact -->
+                    <div class="content-section" id="section-5">
+                        <div class="content-layout-full-image">
+                            <span class="content-label">Impact</span>
+                            <h3>Launching Kiro to the developer community</h3>
+                            <p>Kiro launched publicly, introducing developers worldwide to a new way of building software. The spec-driven workflow and agentic capabilities resonated with developers looking for more structured, intentional approaches to AI-assisted development. The response validated our design hypothesis: developers want AI that enhances their thinking process, not just their typing speed.</p>
+                            <p>As design lead, I continue to evolve Kiro's experience based on user feedback, usage patterns, and emerging capabilities, ensuring the product grows alongside the rapidly evolving landscape of AI-powered development tools.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-social">
+                <a href="mailto:michelle.maxm@gmail.com" class="social-link" aria-label="Email" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="image/icon/email-circle.svg" alt="Email" class="social-icon">
+                </a>
+                <a href="https://linkedin.com/in/michellemxm" class="social-link" aria-label="LinkedIn" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="image/icon/linkedin-circle.svg" alt="LinkedIn" class="social-icon">
+                </a>
+                <a href="https://instagram.com/michelle_mxm" class="social-link" aria-label="Instagram" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="image/icon/ig-circle.svg" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://discordapp.com/users/tinkrthetinker" class="social-link" aria-label="Discord"
+                    target="_blank" rel="noopener noreferrer">
+                    <img src="image/icon/discord-circle.svg" alt="Discord" class="social-icon">
+                </a>
+            </div>
+            <div class="footer-copyright">
+                <p class="small">Designed and coded with <i class="fa-solid fa-heart"></i> and <i
+                        class="fa-solid fa-mug-saucer"></i> | Xiaomeng (Michelle) Ma all rights reserved © 2013-2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+        <img src="image/icon/arrow-up.svg" alt="Scroll to top" class="scroll-icon">
+    </button>
+
+    <script src="js/preloader.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/project.js"></script>
+    <script src="js/lightbox.js"></script>
+</body>
+
+</html>
