@@ -488,7 +488,7 @@ img {
 .content-img {
     width: 100%;
     height: auto;
-    border-radius: 12px;
+    border-radius: 0;
     object-fit: cover;
 }
 
@@ -513,8 +513,61 @@ img {
 .content-img-full {
     width: 100%;
     height: auto;
-    border-radius: 12px;
+    border-radius: 0;
     object-fit: cover;
+}
+
+/* Image style token — adds standard corner radius */
+.img-rounded {
+    border-radius: 12px;
+}
+
+/* Layout 6: Three Columns */
+.content-layout-three-col {
+    width: 100%;
+}
+
+.content-layout-three-col + .content-layout-text,
+.content-layout-three-col + .content-layout-split,
+.content-layout-three-col + .content-layout-full-image,
+.content-layout-three-col + .content-layout-carousel,
+.content-layout-three-col + .content-layout-three-col {
+    margin-top: 3rem;
+}
+
+.content-layout-text + .content-layout-three-col,
+.content-layout-split + .content-layout-three-col,
+.content-layout-full-image + .content-layout-three-col,
+.content-layout-carousel + .content-layout-three-col {
+    margin-top: 3rem;
+}
+
+.content-layout-three-col p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.three-col-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    margin-top: 2rem;
+}
+
+.three-col-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.three-col-item h5 {
+    margin-top: 1rem;
+    color: var(--text-primary);
+}
+
+.three-col-item p {
+    color: var(--text-secondary);
+    line-height: 1.6;
 }
 
 /* Layout 5: Image Carousel */
@@ -615,6 +668,11 @@ img {
         order: unset;
     }
 
+    .three-col-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
     /* Reduce spacing between layouts on mobile */
     .content-layout-text+.content-layout-text,
     .content-layout-text+.content-layout-split,
@@ -631,7 +689,13 @@ img {
     .content-layout-carousel+.content-layout-text,
     .content-layout-carousel+.content-layout-split,
     .content-layout-carousel+.content-layout-full-image,
-    .content-layout-carousel+.content-layout-carousel {
+    .content-layout-carousel+.content-layout-carousel,
+    .content-layout-carousel+.content-layout-three-col,
+    .content-layout-three-col+.content-layout-text,
+    .content-layout-three-col+.content-layout-split,
+    .content-layout-three-col+.content-layout-full-image,
+    .content-layout-three-col+.content-layout-carousel,
+    .content-layout-three-col+.content-layout-three-col {
         margin-top: 2rem;
     }
 
