@@ -157,6 +157,114 @@ img {
 }
 
 /* ========================================
+   KIRO COVER - Custom Two-Column Layout
+   ======================================== */
+.kiro-cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5% 0 5%;
+    gap: 60px;
+}
+
+.kiro-cover-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+
+.kiro-cover-left-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.kiro-cover-left-img {
+    max-width: 280px;
+    height: auto;
+}
+
+.kiro-cover-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--bg-primary);
+    border: none;
+    border-radius: 16px;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    margin: 0px 8px;
+}
+
+.kiro-cover-btn::after {
+    content: '→';
+    font-size: 1.1rem;
+}
+
+.kiro-cover-btn:hover {
+    background: var(--text-primary);
+    color: var(--kiro-purple);
+}
+
+.kiro-cover-right {
+    flex: 0 1 auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    overflow: hidden;
+    align-self: stretch;
+    padding-top: 5%;
+}
+
+.kiro-cover-right-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: bottom right;
+    border-radius: 8px 8px 0 0;
+    display: block;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .kiro-cover {
+        flex-direction: column;
+        padding: 5% 5%;
+        gap: 24px;
+    }
+
+    .kiro-cover-left {
+        align-items: center;
+    }
+
+    .kiro-cover-left-img {
+        max-width: 200px;
+    }
+
+    .kiro-cover-right-img {
+        border-radius: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .kiro-cover-left-img {
+        max-width: 160px;
+    }
+
+    .kiro-cover-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+}
+
+/* ========================================
    PROJECT OVERVIEW SECTION
    ======================================== */
 .project-overview {
