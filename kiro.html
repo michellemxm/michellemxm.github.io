@@ -16,7 +16,7 @@
     <!-- Page-specific color override -->
     <style>
         :root {
-            --primary-color: var(--kiro-purple); /* Custom color for this project page */
+            --primary-color: var(--kiro-purple);
         }
     </style>
     
@@ -63,9 +63,8 @@
                         <i class="fas fa-chevron-down dropdown-icon"></i>
                     </button>
                     <div class="project-dropdown-menu" id="projectDropdownMenu">
-                        <!-- <a href="kiro.html" class="dropdown-item active">Kiro Agentic IDE</a> -->
+                        <a href="kiro.html" class="dropdown-item active">Kiro Agentic IDE</a>
                         <a href="alexaplus.html" class="dropdown-item">Alexa+ on Mobile App</a>
-                        <!-- <a href="#" class="dropdown-item">Alexa Mosaic Design System</a> -->
                         <a href="googleintern.html" class="dropdown-item">Google HWUX</a>
                         <a href="vissh.html" class="dropdown-item">VISSH</a>
                         <a href="swan.html" class="dropdown-item">SWAN AR</a>
@@ -85,7 +84,7 @@
     <section class="project-cover">
         <div class="container">
             <div class="project-cover-content" style="background: var(--kiro-purple);">
-                <img src="image/index/index-work-kiro.png" alt="Kiro Agentic IDE Cover" class="project-cover-image">
+                <img src="image/kiro/kiro-cover-right.png" alt="Kiro Agentic IDE Cover" class="project-cover-image">
             </div>
         </div>
     </section>
@@ -97,17 +96,17 @@
             <div class="overview-grid">
                 <div class="overview-column">
                     <h5>Overview</h5>
-                    <p>Kiro is AWS's agentic IDE, built around a spec-driven workflow that helps developers move from requirements to technical design to structured tasks with the support of AI agents. It goes beyond code recommendation or single-task completions through chat, enabling developers to work with agents that understand context and execute across the full development lifecycle.</p>
+                    <p>AWS is well known for enterprise products and services, but Kiro is something pretty different — it's the first customer-facing product the company has created. Starting as an internal incubator with one PM and a small engineering team, the product grew quickly into a full team effort.</p>
                 </div>
                 <div class="overview-column">
                     <h5>My Role</h5>
-                    <p>As design lead of Kiro, I define how agentic capabilities come to life in the IDE, ensuring the workflows are intuitive, transparent, and productive. I drive design strategy and collaborate closely with product, engineering, and science teams to continuously evolve Kiro while aligning it with AWS's broader developer tools ecosystem.</p>
+                    <p>I started as the solo designer for the first six months, and I'm now leading a design team of five. My job has been to define how agentic capabilities come to life in the IDE — shaping interaction models and workflows while driving design strategy and our design system in close collaboration with product, engineering, and science.</p>
                 </div>
                 <div class="overview-column overview-details">
                     <h5>Project Details</h5>
-                    <p class="detail-item"><strong>Role:</strong> Design Lead</p>
-                    <p class="detail-item"><strong>Timeline:</strong> 2024-2025</p>
-                    <p class="detail-item"><strong>Team:</strong> Product, Engineering, Science</p>
+                    <p class="detail-item"><strong>Role:</strong> Solo Designer → Design Lead (team of 5)</p>
+                    <p class="detail-item"><strong>Timeline:</strong> Oct 2024 – Present</p>
+                    <p class="detail-item"><strong>Company:</strong> Amazon Web Services</p>
                     <div class="project-tags">
                         <span class="skill-tag">Agentic Experience</span>
                         <span class="skill-tag">Developer Tool</span>
@@ -129,73 +128,187 @@
                     <div class="toc-content">
                         <h5><img src="image/icon/note.svg" alt="Content" class="header-icon">Content</h5>
                         <nav class="toc-nav">
-                            <a href="#section-1" class="toc-link active">The Challenge</a>
-                            <a href="#section-2" class="toc-link">Spec-Driven Workflow</a>
-                            <a href="#section-3" class="toc-link">Agentic Experience</a>
-                            <a href="#section-4" class="toc-link">Design Principles</a>
-                            <a href="#section-5" class="toc-link">Impact</a>
+                            <a href="#section-1" class="toc-link active">Problem Space</a>
+                            <a href="#section-2" class="toc-link">Early Explorations</a>
+                            <a href="#section-3" class="toc-link">Core Interaction Loop</a>
+                            <a href="#section-4" class="toc-link">The Solution</a>
+                            <a href="#section-5" class="toc-link">Key Features</a>
+                            <a href="#section-6" class="toc-link">Design System</a>
+                            <a href="#section-7" class="toc-link">Impact</a>
                         </nav>
                     </div>
                 </div>
 
                 <!-- Main Content -->
                 <div class="main-content">
-                    <!-- Section 1: The Challenge -->
+                    <!-- Section 1: Problem Space -->
                     <div class="content-section" id="section-1">
                         <div class="content-layout-text">
-                            <span class="content-label">The Challenge</span>
-                            <h3>Bridging the gap between <span class="highlight">product requirements</span> and <span class="highlight">code implementation</span></h3>
-                            <p>Developers often struggle with the disconnect between what needs to be built and how it gets built. Traditional development workflows rely on scattered documentation, ad-hoc conversations, and individual interpretation, leading to misaligned features, rework, and inefficient development cycles. As AI-powered coding tools emerged, most focused on code generation in isolation, missing the broader context of why code is being written in the first place.</p>
-                            <p>Kiro was created to address this fundamental gap by introducing a structured, spec-driven approach that brings clarity and intentionality to every stage of the development lifecycle, from requirements gathering through implementation.</p>
+                            <span class="content-label">Problem Space</span>
+                            <h3>AI makes us code faster — and makes code <span class="highlight">harder to trust</span></h3>
+                            <p>GenAI is shifting software development away from mechanical execution toward work that actually requires human judgment: understanding requirements, making architectural decisions, ensuring the code solves the right problem. The developer role moves from writing code to conducting — defining intent, reasoning through complexity, reviewing outcomes.</p>
+                            <p>But there's a catch. The volume of AI-generated code far exceeds what a human can quickly consume. The code works, until it doesn't — and when something breaks, it's much harder to trace why. "Vibe coding" feels productive until you hit a wall you can't debug your way out of.</p>
+                            <p>The deeper issue is structural. Traditional software development is built around object-oriented thinking, where behavior lives inside functions and classes you can point to. GenAI-assisted development doesn't fit that model. Behavior becomes distributed, contextual, and emergent — shaped by the model, the prompt, conversation history, and available tools. A small change in wording leads to a very different outcome.</p>
+                        </div>
+                        <div class="content-layout-text">
+                            <h3>How might we help teams <span class="highlight">design and control</span> system behavior?</h3>
+                            <p>This framed the entire Kiro product. The answer wasn't better prompts — it was better control surfaces. That meant rethinking workflows entirely, not just the UI.</p>
                         </div>
                     </div>
 
-                    <!-- Section 2: Spec-Driven Workflow -->
+                    <!-- Section 2: Early Explorations -->
                     <div class="content-section" id="section-2">
+                        <div class="content-layout-text">
+                            <span class="content-label">Early Explorations</span>
+                            <h3>9 months · 6 primary iterations · 500+ screens</h3>
+                            <p>We explored a wide range of concepts at different fidelities, working immersively with our engineering team — who are also our users. We prototyped across different interaction models, from traditional chat interfaces to more structured workflow approaches, testing various levels of automation versus user control.</p>
+                            <p>We ran user studies, interviews, and participatory design work sessions with AWS Heroes and the broader developer community. Each iteration incorporated feedback and tightened our understanding of what developers actually needed.</p>
+                        </div>
                         <div class="content-layout-full-image">
-                            <span class="content-label">Core Innovation</span>
-                            <h3>Spec-Driven Workflow</h3>
-                            <p>At the heart of Kiro is the spec-driven workflow, a structured methodology that guides developers through three key phases: requirements, design, and implementation tasks. Rather than jumping straight into code, Kiro encourages developers to articulate what they're building and why before determining how.</p>
-                            <p>This approach ensures alignment between product intent and technical execution, reduces ambiguity, and creates a shared understanding that persists throughout the project. The spec becomes a living document that evolves with the codebase, keeping the team grounded in the original goals while adapting to new insights.</p>
                             <div class="full-width-image">
-                                <img src="image/index/index-work-kiro.png" alt="Kiro Spec-Driven Workflow"
+                                <img src="image/kiro/iterations.png" alt="Design iterations across 9 months"
                                     class="content-img-full lightbox-image">
                             </div>
                         </div>
                     </div>
 
-                    <!-- Section 3: Agentic Experience -->
+                    <!-- Section 3: Core Interaction Loop -->
                     <div class="content-section" id="section-3">
                         <div class="content-layout-text">
-                            <span class="content-label">Agentic Experience</span>
-                            <h3>Designing for AI agents that <span class="highlight">understand context</span></h3>
-                            <p>Kiro's agentic capabilities go beyond simple code completion. The AI agents in Kiro understand the full development context, from the spec and requirements down to the codebase structure, enabling them to execute meaningful tasks across the entire development lifecycle.</p>
-                            <p>Designing this experience required careful consideration of transparency, control, and trust. Developers need to understand what the agent is doing, why it's making certain decisions, and how to steer it when needed. We focused on creating interaction patterns that keep the developer in the driver's seat while letting the agent handle the heavy lifting, striking a balance between automation and agency.</p>
+                            <span class="content-label">Core Interaction Loop</span>
+                            <h3>From a natural language idea to <span class="highlight">production-ready code</span></h3>
+                            <p><strong>Idea →</strong> A simple prompt in chat. The agent helps generate a markdown file where the user and agent work together — detailing, refining, iterating — until it's ready to become requirements.</p>
+                            <p><strong>Requirements →</strong> The agent generates a technical design covering architecture, data flow, interfaces, data models, error handling, and test strategy. This is the translation layer between what the user wants to build and what the system actually needs to include.</p>
+                            <p><strong>Tasks →</strong> An execution plan linked back to the original requirements. This is also the primary interface where the agent surfaces execution status as it works through each step.</p>
+                            <p><strong>Code →</strong> With spec in place, the agent produces viable code. The developer then continues with vibe coding — iterating and refining — until the output is robust and production-ready.</p>
+                        </div>
+                        <div class="content-layout-full-image">
+                            <div class="full-width-image">
+                                <img src="image/kiro/core-interaction-loop.png" alt="Core interaction loop from idea to code"
+                                    class="content-img-full lightbox-image">
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Section 4: Design Principles -->
+                    <!-- Section 4: The Solution -->
                     <div class="content-section" id="section-4">
                         <div class="content-layout-text">
-                            <span class="content-label">Design Principles</span>
-                            <h3>Guiding the design of an agentic IDE</h3>
-                            <p>The design of Kiro is grounded in a set of core principles that shape every interaction:</p>
-                            <ul>
-                                <li><strong>Transparency:</strong> Make the agent's reasoning and actions visible so developers can build trust and maintain oversight</li>
-                                <li><strong>Progressive disclosure:</strong> Surface the right level of detail at the right time, avoiding information overload while keeping depth accessible</li>
-                                <li><strong>Developer agency:</strong> Ensure the developer always has control, with the ability to guide, override, or refine the agent's work</li>
-                                <li><strong>Seamless integration:</strong> Fit naturally into existing development workflows and mental models rather than requiring developers to learn entirely new paradigms</li>
-                            </ul>
+                            <span class="content-label">The Solution</span>
+                            <h3>Spec-driven Development</h3>
+                            <p>Instead of jumping from idea straight to code, spec-driven development creates a structured middle layer where developers and agents build shared understanding first. Specs externalize intent — making it explicit, structured, inspectable, and shared. Rather than guessing what the AI will do, you define what you want, and the spec becomes the source of truth both parties refer back to. Fewer rewrites, more predictable outcomes, better collaboration.</p>
+                            <p>When we introduced spec-driven development, many users weren't sure when to use it versus just vibe coding. That made the entry point a feature education moment as much as an interaction design one. Going forward, the intent is to move toward intent detection — where the agent recognizes what the user is trying to build and recommends the right approach automatically.</p>
+                        </div>
+                        <div class="content-layout-full-image">
+                            <div class="full-width-image">
+                                <img src="image/kiro/spec-1-select.png" alt="Spec step 1 — select a feature to spec"
+                                    class="content-img-full lightbox-image">
+                            </div>
+                        </div>
+                        <div class="content-layout-full-image">
+                            <div class="full-width-image">
+                                <img src="image/kiro/spec-2-req.png" alt="Spec step 2 — requirements generation"
+                                    class="content-img-full lightbox-image">
+                            </div>
+                        </div>
+                        <div class="content-layout-full-image">
+                            <div class="full-width-image">
+                                <img src="image/kiro/spec-3-tech-design.png" alt="Spec step 3 — technical design"
+                                    class="content-img-full lightbox-image">
+                            </div>
+                        </div>
+                        <div class="content-layout-full-image">
+                            <div class="full-width-image">
+                                <img src="image/kiro/spec-4-task-list.png" alt="Spec step 4 — task list"
+                                    class="content-img-full lightbox-image">
+                            </div>
+                        </div>
+                        <div class="content-layout-text">
+                            <h4>Vibe Coding for Refinement</h4>
+                            <p>Spec handles complexity. Vibe coding handles everything else. Once you have a structured foundation, you can talk to your codebase naturally — "make this faster," "add error handling here," "what if we tried a different approach?" — without needing a whole plan first.</p>
+                            <p>Supervised mode lets users approve agent-generated code step by step, pausing at the file level before moving forward. Users can also step in anytime mid-execution. The next iteration will pause at logical groups of edits rather than individual files, reducing friction while keeping the human in the loop.</p>
+                        </div>
+                        <div class="content-layout-full-image">
+                            <div class="full-width-image">
+                                <img src="image/kiro/supervised-mode.gif" alt="Supervised mode interaction demo"
+                                    class="content-img-full lightbox-image">
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Section 5: Impact -->
+                    <!-- Section 5: Key Features -->
                     <div class="content-section" id="section-5">
                         <div class="content-layout-full-image">
+                            <span class="content-label">Key Features</span>
+                            <h3>Control surfaces for <span class="highlight">agentic development</span></h3>
+                            <div class="full-width-image">
+                                <img src="image/kiro/key-features.png" alt="Kiro key features overview"
+                                    class="content-img-full lightbox-image">
+                            </div>
+                        </div>
+                        <div class="content-layout-split">
+                            <div class="content-text">
+                                <h4>Steering Rules</h4>
+                                <p>Persistent instructions that teach Kiro how your team works. Write your conventions once — "use TypeScript," "follow our naming standards" — and Kiro applies them automatically across every interaction. Consistent code, no repetition, and the same agent behavior for everyone on the team.</p>
+                            </div>
+                            <div class="content-image">
+                                <img src="image/kiro/steering.png" alt="Steering rules interface"
+                                    class="content-img lightbox-image">
+                            </div>
+                        </div>
+                        <div class="content-layout-split reverse">
+                            <div class="content-image">
+                                <img src="image/kiro/hook.png" alt="Agent hooks interface"
+                                    class="content-img lightbox-image">
+                            </div>
+                            <div class="content-text">
+                                <h4>Agent Hooks</h4>
+                                <p>Automated triggers that execute predefined agent actions when certain events occur — a file save, a completed task. Instead of manually asking Kiro to run tests or check for issues, you set it up once and it runs in the background. The repetitive overhead disappears; you just code.</p>
+                            </div>
+                        </div>
+                        <div class="content-layout-split">
+                            <div class="content-text">
+                                <h4>Kiro Powers</h4>
+                                <p>Dynamic tool loading through MCP. Too little context and the agent guesses; too much and it slows down. Kiro Powers solve this by connecting to external tools on demand rather than loading everything upfront. One-click install, minimal setup, and an open ecosystem where anyone can build and share tools.</p>
+                            </div>
+                            <div class="content-image">
+                                <img src="image/kiro/kiro-powers.png" alt="Kiro Powers ecosystem"
+                                    class="content-img lightbox-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 6: Design System -->
+                    <div class="content-section" id="section-6">
+                        <div class="content-layout-split">
+                            <div class="content-text">
+                                <span class="content-label">Design System</span>
+                                <h3>Why we invested early</h3>
+                                <p>Building a design system before the product is fully defined might seem premature, but it was one of the best early investments we made. When you're navigating genuine unknowns, a lightweight system eliminates the micro-decisions — button padding, spacing tokens — so you can focus on the harder questions about how the product actually works.</p>
+                                <p>It also enables parallel work at speed. Once more than one person is designing, a shared system means designers, engineers, researchers, and PMs can all move forward using the same visual language without constant check-ins. And because design tokens map directly to code tokens, engineers could prototype faster and we avoided the typical "rebuild it properly before launch" reckoning.</p>
+                            </div>
+                            <div class="content-image">
+                                <img src="image/kiro/kiro-ds.png" alt="Kiro design system"
+                                    class="content-img lightbox-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 7: Impact -->
+                    <div class="content-section" id="section-7">
+                        <div class="content-layout-text">
                             <span class="content-label">Impact</span>
-                            <h3>Launching Kiro to the developer community</h3>
-                            <p>Kiro launched publicly, introducing developers worldwide to a new way of building software. The spec-driven workflow and agentic capabilities resonated with developers looking for more structured, intentional approaches to AI-assisted development. The response validated our design hypothesis: developers want AI that enhances their thinking process, not just their typing speed.</p>
-                            <p>As design lead, I continue to evolve Kiro's experience based on user feedback, usage patterns, and emerging capabilities, ensuring the product grows alongside the rapidly evolving landscape of AI-powered development tools.</p>
+                            <h3>Spec-driven Development adoption</h3>
+                            <p>82% of users adopted spec-driven development — significant uptake for a completely new workflow. Satisfaction followed: 83% positive ratings on spec creation, 73% on task creation.</p>
+                        </div>
+                        <div class="content-layout-text">
+                            <h3>Overall — 6 months post-launch</h3>
+                            <p>100,000 daily active users is meaningful traction for a new product category. 35,000 paid conversions shows developers finding enough value to pay for more. The number I'm most proud of: 92% positive ratings from power users — the developers who put Kiro to work every day.</p>
+                        </div>
+                        <div class="content-layout-full-image">
+                            <div class="full-width-image">
+                                <img src="image/kiro/metrics.png" alt="Kiro post-launch metrics"
+                                    class="content-img-full lightbox-image">
+                            </div>
                         </div>
                     </div>
                 </div>
