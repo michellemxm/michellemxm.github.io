@@ -439,7 +439,7 @@ img {
 
 /* Layout 1: Text Only */
 .content-layout-text {
-    max-width: 800px;
+    max-width: 900px;
 }
 
 .content-layout-text+.content-layout-text,

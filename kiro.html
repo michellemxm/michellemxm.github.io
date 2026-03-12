@@ -185,10 +185,10 @@
                         <div class="content-layout-text">
                             <span class="content-label">Core Interaction Loop</span>
                             <h3>From a natural language idea <br>to <span class="highlight">production-ready code</span></h3>
-                            <p><strong>Idea →</strong> A simple prompt in chat. The agent helps generate a markdown file where the user and agent work together — detailing, refining, iterating — until it's ready to become requirements.</p>
-                            <p><strong>Requirements →</strong> The agent generates a technical design covering architecture, data flow, interfaces, data models, error handling, and test strategy. This is the translation layer between what the user wants to build and what the system actually needs to include.</p>
-                            <p><strong>Tasks →</strong> An execution plan linked back to the original requirements. This is also the primary interface where the agent surfaces execution status as it works through each step.</p>
-                            <p><strong>Code →</strong> With spec in place, the agent produces viable code. The developer then continues with vibe coding — iterating and refining — until the output is robust and production-ready.</p>
+                            <p><strong>Requirements  → </strong>Send a simple prompt in chat and the agent helps generate a markdown file where the user and agent work together, detailing, refining, iterating until it's ready to become requirements.</p>
+                            <p><strong>Tech Design  → </strong>The agent generates a technical design covering architecture, data flow, interfaces, data models, error handling, and test strategy. This is the translation layer between what the user wants to build and what the system actually needs to include.</p>
+                            <p><strong>Tasks  → </strong>An execution plan linked back to the original requirements. This is also the primary interface where the agent surfaces execution status as it works through each step.</p>
+                            <p><strong>Code  → </strong>With spec, technical design and task list as execution plan in place, the agent produces viable code. The developer then continues with vibe coding — iterating and refining — until the output is robust and production-ready.</p>
                         </div>
                         <div class="content-layout-full-image">
                             <div class="full-width-image">
@@ -206,11 +206,22 @@
                             <p>Instead of jumping from idea straight to code, spec-driven development creates a structured middle layer where developers and agents build shared understanding first. Specs externalize intent — making it explicit, structured, inspectable, and shared. Rather than guessing what the AI will do, you define what you want, and the spec becomes the source of truth both parties refer back to. Fewer rewrites, more predictable outcomes, better collaboration.</p>
                             <p>When we introduced spec-driven development, many users weren't sure when to use it versus just vibe coding. That made the entry point a feature education moment as much as an interaction design one. Going forward, the intent is to move toward intent detection — where the agent recognizes what the user is trying to build and recommends the right approach automatically.</p>
                         </div>
+                        <div class="content-layout-text">
+                            <h4>Spec workflow ingress</h4>
+                            <p>By presenting Vibe and Spec as two distinct entry points, Kiro makes the developer's intent explicit from the start — helping agents understand how much structure to apply and how autonomously to act. It also serves as a moment of discovery: for developers new to Kiro, this is where spec-driven development announces itself as a first-class workflow worth trying. Not every problem is ready to build immediately; some benefit from planning first. This small moment of decision sets the tone for the entire workflow.</p>
+                        </div>
                         <div class="content-layout-full-image">
                             <div class="full-width-image">
                                 <img src="image/kiro/spec-1-select.png" alt="Spec step 1 — select a feature to spec"
                                     class="content-img-full img-rounded lightbox-image">
                             </div>
+                        </div>
+                        <div class="content-layout-text">
+                            <h4>Requirements</h4>
+                            <p>
+                                Specs become the interface between humans and AI - humans define what they want, and the agent figures out how to build it. And it is an iterative process with human in the loop. The spec becomes a shared source of truth when communicating intent between the user and the agent.<br>
+                                Requirements doc make behavior visible and shareable. Instead of guessing what the AI will do, you write down exactly what you want. This creates a clear plan that both you and the agent can follow and refer back to. It shifts focus from writing code to designing how the system should actually work - this means fewer rewrites, more predictable outcomes, and better collaboration between people and AI agent.
+                            </p>
                         </div>
                         <div class="content-layout-full-image">
                             <div class="full-width-image">
@@ -218,11 +229,19 @@
                                     class="content-img-full img-rounded lightbox-image">
                             </div>
                         </div>
+                        <div class="content-layout-text">
+                            <h4>Technical Design</h4>
+                            <p>Once you've nailed down the requirements, you work with the agent to create a technical design. This is where you spell out exactly what needs to be built - the architecture, data flow, interfaces, all that stuff. It's basically translating your feature idea into something the system can actually understand and implement.</p>
+                        </div>
                         <div class="content-layout-full-image">
                             <div class="full-width-image">
                                 <img src="image/kiro/spec-3-tech-design.png" alt="Spec step 3 — technical design"
                                     class="content-img-full img-rounded lightbox-image">
                             </div>
+                        </div>
+                        <div class="content-layout-text">
+                            <h4>Task List</h4>
+                            <p>The task list breaks down your technical design into actionable steps. Think of it as your execution roadmap - it takes everything from the technical design and turns it into a clear sequence that both you and the agent can follow. This way, instead of jumping around or missing pieces, you have a structured plan that keeps development moving in the right direction. It is also the primary interface where the agent shows execution statuses as it executes through the tasks.</p>
                         </div>
                         <div class="content-layout-full-image">
                             <div class="full-width-image">
@@ -321,7 +340,7 @@
                     <div class="content-section" id="section-7">
                         <div class="content-layout-text">
                             <span class="content-label">Impact</span>
-                            <h3>Spec-driven development adoption and <br>6-month post-launch metrics</h3>
+                            <h3>Spec-driven development feature adoption and <br>6 months post-launch metrics</h3>
                             <p>82% of users adopted spec-driven development — significant uptake for a completely new workflow. Satisfaction followed: 83% positive ratings on spec creation, 73% on task creation.</p>
                             <p>100,000 daily active users is meaningful traction for a new product category. 35,000 paid conversions shows developers finding enough value to pay for more. The number I'm most proud of: 92% positive ratings from power users — the developers who put Kiro to work every day.</p>
                         </div>
