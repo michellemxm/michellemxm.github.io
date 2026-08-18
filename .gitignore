@@ -1,0 +1,6 @@
+# macOS
+.DS_Store
+
+# Local editor / agent config
+.claude/
+.kiro/settings/cli.json
