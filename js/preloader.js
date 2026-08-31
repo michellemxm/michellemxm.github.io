@@ -26,7 +26,14 @@ document.addEventListener('DOMContentLoaded', function() {
         if (pageLoaded && minTimeElapsed) {
             preloader.classList.add('fade-out');
             body.classList.remove('preloader-active');
-            
+
+            // The page is now becoming visible. Anything holding an intro
+            // animation back until the visitor can actually see it listens for
+            // this (see js/hero-matrix.js). Fired at fade START, not after
+            // removal, so an animation forms through the crossfade instead of
+            // beginning on a dead beat.
+            document.dispatchEvent(new CustomEvent('preloader:fadeout'));
+
             // Remove preloader from DOM after transition
             setTimeout(() => {
                 if (preloader.parentNode) {
