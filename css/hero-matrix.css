@@ -1,0 +1,79 @@
+/* ========================================
+   Animated Character-Grid Hero
+   ======================================== */
+
+/* Full-bleed canvas hero. Overrides the two-column .hero layout, so this
+   file must be linked after style.css. */
+.hero-matrix {
+    position: relative;
+    min-height: 100vh;
+    padding: 0;
+    overflow: hidden;
+    background: var(--bg-primary);
+    display: block;
+}
+
+.hero-matrix-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* The real copy stays in the DOM for screen readers and search engines --
+   the canvas above is a decorative rendering of the same text. */
+.hero-matrix-content {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Surface the panel when a keyboard user tabs into one of its links, so focus
+   is never invisible. */
+.hero-matrix-content:focus-within {
+    position: absolute;
+    inset: auto 20px 40px 20px;
+    width: auto;
+    height: auto;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 1.25rem 1.5rem;
+    clip: auto;
+    clip-path: none;
+    white-space: normal;
+    overflow: visible;
+    z-index: 2;
+    background: rgba(var(--bg-primary-rgb), 0.94);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+}
+
+.hero-matrix-content:focus-within h1 {
+    font-size: 1.5rem;
+    margin: 0 0 0.75rem;
+    color: var(--text-primary);
+}
+
+.hero-matrix-content:focus-within p {
+    margin: 0 0 0.5rem;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.hero-matrix-content:focus-within a {
+    color: var(--primary-color);
+}
+
+@media (max-width: 640px) {
+    .hero-matrix {
+        min-height: 100svh;
+    }
+}
