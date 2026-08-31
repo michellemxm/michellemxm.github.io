@@ -23,6 +23,9 @@
     const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()[]{}<>/\\|=+-~;:.,?_';
     const REVEAL_MS = 5000; // window over which the body copy finishes locking
     const TITLE_REVEAL_MS = 2000; // the headline resolves first
+    // If the preloader never signals (its script failed, or `load` never fires),
+    // reveal anyway rather than leaving the hero as permanent noise.
+    const REVEAL_FALLBACK_MS = 6000;
 
     const rootStyles = getComputedStyle(document.documentElement);
     const readVar = (name, fallback) => (rootStyles.getPropertyValue(name) || '').trim() || fallback;
@@ -73,7 +76,9 @@
     let rafId = null;
     let visible = true;
 
-    const t0 = performance.now();
+    // Timestamp the reveal is measured from. Stays null until the page is
+    // actually visible, so the animation is not spent behind the preloader.
+    let revealStart = null;
 
     /* ---------- Helpers ---------- */
 
@@ -214,7 +219,7 @@
                     block.accentFrom !== undefined && i >= block.accentFrom
                         ? block.accentColor
                         : block.color;
-                anchor.lockAt = t0 + lockDelay(block.big);
+                anchor.lockAt = Infinity; // scheduled by startReveal()
 
                 if (block.big) {
                     // Mark the three cells the 2x2 glyph paints over.
@@ -231,6 +236,25 @@
 
         ctx.fillStyle = BG;
         ctx.fillRect(0, 0, width, height);
+
+        if (revealStart !== null) {
+            const elapsed = performance.now() - revealStart;
+            if (elapsed < REVEAL_MS) {
+                // Re-layout while the reveal is still in flight — most commonly a
+                // webfont arriving, which resolves at almost the same instant the
+                // preloader fades. Keep the ORIGINAL clock so the reveal carries on
+                // from where it was instead of being consumed.
+                for (const cell of cells) {
+                    if (cell.target !== null) cell.lockAt = revealStart + lockDelay(cell.big);
+                }
+            } else {
+                // Reveal already finished (e.g. the visitor resized later). Resolve
+                // at once; replaying it would send read characters back to noise.
+                for (const cell of cells) {
+                    if (cell.target !== null) cell.lockAt = 0;
+                }
+            }
+        }
 
         if (reduceMotion) {
             // No flipping: paint the resolved copy over a static field of noise.
@@ -310,6 +334,46 @@
         }
     }
 
+    /* ---------- Reveal trigger ---------- */
+
+    /**
+     * Start the clock. Every cell carrying a character gets its lock time
+     * scheduled from now, so the whole reveal is visible to the visitor.
+     */
+    function startReveal() {
+        if (revealStart !== null) return;
+        revealStart = performance.now();
+        for (const cell of cells) {
+            if (cell.target !== null) cell.lockAt = revealStart + lockDelay(cell.big);
+        }
+    }
+
+    /**
+     * Hold the reveal until the page is visible. The preloader announces its
+     * fade (js/preloader.js); a page without one, or a preloader that never
+     * gets there, falls through to REVEAL_FALLBACK_MS.
+     */
+    function armRevealTrigger() {
+        let fallbackTimer = null;
+
+        function begin() {
+            document.removeEventListener('preloader:fadeout', begin);
+            if (fallbackTimer !== null) {
+                clearTimeout(fallbackTimer);
+                fallbackTimer = null;
+            }
+            startReveal();
+        }
+
+        if (!document.getElementById('preloader')) {
+            begin(); // no preloader on this page — nothing to wait for
+            return;
+        }
+
+        document.addEventListener('preloader:fadeout', begin);
+        fallbackTimer = setTimeout(begin, REVEAL_FALLBACK_MS);
+    }
+
     /* ---------- Wiring ---------- */
 
     let resizeTimer = null;
@@ -353,6 +417,9 @@
             );
             observer.observe(canvas);
         }
+        // The glyphs flip from the start so the grid is already alive the moment
+        // the preloader clears; only the lock-in schedule waits.
+        armRevealTrigger();
         rafId = requestAnimationFrame(frame);
     }
 
