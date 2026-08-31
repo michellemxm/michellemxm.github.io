@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="css/preloader.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/paginated-scroll.css">
+    <link rel="stylesheet" href="css/hero-matrix.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -67,48 +68,19 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-left">
-                <div class="dot-pattern"></div>
-            </div>
-            <div class="hero-right">
-                <div class="hero-content-top">
-                    <div class="hero-tagline">
-                        <span>A Good Design =</span>
-                        <span><span class="hero-tagline-line"></span> Inspirations + Passion + A lot of Coffee</span>
-                    </div>
-                </div>
-                <div class="hero-content-bottom">
-                    <h1 class="hero-title">
-                        Hi, I'm <span class="highlight">Michelle Ma</span>
-                    </h1>
-                    <div class="hero-details">
-                        <p class="hero-role">Design lead of <a class="text-link" href="https://kiro.dev"
-                                target="_blank"><img src="image/icon/kiro-filled.svg" alt="Kiro"
-                                    class="inline-icon">Kiro Agentic IDE
-                                @
-                                AWS</a> based in <span class="text-link"><img src="image/icon/location.svg"
-                                    alt="Location" class="inline-icon">Seattle WA USA</span></p>
-                        <p class="hero-experience">Previously worked with <span class="text-link">Amazon
-                                Alexa</span>, <span class="text-link">Google</span>, and <a class="text-link"
-                                href="https://shimo.im/" target="_blank">Shimo.im</a></p>
-                        <p class="hero-background">Georgia Tech alum
-                            (labs: <a class="text-link" href="https://ubicomp.cc.gatech.edu/index.html"
-                                target="_blank">Ubicomp</a>, <a class="text-link" href="http://sonify.psych.gatech.edu/"
-                                target="_blank">SonLab</a>). Go
-                            Jackets!</p>
-                        <div class="hero-skills">
-                            <p class="hero-background">What I do&nbsp
-                                <span class="skill-tag">Agentic Experience</span>
-                                <span class="skill-tag">Generative AI</span>
-                                <span class="skill-tag">Ubiquitous Computing</span>
-                                <span class="skill-tag">Multimodality UX</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section id="home" class="hero hero-matrix">
+        <canvas id="hero-matrix-canvas" class="hero-matrix-canvas" aria-hidden="true"></canvas>
+        <!-- Same copy as the canvas above, kept for screen readers and search engines -->
+        <div class="hero-matrix-content">
+            <h1>Hi, I'm <span class="highlight">Michelle Ma</span></h1>
+            <p>Design lead of <a href="https://kiro.dev" target="_blank" rel="noopener noreferrer">Kiro Agentic IDE @
+                    AWS</a> based in Seattle WA USA</p>
+            <p>Previously worked with Amazon Alexa, Google, and <a href="https://shimo.im/" target="_blank"
+                    rel="noopener noreferrer">Shimo.im</a></p>
+            <p>Georgia Tech alum (labs: <a href="https://ubicomp.cc.gatech.edu/index.html" target="_blank"
+                    rel="noopener noreferrer">Ubicomp</a>, <a href="http://sonify.psych.gatech.edu/" target="_blank"
+                    rel="noopener noreferrer">SonLab</a>). Go Jackets!</p>
+            <p>What I do: Agentic Experience, Generative AI, Ubiquitous Computing, Multimodality UX</p>
         </div>
     </section>
 
@@ -407,7 +379,7 @@
     </button>
 
     <script src="js/preloader.js"></script>
-    <script src="js/dot-pattern.js"></script>
+    <script src="js/hero-matrix.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/script.js"></script>
     <script src="js/paginated-scroll.js"></script>
