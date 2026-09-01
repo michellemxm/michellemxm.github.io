@@ -33,8 +33,14 @@
     const ACCENT = readVar('--primary-color', '#FB008B');
     const BG = readVar('--bg-primary', '#0A090B');
     const TEXT = '#FFFFFF';
-    const NOISE_DIM = '#2C2F36';
-    const NOISE_BRIGHT = '#4A4E56';
+    // Idle glyph inks. These sit just above the page background on purpose — the
+    // field is texture, not content, so it should read as a surface rather than as
+    // characters competing with the copy. Contrast against --bg-primary:
+    // dim 1.26:1, bright 1.77:1 (was 1.48:1 / 2.38:1). Decorative only — the
+    // canvas is aria-hidden and the real copy lives in .hero-matrix-content, so
+    // no text-contrast requirement applies to these.
+    const NOISE_DIM = '#212328';
+    const NOISE_BRIGHT = '#383B42';
     const NOISE_HOVER = '#B8BDC6';
 
     // Cell geometry at the desktop scale; scaled down on narrow viewports.
@@ -42,6 +48,15 @@
     const CELL_RATIO = 1.6; // cell height / cell width
     const FONT_RATIO = 0.87; // glyph size / cell width
     const HOVER_RADIUS = 80; // px
+
+    // How often a background glyph re-rolls. These are PER CELL, but the grid is
+    // ~3,500 cells at desktop size, so the aggregate is what reads as "busy":
+    // flips per second across the whole hero is roughly cells / mean interval.
+    const IDLE_FLIP_MIN_MS = 5000;
+    const IDLE_FLIP_JITTER_MS = 16000; // so 5-21s per cell, mean 13s
+    // Glyphs near the pointer re-roll fast — that contrast is the interaction.
+    const HOVER_FLIP_MIN_MS = 240;
+    const HOVER_FLIP_JITTER_MS = 240;
 
     const LINES = [
         {
@@ -55,7 +70,7 @@
         { text: 'Previously worked with Amazon Alexa, Google, and Shimo.im', color: TEXT },
         { text: 'Georgia Tech alum (labs: Ubicomp, SonLab). Go Jackets!', color: TEXT },
         {
-            text: 'What I do: Agentic Experience, Generative AI, Ubiquitous Computing, Multimodality UX',
+            text: 'What I do: Agentic UX, Data Semantics, Ubiquitous Computing, Multimodality',
             color: TEXT
         }
     ];
@@ -170,7 +185,9 @@
                     r: r,
                     glyph: randomChar(),
                     color: noiseColor(),
-                    next: now + Math.random() * 1200,
+                    // First flip staggered across a full idle interval, so the
+                    // opening second is not a burst that then settles down.
+                    next: now + Math.random() * (IDLE_FLIP_MIN_MS + IDLE_FLIP_JITTER_MS),
                     target: null,
                     targetColor: TEXT,
                     big: false,
@@ -328,7 +345,11 @@
                         ? ACCENT
                         : NOISE_HOVER
                     : noiseColor();
-                cell.next = now + (near ? 240 + Math.random() * 240 : 1200 + Math.random() * 5500);
+                cell.next =
+                    now +
+                    (near
+                        ? HOVER_FLIP_MIN_MS + Math.random() * HOVER_FLIP_JITTER_MS
+                        : IDLE_FLIP_MIN_MS + Math.random() * IDLE_FLIP_JITTER_MS);
                 drawCell(cell);
             }
         }
